@@ -154,3 +154,16 @@ svg {
 .footer {
   flex: 0 0 auto;
 }
+
+.btn {
+  padding: 15px 25px;
+  font-family:$font-bold;
+  background-color: transparent;
+  border: 2px solid $highlight;
+  color: $highlight;
+  transition: $transition;
+  &:hover {
+    background-color: $highlight;
+    color: #fff;
+  }
+}

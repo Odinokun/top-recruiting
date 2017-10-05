@@ -1,0 +1,19 @@
+// ***** main colors *******
+$brand: #f0f0f0;
+$highlight: #c19f63;
+$highlight-hov: darken($highlight, 10%);
+
+// ***** text colors *******
+$text: #505050 ;
+$title: #141414;
+
+$grey: #f0f0f0;
+
+$link-color: $highlight;
+$link-color-hov: $highlight-hov;
+
+// ===== fonts =====
+$font:            'OpenSans', sans-serif;
+$font-bold:       'DroidSerif-Bold', sans-serif;
+$font-light:      'OpenSans-Light', sans-serif;
+$font-semibold:   'OpenSans-Semibold', sans-serif;

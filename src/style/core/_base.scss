@@ -156,11 +156,15 @@ svg {
 }
 
 .btn {
+  display: inline-block;
   padding: 15px 25px;
   font-family:$font-bold;
   background-color: transparent;
   border: 2px solid $highlight;
   color: $highlight;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
   transition: $transition;
   &:hover {
     background-color: $highlight;

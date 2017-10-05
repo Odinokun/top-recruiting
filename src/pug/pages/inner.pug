@@ -1,5 +1,14 @@
 extends ../_template
 
+mixin portfolio-item(link, title, image, descr)
+  //begin item
+  a(href=link target="_blank" rel="nofollow noopener noreferrer").portfolio-item
+    .portfolio-item__img(style="background-image:url(assets/img/portfolio/" + image + ")")
+    .portfolio-item__text
+      h2.portfolio-item__title= title
+      p= descr
+  //end item
+
 block variables
   - var title = 'Inner'
   - var pageHeaderTitle = 'Внутренняя страница'
@@ -10,16 +19,39 @@ block content
   //begin content
   section.main
     .container
-      .test-mixins(style="display:flex; justify-content: space-between;")
-        +test__item('background-image:url(assets/img/favicon.png); width:49px; height: 49px;display:inline-block', 'hello world 1')
-        +test__item('background-image:url(assets/img/favicon.png); width:49px; height: 49px;display:inline-block', 'hello world 2')
-        +test__item('background-image:url(assets/img/favicon.png); width:49px; height: 49px;display:inline-block', 'hello world 3')
+      .portfolio
+        +portfolio-item(
+        'http://notary-office.kiev.ua/',
+        'notary-office.kiev.ua',
+        'portfolio-01.jpg',
+        'Сайт частного нотариуса')
+        +portfolio-item(
+        'http://cpha.ru/',
+        'cpha.ru',
+        'portfolio-02.jpg',
+        'Центр Фармацевтической Аналитики')
+        +portfolio-item(
+        'http://www.prc-personal.ru/',
+        'prc-personal.ru',
+        'portfolio-03.jpg',
+        'PRC - аусорсинговая компания')
       h1 Заголовок 1
       h2 Заголовок 2
       h3 Заголовок 3
       h4 Заголовок 4
       h5 Заголовок 5
       h6 Заголовок 6
+
+      a(href="#").btn Button link
+      br
+      br
+      button.btn Button
+      br
+      br
+      input(type="submit" value="Button input").btn
+      br
+      br
+
 
       p Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. С другой стороны сложившаяся структура организации требуют от нас анализа направлений прогрессивного развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
       p

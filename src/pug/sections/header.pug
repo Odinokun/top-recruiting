@@ -1,4 +1,46 @@
 // begin header
 header.header
-  h1 header
+  .container-lg
+    a(href="#").header-logo
+      h1.header-logo__title Top Recruiting
+      img(src="assets/img/logo.png" alt="company logo")
+
+    //begin header-menu
+    nav.header-menu
+      ul.header-menu__list
+        li.header-menu__item
+          a(href="#").header-menu__link О компании
+        li.header-menu__item.header-menu__item-parents
+          a(href="#").header-menu__link Работодателю
+          ul.header-menu__sublist
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Подпункт 1
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Подпункт 2
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Длинный подпункт 3
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Подпункт 4
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Подпункт 5
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Длинный подпункт 6
+        li.header-menu__item.header-menu__item-parents
+          a(href="#").header-menu__link Соискателю
+          ul.header-menu__sublist
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Подпункт 1
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Подпункт 2
+            li.header-menu__subitem
+              a(href="#").header-menu__sublink Длинный подпункт 3
+        li.header-menu__item
+          a(href="#").header-menu__link Новости
+        li.header-menu__item
+          a(href="#").header-menu__link Контакты
+
+  //end   header-menu
+
+
+
 // end   header

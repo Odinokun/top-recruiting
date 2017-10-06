@@ -1,0 +1,33 @@
+.magnific-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  .img-grey,
+  .img-white {
+    width: 350px;
+    height: 350px;
+  }
+  .img-grey {
+    position: absolute;
+    z-index: 5;
+    top: -180px;
+    left: -190px;
+  }
+  .img-white {
+    position: absolute;
+    top: -180px;
+    left: -190px;
+  }
+  .magnific-section__inn {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}

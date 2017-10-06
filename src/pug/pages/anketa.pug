@@ -1,0 +1,19 @@
+extends ../_template
+
+block variables
+  - var title = 'Анкета'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.anketa
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-anketa-top.jpg')")
+        include ../elements/magnific
+        include ../elements/top-block-mouse
+
+  //end   content
+
+  //include ../elements/popup
+  include ../sections/footer

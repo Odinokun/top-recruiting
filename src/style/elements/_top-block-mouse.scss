@@ -1,0 +1,82 @@
+.top-block {
+  .container-lg {
+    min-height: 630px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: cover;
+    svg {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 30px;
+      fill: #fff;
+    }
+  }
+}
+.mouse-top {
+  position: absolute;
+  z-index: 10;
+  bottom: 18px;
+  left: 303px;
+  display: block;
+
+  width: 15px;
+  height: 22px;
+  cursor: pointer;
+  opacity: .7;
+  border: 1px solid #fff;
+  border-radius: 16px;
+}
+//animation
+.mouse-wheel {
+  animation-name: drop;
+  animation-duration: 1s;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.mouse-wheel {
+  position: relative;
+  top: 2px;
+  width: 1px;
+  height: 4px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: 2px;
+    opacity: 0;
+  }
+  30% {
+    top: 6px;
+    opacity: 1;
+  }
+  100% {
+    top: 12px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: 2px;
+    opacity: 0;
+  }
+  30% {
+    top: 6px;
+    opacity: 1;
+  }
+  100% {
+    top: 12px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,22 @@
+.header {
+  height: 100px;
+  background-color: #fff;
+  .container-lg {
+    display: flex;
+    align-items: center;
+  }
+}
+.header-logo {
+  z-index: 10;
+  display: inline-block;
+  margin-top: 3px;
+  margin-right: 50px;
+  text-indent: -9999px;
+
+  img {
+    display: block;
+  }
+}
+.header-logo__title {
+  position: absolute;
+}

@@ -4,7 +4,8 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'inner'
+    'anketa',
+    'inner',
     ]);
 });
 

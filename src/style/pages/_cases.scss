@@ -1,7 +1,7 @@
 .cases .top-block {
   .container-lg {
     display: flex;
-    background-position: 70% 50%;
+    background-position: 30% 50%;
   }
   .container {
     display: flex;
@@ -11,5 +11,137 @@
     margin-bottom: 50px;
   }
 }
+.cases-second {
+  padding-bottom: 80px;
+}
+.cases__row {
+  display: flex;
+  padding: 10px 0 40px 0;
+  &:nth-child(odd) {
+    flex-direction: row;
 
+    @include max(1000) {
+      flex-direction: column;
+    }
+    .cases-img__title {
+      left: -30px;
 
+      @include max(680) {
+        left: 30px;
+      }
+    }
+    .cases-img__inn {
+      padding-right: 85px;
+
+      @include max(1200) {
+        padding-right: 30px;
+      }
+      @include max(1000) {
+        padding: 0;
+      }
+    }
+  }
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+
+    @include max(1000) {
+      flex-direction: column;
+    }
+    .cases-img__title {
+      right: -35px;
+
+      @include max(1000) {
+        right: 0;
+        left: -30px;
+      }
+      @include max(680) {
+        left: 30px;
+      }
+    }
+    .cases-img__inn {
+      padding-left: 85px;
+
+      @include max(1200) {
+        padding-left: 30px;
+      }
+      @include max(1000) {
+        padding: 0;
+      }
+    }
+  }
+}
+.cases__item {
+  position: relative;
+  width: 50%;
+
+  flex: none;
+  @include max(1000) {
+    width: 100%;
+    max-width: 525px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+//begin cases-img
+.cases-img__title {
+  font-family: $font-bold;
+  font-size: 55px;
+  line-height: 1;
+  position: absolute;
+  top: -35px;
+}
+.cases-img__title-grey {
+  color: #e6e6e6;
+}
+.cases-img__title-white {
+  color: #fff;
+}
+.cases-img__inn {
+  position: relative;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+//end cases-img
+
+//begin cases-text
+.cases-text {
+  padding-top: 30px;
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: $text;
+  }
+}
+.cases-text__title {
+  font-family: $font-bold;
+  font-size: 35px;
+  line-height: 1.42;
+  margin-bottom: 50px;
+  color: $title;
+
+  @include max(1024) {
+    font-size: 30px;
+  }
+  @include max(425) {
+    font-size: 24px;
+  }
+}
+.cases-text__name {
+  font-family: $font-light;
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: $title;
+  span {
+    font-family: $font-semibold;
+  }
+}
+.cases-text__link {
+  font-family: $font-bold;
+  font-size: 11px;
+}
+//end cases-text

@@ -156,6 +156,16 @@ svg {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0;
+
+  @include max(1360) {
+    width: calc(100% - 110px);
+  }
+  @include max(768) {
+    width: calc(100% - 40px);
+  }
+  @include max(425) {
+    width: calc(100% - 20px);
+  }
 }
 .header,
 .page-header,

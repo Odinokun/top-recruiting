@@ -1,3 +1,98 @@
+//begin footer top
+.footer-top {
+  background-color: #2b374d;
+  .container-lg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    //justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 15px;
+  }
+}
+.footer-item {
+  width: 20%;
+  margin-bottom: 30px;
+  padding: 0 10px;
+
+  @include max(1200) {
+    width: 33.33%;
+  }
+  @include max(768) {
+    width: 50%;
+    &:first-child {
+      width: 100%;
+    }
+  }
+  @include max(550) {
+    width: 100%;
+  }
+}
+.footer-logo {
+  display: block;
+  width: 100%;
+  max-width: 210px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.footer-accredit {
+  font-family: $font-bold;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 20px;
+  color: $highlight;
+}
+.footer-adress {
+  margin-bottom: 20px;
+
+  @include max(768) {
+    display: inline-block;
+    width: 48%;
+  }
+  @include max(550) {
+    display: block;
+    width: 100%;
+  }
+  a {
+    font-family: $font-light;
+    font-size: 13px;
+    line-height: 21px;
+    display: block;
+    text-decoration: none;
+    color: #969696;
+    span {
+      color: #fff;
+    }
+  }
+}
+.footer-item__title {
+  font-family: $font-semibold;
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.footer-item__list {
+  margin: 0;
+  padding: 0;
+}
+.footer-item__item {
+  padding: 0;
+  list-style: none;
+}
+.footer-item__link {
+  font-family: $font-light;
+  font-size: 14px;
+  line-height: 30px;
+  transition: color .5s ease-in-out;
+  text-decoration: none;
+  color: #969696;
+  &:hover {
+    color: $highlight;
+  }
+}
+//end footer top
 
 
 //begin footer bottom
@@ -6,10 +101,16 @@
 
   .container-lg {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     min-height: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    @include max(680) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 .footer-bottom__copyright {
@@ -19,7 +120,12 @@
   color: #969696;
 }
 .footer-social {
+  margin-top: 10px;
   margin-left: auto;
+
+  @include max(680) {
+    margin-left: -15px;
+  }
 }
 .footer-social__list {
   display: flex;

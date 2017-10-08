@@ -12,7 +12,7 @@ $(function() {
   // end   Chrome Smooth Scroll
 
   // begin Chrome Scroll2Ancor
-  // require('./modules/scroll2ancor')();
+  require('./modules/scroll2ancor')();
   // end   Chrome Scroll2Ancor
   
   // begin Slick slider

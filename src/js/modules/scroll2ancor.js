@@ -1,9 +1,9 @@
 module.exports = function() {
 
-  // begin scroll 2 ancor desctop menu
+  // begin scroll 2 ancor - mouse
   $(function() {
-    $('nav a[href*=\\#]').on("click", function(e){
-       // e.preventDefault();
+    $('a.mouse-top[href*=\\#]').on("click", function(e){
+       e.preventDefault();
        var anchor = $(this);
        $('html, body').stop().animate({
         scrollTop: $(anchor.attr('href')).offset().top - 0 + 'px'
@@ -11,6 +11,6 @@ module.exports = function() {
     });
     return false;
   });
-  // end scroll 2 ancor desctop menu
+  // end scroll 2 ancor - mouse
 
 };

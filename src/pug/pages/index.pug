@@ -2,18 +2,24 @@ extends ../_template
 
 block variables
   - var title = 'Lets Go'
+  - var pageHeaderTitle = 'Top recruiting'
 
 block content
   include ../sections/header
   
   //begin content
   section.main
-    .main-test
-      .container-lg
-        .black-box__wrap
-          img(src="assets/img/logo-magnific-g.svg" alt="logo").img-grey
-          .black-box
-            img(src="assets/img/logo-magnific-w.svg" alt="logo").img-white
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-anketa-top.jpg')")
+        include ../elements/breadcrumbs
+        include ../elements/magnific
+        include ../elements/top-block-mouse
+
+        .container
+          h2.top-block__title
+            | Отправить заявку
+            br
+            | на персонал
   //end   content
 
   //include ../elements/popup

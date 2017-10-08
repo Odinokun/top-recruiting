@@ -1,0 +1,33 @@
+extends ../_template
+
+block variables
+  - var title = 'Анкета'
+  - var pageHeaderTitle = 'Заявка на персонал'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.cases
+    //begin top-section
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-cases-top.jpg')")
+        include ../elements/breadcrumbs
+        include ../elements/magnific
+        include ../elements/top-block-mouse
+
+        .container
+          h2.top-block__title
+            |Отправить заявку
+            br
+            |на персонал
+    //end top-section
+
+    //begin second-section
+    section#second-section.cases-second
+
+    //end   second-section
+  //end   content
+
+  //include ../elements/popup
+  include ../sections/footer

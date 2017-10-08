@@ -172,11 +172,36 @@ svg {
 .footer {
   flex: 0 0 auto;
 }
+#second-section {
+  padding-top: 30px;
+}
 .title {
+  font-family: $font-bold;
   font-size: 35px;
-  color: #141414;
-  font-family:$font-bold;
   margin-bottom: 50px;
+  color: #141414;
+  @include max(680) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  @include max(425) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.top-block__title {
+  font-size: 50px;
+  font-family: $font-bold;
+  color: #ffffff;
+  @include max(680) {
+    font-size: 44px;
+  }
+  @include max(550) {
+    font-size: 36px;
+  }
+  @include max(425) {
+    font-size: 30px;
+  }
 }
 .btn {
   font-family: $font-bold;

@@ -1,10 +1,17 @@
 .breadcrumbs__list {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 50px;
   .breadcrumbs__item:last-child {
     .breadcrumbs__link {
+      font-family:$font-semibold;
       text-decoration: none;
       pointer-events: none;
     }
@@ -17,6 +24,7 @@
     font-size: 12px;
     margin: 0 3px 0 4px;
     content: '/';
+    color: #fff;
   }
   &:last-child {
     &::after {
@@ -27,8 +35,6 @@
 .breadcrumbs__link {
   font-size: 12px;
   white-space: nowrap;
-  color: #403549;
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
+  color: #fff;
 }

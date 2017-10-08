@@ -1,0 +1,47 @@
+//begin checkbox
+.agree-checkbox {
+  display: flex;
+  input {
+    position: absolute;
+    visibility: hidden;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  input:checked + label:after {
+    background-image: url('../../img/check.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  label {
+    font-family: $font-light;
+    font-size: 10px;
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 35px;
+    color: $text;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      content: '';
+      border: 2px solid #b4b4b4;
+      background-color: transparent;
+    }
+    &::after {
+      position: absolute;
+      top: -4px;
+      left: 4px;
+      width: 18px;
+      height: 18px;
+      content: '';
+      background-color: transparent;
+    }
+    a {
+      color: $text;
+    }
+  }
+}
+//end checkbox

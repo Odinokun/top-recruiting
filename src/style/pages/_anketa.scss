@@ -1,6 +1,6 @@
 .anketa-second {
   position: relative;
-  min-height: 700px;
+  min-height: 750px;
   .container {
     display: flex;
   }
@@ -28,8 +28,8 @@
   background-size: cover;
   &::before {
     position: absolute;
-    bottom: 100px;
-    left: calc(-100% + 100px);
+    bottom: 70px;
+    left: calc(-100% + 70px);
     width: 100%;
     height: 240px;
     content: '';
@@ -48,8 +48,8 @@
   overflow: hidden;
   &::before {
     position: absolute;
-    bottom: 100px;
-    left: calc(-100% + 100px);
+    bottom: 70px;
+    left: calc(-100% + 70px);
     width: 100%;
     height: 240px;
     content: '';
@@ -64,5 +64,46 @@
 .anketa-second__left,
 .anketa-second__right {
   width: 50%;
+  padding-bottom: 55px;
+}
+.anketa-second__left {
+  padding-right: 55px;
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: $text;
+    span {
+      font-family: $font-semibold;
+      color: $title;
+    }
+  }
 }
 
+.anketa-second__right {
+  padding-top: 55px;
+  padding-left: 55px;
+}
+.anketa-form {
+  width: 100%;
+}
+.anketa-form__input,
+.anketa-form__textarea {
+  border: 2px solid #b4b4b4;
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 25px;
+  //padding: 0 20px 0 28px;
+  padding: 20px 28px;
+  @include placeholder-color(#b4b4b4);
+}
+.anketa-form__input {
+  height: 60px;
+}
+.anketa-form__textarea {
+  height: 145px;
+}
+
+.anketa-form__submit {
+  min-width: 270px;
+}

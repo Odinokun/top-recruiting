@@ -172,7 +172,12 @@ svg {
 .footer {
   flex: 0 0 auto;
 }
-
+.title {
+  font-size: 35px;
+  color: #141414;
+  font-family:$font-bold;
+  margin-bottom: 50px;
+}
 .btn {
   font-family: $font-bold;
   font-size: 20px;

@@ -1,1 +1,68 @@
+.anketa-second {
+  position: relative;
+  min-height: 700px;
+  .container {
+    display: flex;
+  }
+}
+.anketa-second__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow: hidden;
+}
+.anketa-second__bg-left,
+.anketa-second__bg-right {
+  width: 50%;
+}
+//begin mail-decor
+.anketa-second__bg-right {
+  position: relative;
+  background-color: #909090;
+  background-image: url('../../img/bg-anketa.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  &::before {
+    position: absolute;
+    bottom: 100px;
+    left: calc(-100% + 100px);
+    width: 100%;
+    height: 240px;
+    content: '';
+    background-image: url('../../img/mails-g.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: contain;
+  }
+}
+.anketa-second__bg-right-inn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    bottom: 100px;
+    left: calc(-100% + 100px);
+    width: 100%;
+    height: 240px;
+    content: '';
+    background-image: url('../../img/mails-w.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: contain;
+  }
+}
+//end mail-decor
+
+.anketa-second__left,
+.anketa-second__right {
+  width: 50%;
+}
 

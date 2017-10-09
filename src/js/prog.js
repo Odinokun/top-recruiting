@@ -29,20 +29,26 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
+//begin open/close submenu in top menu
 $('.header-menu .header-menu__item-parents span').on('click', function () {
   var submenu = $(this).siblings('.header-menu__sublist');
 
   $(this).toggleClass('active');
   $(submenu).slideToggle();
-
 });
+//end open/close submenu in top menu
 
+
+//begin open/close top menu
 $('#burger label').on('click', function () {
   $('#header-menu__list').toggleClass('active');
   //del header__right active classes
   $('.header__right-inn').removeClass('active');
 });
+//end open/close top menu
 
+
+//begin open/close header right block
 $('.header__right-button').on('click', function () {
   $('.header__right-inn').toggleClass('active');
 
@@ -52,3 +58,4 @@ $('.header__right-button').on('click', function () {
   $('#burger input').prop('checked', false);
   $('.header-menu__sublist').slideUp();
 });
+//end open/close header right block

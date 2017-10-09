@@ -39,11 +39,10 @@ block content
             span Мы заинтересованы в прочных и долговременных отношениях с Заказчиком и несем личную ответственность за качество подбора персонала и репутацию компании. Гарантируем конфиденциальность.
         .anketa-second__right
           form.anketa-form
-            input.anketa-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?" required)
-            input.anketa-form__input(type="text" name="phone"   placeholder="Телефон или e-mail" required)
-            input.anketa-form__input(type="text" name="company" placeholder="Название организации" required)
+            input.anketa-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
+            input.anketa-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
+            input.anketa-form__input(type="text" name="company" placeholder="Название организации")
             textarea.anketa-form__textarea(name="descr" placeholder="Опишите какой персонал Вам необходим")
-
             include ../elements/agree-checkbox
             input.anketa-form__submit.btn(type="submit" value="отправить")
 

@@ -1,51 +1,60 @@
 extends ../_template
 
 block variables
-  - var title = 'Анкета'
-  - var pageHeaderTitle = 'Заявка на персонал'
+  - var title = 'Резюме'
+  - var pageHeaderTitle = 'Отправить резюме'
 
 block content
   include ../sections/header
   
   //begin content
-  section.main.anketa
+  section.main.resume
     //begin top-section
     .top-block
-      .container-lg(style="background-image:url('assets/img/bg-anketa-top.jpg')")
+      .container-lg(style="background-image:url('assets/img/bg-resume-top.jpg')")
         include ../elements/breadcrumbs
         include ../elements/magnific
         include ../elements/top-block-mouse
 
         .container
           h2.top-block__title
-            |Отправить заявку
-            br
-            |на персонал
+            |Отправить резюме
     //end top-section
 
     //begin second-section
-    section#second-section.anketa-second
+    section#second-section.resume-second
       //begin decor
-      .anketa-second__bg
-        .anketa-second__bg-left
-        .anketa-second__bg-right
-          .anketa-second__bg-right-inn
+      .resume-second__bg
+        .resume-second__bg-left
+        .resume-second__bg-right
+          .resume-second__bg-right-inn
       //end decor
       .container
-        .anketa-second__left
-          h2.title Уважаемый работодатель!
-          p Если Вы хотите сформировать команду талантливых руководителей, найти лучших специалистов на Ваши вакансии или разработать эффективную стратегию развития и обучения сотрудников, то можете оставить заявку на нашем сайте. Удачно подобранный персонал высшего и среднего звена – это лучшие инвестиции в будущее процветание Вашей организации.
+        .resume-second__left
+          h2.title Уважаемый Топ-менеджер!
+          p Размышляя о собственной карьере в российском бизнесе, сложно досконально просчитать, как и к чему может привести Ваш следующий шаг. Ведь реалии развития отечественных компаний таковы, что планирование ведется лишь на ближайшие 2-3 года.
+          p Отсутствие долгосрочных перспектив и комплексных программ продвижения персонала высшего звена наталкивают на очевидное решение: о своей карьере Топ-менеджер должен позаботиться сам. Сегодня управление собственной карьерой – это не только поиск лучшего места работы, это возможность держать ситуацию под контролем и двигаться вперед.
+          h3.resume-list__title Если вы:
+          ul.resume-list
+            li.resume-list__item Занимаете руководящую должность
+            li.resume-list__item Готовы к следующей карьерной ступени в профессиональном и финансовом отношении
+            li.resume-list__item Находитесь в поисках мотивации и вдохновения от работы
+            li.resume-list__item Хотите управлять своим будущим
+          p В таком случае Вы можете разместить свой профайл в нашей Закрытой базе руководителей. Для этого необходимо заполнить приведенную на сайте форму и прикрепить файл со своим резюме.
           p
-            span Мы заинтересованы в прочных и долговременных отношениях с Заказчиком и несем личную ответственность за качество подбора персонала и репутацию компании. Гарантируем конфиденциальность.
-        .anketa-second__right
-          form.anketa-form
-            input.anketa-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?" required)
-            input.anketa-form__input(type="text" name="phone"   placeholder="Телефон или e-mail" required)
-            input.anketa-form__input(type="text" name="company" placeholder="Название организации" required)
-            textarea.anketa-form__textarea(name="descr" placeholder="Опишите какой персонал Вам необходим")
+            span Вам гарантированы интересные предложения от наших клиентов – ведущих компаний Москвы и Санкт-Петербурга (на конфиденциальной основе).
 
+        .resume-second__right
+          form.resume-form
+            input.resume-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
+            input.resume-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
+            textarea.resume-form__textarea(name="descr" placeholder="Опишите какой персонал Вам необходим")
+            .resume-form__add
+              svg
+                use(xlink:href="assets/img/sprite.svg#clip")
+              a(href="#") Прикрепить резюме
             include ../elements/agree-checkbox
-            input.anketa-form__submit.btn(type="submit" value="отправить")
+            input.resume-form__submit.btn(type="submit" value="отправить")
 
     //end   second-section
   //end   content

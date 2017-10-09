@@ -29,3 +29,26 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
+$('.header-menu .header-menu__item-parents span').on('click', function () {
+  var submenu = $(this).siblings('.header-menu__sublist');
+
+  $(this).toggleClass('active');
+  $(submenu).slideToggle();
+
+});
+
+$('#burger label').on('click', function () {
+  $('#header-menu__list').toggleClass('active');
+  //del header__right active classes
+  $('.header__right-inn').removeClass('active');
+});
+
+$('.header__right-button').on('click', function () {
+  $('.header__right-inn').toggleClass('active');
+
+  //del menu active classes
+  $('#header-menu__list').removeClass('active');
+  $('.header-menu .header-menu__item-parents span').removeClass('active');
+  $('#burger input').prop('checked', false);
+  $('.header-menu__sublist').slideUp();
+});

@@ -1,15 +1,10 @@
-.burger__menu {
-  font-family: $font, sans-serif;
-  font-size: 22px;
-  position: absolute;
-  top: 4px;
-  left: 50px;
-  letter-spacing: 1px;
-  color: #fafafa;
-}
 .burger {
-  width: 130px;
+  width: 55px;
   height: 40px;
+  display: none;
+  @include max(1140) {
+    display: block !important;
+  }
 }
 .burger input {
   display: none;
@@ -32,7 +27,7 @@
   margin-top: -1px;
   content: '';
   border-radius: 2px;
-  background: #fafafa;
+  background: $title;
 }
 .burger label:before {
   animation: animationOneReverse 1s ease forwards;
@@ -73,7 +68,7 @@
   margin-top: -1px;
   content: '';
   border-radius: 2px;
-  background: #fafafa;
+  background: $title;
 }
 .burger label:after {
   animation: animationTwoReverse 1s ease forwards;
@@ -114,7 +109,7 @@
   content: '';
   animation: animationBurgerTopReverse 1s ease forwards;
   border-radius: 2px;
-  background: #fafafa;
+  background: $title;
 }
 @keyframes animationBurgerTopReverse {
   0%,
@@ -157,7 +152,7 @@
   content: '';
   animation: animationBurgerBottomReverse 1s ease forwards;
   border-radius: 2px;
-  background: #fafafa;
+  background: $title;
 }
 @keyframes animationBurgerBottomReverse {
   0%,

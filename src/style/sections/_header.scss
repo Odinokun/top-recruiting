@@ -1,9 +1,9 @@
 .header {
-  height: 100px;
   background-color: #fff;
   .container-lg {
     display: flex;
     align-items: center;
+    height: 100px;
   }
 }
 .header-logo {
@@ -13,19 +13,84 @@
   margin-right: 50px;
   text-indent: -9999px;
 
+  @include max(1360) {
+    margin-right: 30px;
+  }
+
   img {
     display: block;
+    width: 100%;
   }
 }
 .header-logo__title {
   position: absolute;
 }
 
+//begin header__right
+.header__right {
+  z-index: 100;
+  margin-left: auto;
+}
+.header__right-inn {
+  transition: $transition;
+  transform: scale(0);
+  pointer-events: none;
+  opacity: 0;
+
+  @include max(700) {
+    position: absolute;
+    top: 100px;
+    right: -20px;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f0f0f0;
+  }
+  @include max(425) {
+    right: -10px;
+    left: -10px;
+  }
+  &.active {
+    transform: scale(1);
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+.header__right-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin-right: -20px;
+  border: none;
+  background-color: $highlight;
+
+  @include max(700) {
+    display: flex;
+  }
+  @include max(425) {
+    margin-right: -10px;
+  }
+  svg {
+    max-width: 60px;
+    max-height: 60px;
+    fill: #fff;
+  }
+}
+//end header__right
+
 //begin geolocation
 .geolocation {
   display: flex;
   align-items: center;
-  margin-left: auto;
+
+  @include max(700) {
+    margin-bottom: 30px;
+  }
 }
 .geolocation-city {
   font-family: $font-light;
@@ -38,8 +103,13 @@
   font-family: $font-bold;
   font-size: 25px;
   margin-right: 20px;
+  white-space: nowrap;
   text-decoration: none;
   color: $title;
+
+  @include max(1360) {
+    font-size: 20px;
+  }
   span {
     color: #969696;
   }
@@ -58,6 +128,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
+
+  @include max(1500) {
+    display: none;
+  }
 }
 //end callback
 
@@ -68,12 +142,20 @@
   height: 40px;
   padding: 0 0 0 25px;
   transition: color .5s ease-in-out;
+  white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
   color: #969696;
   background-image: url('../../img/cabinet.png');
   background-repeat: no-repeat;
   background-position: 0 50%;
+
+  @include max(1360) {
+    font-size: 12px;
+  }
+  @include max(700) {
+    margin-bottom: 30px;
+  }
   &:hover {
     color: $highlight;
   }
@@ -87,6 +169,14 @@
   right: -58px;
   display: flex;
   flex-direction: column;
+
+  @include max(1360) {
+    right: -38px;
+  }
+  @include max(768) {
+    position: static;
+    margin-left: 15px;
+  }
 }
 .lang-switcher__link {
   display: block;

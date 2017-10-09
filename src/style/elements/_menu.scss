@@ -2,26 +2,89 @@
   display: flex;
   margin: 0;
   padding: 0;
+
+  @include max(1140) {
+    position: absolute;
+    z-index: 9999;
+    top: 100px;
+    right: -55px;
+    left: -55px;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    transform: scale(0);
+    pointer-events: none;
+    opacity: 0;
+    background-color: #f0f0f0;
+    &.active {
+      transform: scale(1);
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  @include max(768) {
+    right: -20px;
+    left: -20px;
+  }
+  @include max(425) {
+    right: -10px;
+    left: -10px;
+  }
 }
 .header-menu__item {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+
+  @include max(1140) {
+    width: 200px;
+    text-align: left;
+  }
 }
 .header-menu__link {
   font-size: 14px;
+  display: inline-block;
+  padding: 40px 15px;
+  transition: color .5s;
+  white-space: nowrap;
   text-decoration: none;
   color: $text;
-  transition: color .5s;
+
+  @include max(1360) {
+    padding: 40px 10px;
+  }
+  @include max(1140) {
+    padding: 15px 20px;
+  }
   &:hover {
     color: $highlight;
   }
-  display: inline-block;
-  padding: 40px 15px;
 }
 
 .header-menu__item-parents {
   position: relative;
+  span {
+    font-size: 24px;
+    line-height: 1;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+    transform: rotate(0);
+
+    @include max(1140) {
+      display: flex;
+    }
+    &.active {
+      transform: rotate(315deg);
+    }
+  }
   &:hover {
     .header-menu__sublist {
       transform: scale(1);
@@ -31,28 +94,40 @@
 .header-menu__sublist {
   position: absolute;
   z-index: 10;
-  left: 15px;
-  top: 100%;
-  background-color: #fff;
+  top: calc(100% - 30px);
+  right: 15px;
   margin: 0;
-  padding: 0;
-  transform: scale(0);
+  padding: 15px;
   transition: transform .5s;
+  transform: scale(0);
+  background-color: #f0f0f0;
+
+  @include max(1360) {
+    right: 10px;
+  }
+  @include max(1140) {
+    position: static;
+    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    transform: scale(1);
+  }
 }
 .header-menu__subitem {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .header-menu__sublink {
   font-size: 14px;
-  text-decoration: none;
-  white-space: nowrap;
-  color: $text;
-  transition: color .5s;
-  &:hover {
-    color: $highlight;
-  }
   display: inline-block;
+  width: 100%;
   padding: 10px 20px;
+  transition: color .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $text;
+  &:hover {
+    color: #2b374d;
+  }
 }

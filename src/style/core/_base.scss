@@ -150,6 +150,13 @@ svg {
     padding: 0 10px;
   }
 }
+.top-block {
+  .container-lg {
+    @include max(700) {
+      width: 100%;
+    }
+  }
+}
 .container-lg {
   position: relative;
   width: calc(100% - 200px);

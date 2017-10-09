@@ -5,7 +5,8 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'anketa',
-    'cases'
+    'cases',
+    'resume'
     ]);
 });
 

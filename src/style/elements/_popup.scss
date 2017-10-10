@@ -20,22 +20,24 @@
   background-color: #fff;
   .agree-checkbox {
     max-width: 55%;
+
+    @include max(768) {
+      max-width: 100%;
+    }
     label {
       @include max(768) {
         margin-bottom: 30px;
       }
     }
-    @include max(768) {
-      max-width: 100%;
-    }
   }
 }
 .popup__inn {
-  padding: 90px 60px;
-  max-height: 85vh;
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
+  max-height: 85vh;
+  padding: 90px 60px;
+
   @include max(768) {
     padding: 50px 30px;
   }
@@ -47,9 +49,10 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
+
   @include max(1360) {
-    right: 20px;
     top: 20px;
+    right: 20px;
   }
   @include max(768) {
     width: 20px;
@@ -73,6 +76,7 @@
   font-size: 35px;
   margin-bottom: 50px;
   color: $title;
+
   @include max(768) {
     font-size: 28px;
     margin-bottom: 30px;
@@ -85,6 +89,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   @include max(768) {
     flex-direction: column;
   }
@@ -99,8 +104,8 @@
   @include placeholder-color(#b4b4b4);
   @include max(768) {
     width: 100%;
-    padding: 15px 20px;
     margin-bottom: 20px;
+    padding: 15px 20px;
   }
 }
 .agree-checkbox + .popup__submit {
@@ -108,33 +113,57 @@
   opacity: .5;
 }
 .agree-checkbox.checked + .popup__submit {
-  opacity: 1;
   pointer-events: auto;
+  opacity: 1;
 }
 .popup__submit {
   min-width: 270px;
   padding-right: 30px;
   padding-left: 30px;
+
   @include max(425) {
     width: 100%;
     min-width: 0;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
     text-align: center;
     white-space: nowrap;
+  }
+}
+.popup__forget {
+  font-family: $font-bold;
+  font-size: 11px;
+  color: $highlight;
+}
+#popup-cabinet {
+  .popup__form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+
+    @include max(550) {
+      display: block;
+    }
+  }
+  .popup__forget {
+    @include max(550) {
+      display: block;
+      margin-top: 20px;
+    }
   }
 }
 
 
 .popup-success {
-  display: none;
   position: fixed;
   z-index: 1000;
   top: 50%;
   left: 50%;
+  display: none;
   width: 90%;
   max-width: 1170px;
   transform: translate(-50%, -50%);
-  background-color: #fff;
   text-align: center;
+  background-color: #fff;
 }

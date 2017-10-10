@@ -25,3 +25,20 @@
         include ../elements/agree-checkbox
         input.popup__submit.btn(type="submit" value="перезвоните мне")
 //end   popup callback
+
+
+//begin popup cabinet
+.popup#popup-cabinet
+  .popup-close
+    svg
+      use(xlink:href="assets/img/sprite.svg#close")
+  .popup__inn
+    h3.popup__title Вход в личный кабинет
+    form.popup__form
+      input.popup__input(type="text" name="name" placeholder="Логин*" required)
+      input.popup__input(type="password" name="password" placeholder="Пароль*" required)
+      .popup__form-footer
+        input.popup__submit.btn(type="submit" value="Войти")
+        a(href="#").popup__forget забыли пароль?
+
+//end   popup cabinet

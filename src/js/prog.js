@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'anketa',
     'article',
     'cases',
+    'company',
     'resume'
     ]);
 });

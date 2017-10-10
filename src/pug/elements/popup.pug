@@ -22,7 +22,13 @@
       input.popup__input(type="text" name="name" placeholder="Как к Вам обращаться?*" required)
       input.popup__input(type="tel" name="phone" placeholder="Телефон*" required)
       .popup__form-footer
-        include ../elements/agree-checkbox
+        //begin agree checkbox
+        .agree-checkbox
+          input(type="checkbox" id="agree-callback" class="agree" checked)
+          label(for="agree-callback")
+            | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+            a(href="/agree.html") Пользовательского соглашения
+        //end   agree checkbox
         input.popup__submit.btn(type="submit" value="перезвоните мне")
 //end   popup callback
 
@@ -40,5 +46,26 @@
       .popup__form-footer
         input.popup__submit.btn(type="submit" value="Войти")
         a(href="#").popup__forget забыли пароль?
+//end   popup cabinet
 
+
+//begin popup cabinet
+.popup#popup-service
+  .popup-close
+    svg
+      use(xlink:href="assets/img/sprite.svg#close")
+  .popup__inn
+    h3.popup__title Заказать услугу
+    form.popup__form
+      input.popup__input(type="text" name="name" placeholder="Как к Вам обращаться?*" required)
+      input.popup__input(type="tel" name="phone" placeholder="Телефон*" required)
+      .popup__form-footer
+        //begin agree checkbox
+        .agree-checkbox
+          input(type="checkbox" id="agree-service" class="agree" checked)
+          label(for="agree-service")
+            | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+            a(href="/agree.html") Пользовательского соглашения
+        //end   agree checkbox
+        input.popup__submit.btn(type="submit" value="перезвоните мне")
 //end   popup cabinet

@@ -220,6 +220,7 @@ svg {
   cursor: pointer;
   transition: $transition;
   text-align: center;
+  white-space: nowrap;
   text-decoration: none;
   color: $highlight;
   border: 2px solid $highlight;

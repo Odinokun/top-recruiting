@@ -61,6 +61,21 @@ $('.header__right-button').on('click', function () {
 //end open/close header right block
 
 
+// BEGIN активная/неактивная кнопка в форме
+$(window).on('load', function() {
+  $("input:checkbox:checked").parent().addClass('checked');
+});
+
+$("input:checkbox").on('click', function() {
+  if ($(this).is(':checked')) {
+    $(this).parent().addClass('checked');
+  } else {
+    $(this).parent().removeClass('checked');
+  }
+});
+// END активная/неактивная кнопка в форме
+
+
 // begin popup open
 $('.popup-open').on('click', function() {
   var popupName = $(this).data('open');
@@ -76,7 +91,7 @@ $('.popup-open').on('click', function() {
 // begin popup success
 $('.popup__submit').on('click', function() {
   $('.popup').fadeOut();
-  $('#popup-success').fadeIn();
+  $('#popup-success, .popup__layer').fadeIn();
 });
 // end   popup success
 

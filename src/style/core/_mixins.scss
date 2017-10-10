@@ -15,6 +15,11 @@
     @content;
   }
 }
+@mixin max-h($height) {
+  @media screen and (max-height: $height + 'px') {
+    @content;
+  }
+}
 @mixin min($width) {
   @media screen and (min-width: $width + 'px') {
     @content;

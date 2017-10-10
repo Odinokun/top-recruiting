@@ -1,10 +1,27 @@
-//begin popup
-button.popup-open popup open
+
 .popup__layer
-  .popup
-    h3.popup__title Popup title
+//begin success popup
+.popup-success#popup-success
+  .popup-close
+    svg
+      use(xlink:href="assets/img/sprite.svg#close")
+  .popup__inn
+    h4.popup__title Ваше сообщение отправлено
+    h5.popup__subtitle Мы свяжемся с Вами в ближайшее время.
+//end success popup
+
+
+//begin popup callback
+.popup#popup-callback
+  .popup-close
+    svg
+      use(xlink:href="assets/img/sprite.svg#close")
+  .popup__inn
+    h3.popup__title Заказать обратный звонок
     form.popup__form
-      input.popup__input(type="text" placeholder="Ваше имя")
-      input.popup__input(type="text" placeholder="Ваше имя")
-      button.popup__btn Кнопуля
-//end   popup
+      input.popup__input(type="text" name="name" placeholder="Как к Вам обращаться?*" required)
+      input.popup__input(type="tel" name="phone" placeholder="Телефон*" required)
+      .popup__form-footer
+        include ../elements/agree-checkbox
+        input.popup__submit.btn(type="submit" value="перезвоните мне")
+//end   popup callback

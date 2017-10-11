@@ -1,0 +1,232 @@
+.team {
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+.team .top-block {
+  .container-lg {
+    display: flex;
+    background-position: 50% 50%;
+  }
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+  .top-block__title {
+    margin-bottom: 50px;
+  }
+}
+
+
+//begin second section
+.team-director {
+  margin-bottom: 100px;
+  .container {
+    display: flex;
+
+    @include max(1100) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+}
+.team-director__left {
+  width: 350px;
+  padding-right: 50px;
+
+  @include max(1100) {
+    width: 100%;
+    padding-right: 0;
+  }
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 24px;
+    color: $text;
+  }
+}
+.team-director__right {
+  width: 100%;
+  max-width: 810px;
+
+  @include max(1100) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.team-director__link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+
+  @include max(550) {
+    margin-bottom: 100px;
+  }
+  &:hover {
+    &::before {
+      background-color: $highlight-hov;
+    }
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    content: '';
+    transition: background-color .5s ease-in-out;
+    background-color: $highlight;
+    background-image: url('../../img/arrow-right.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+.team-director__table {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include max(550) {
+    top: calc(100% + 20px);
+    left: 0;
+  }
+}
+.team-director__name {
+  font-size: 35px;
+  margin-top: -10px;
+  color: $title;
+
+  @include max(768) {
+    font-size: 32px;
+  }
+  @include max(680) {
+    font-size: 24px;
+  }
+}
+.team-director__position {
+  font-family: $font-light;
+  font-size: 20px;
+  color: $title;
+
+  @include max(680) {
+    font-size: 16px;
+  }
+}
+
+
+.team-all {
+  @include max(1360) {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+  @include max(1000) {
+    margin: 0;
+  }
+  .container-lg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include max(1360) {
+      justify-content: space-around;
+    }
+    @include max(1000) {
+      justify-content: space-between;
+    }
+    @include max(600) {
+      justify-content: center;
+    }
+  }
+}
+.team-all__item {
+  width: 23%;
+  max-width: 390px;
+  margin-bottom: 40px;
+
+  @include max(1360) {
+    width: 30%;
+  }
+  @include max(1000) {
+    width: 48%;
+  }
+  @include max(600) {
+    width: 100%;
+  }
+}
+.team-all__pic {
+  width: 100%;
+  height: 390px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.team-all__name {
+  font-family: $font-semibold;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: $title;
+}
+.team-all__position {
+  font-family: $font-light;
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: $title;
+}
+.team-all__link {
+  font-family: $font-bold;
+  font-size: 11px;
+}
+.team-all__item-last {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 35px;
+    right: -65px;
+    width: 139px;
+    height: 141px;
+    content: '';
+    background-image: url('../../img/team-magnific-g.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+  .team-all__pic {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $highlight;
+    &::before {
+      position: absolute;
+      top: 35px;
+      right: -65px;
+      width: 139px;
+      height: 141px;
+      content: '';
+      background-image: url('../../img/team-magnific-w.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+  }
+  span {
+    font-family: $font-bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .btn {
+    color: #fff;
+    border-color: #fff;
+    &:hover {
+      color: $highlight;
+      background-color: #fff;
+    }
+  }
+}

@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'article',
     'cases',
     'company',
-    'resume'
+    'resume',
+    'team'
     ]);
 });
 

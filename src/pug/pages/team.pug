@@ -1,0 +1,90 @@
+extends ../_template
+
+mixin team-all__item(image, name, position)
+  //begin team-all__item
+  .team-all__item
+    .team-all__pic(style="background-image:url('assets/img/team-all-" + image + ".jpg')")
+    h3.team-all__name= name
+    h4.team-all__position= position
+    a(href="#").team-all__link подробнее
+  //end team-all__item
+
+block variables
+  - var title = 'Наша команда'
+  - var pageHeaderTitle = 'Наша команда'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.team
+    //begin top-section
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-team-top.jpg')")
+        include ../elements/breadcrumbs
+        include ../elements/magnific
+        include ../elements/top-block-mouse
+
+        .container
+          h2.top-block__title
+            |Наша команда
+    //end top-section
+
+    //begin second-section
+    section#second-section.team-director
+      .container
+        .team-director__left
+          p ТОП Рекрутинг» объединяет в своем составе более 80 лучших специалистов по подбору персонала. Мы привлекаем профессиональных экспертов в сфере девелопмента, FMCG, инжиниринга, финансов, производства и других областей. Каждая команда формируется под конкретные задачи Заказчика.
+          p В данном разделе сайта представлены ведущие сотрудники кадрового агентства: руководители индивидуальных проектов, ресечеры и консультанты. К Вашим услугам – наши знания и опыт в области рекрутинга, оптимизации бизнес-процесса, обучения и развития персонала.
+        .team-director__right
+          a(href="#").team-director__link
+            img(src="assets/img/team-director.jpg" alt="director")
+            .team-director__table
+              h3.team-director__name
+                |Егорова
+                br
+                |Инна Игоревна
+              h4.team-director__position Генеральный директор
+    //end   second-section
+
+    //begin team-all
+    section.team-all
+      .container-lg
+        +team-all__item(
+        '01', 'Васильев Артем Владимирович',
+        'Операционный директор'
+        )
+        +team-all__item(
+        '02', 'Алекперова Екатерина Олеговна',
+        'Директор по продажам'
+        )
+        +team-all__item(
+        '03', 'Смельцова Александра Сергеевна',
+        'Руководитель проектов Executive Search'
+        )
+        +team-all__item(
+        '04', 'Егорова Юлия',
+        'Помощник руководителя проектов Executive Search'
+        )
+        +team-all__item(
+        '05', 'Разгонова Анна Сергеевна',
+        'Консультант по подбору персонала'
+        )
+        +team-all__item(
+        '06', 'Бикбаева Ольга Юрьевна',
+        'Руководитель специальных проектов'
+        )
+        +team-all__item(
+        '07', 'Колмаков Сергей',
+        'Консультант по подбору персонала'
+        )
+        .team-all__item.team-all__item-last
+          .team-all__pic
+            span Ищем таланты
+            button(data-open="resume").btn отправить резюме
+    //end team-all
+
+  //end   content
+
+  include ../elements/popup
+  include ../sections/footer

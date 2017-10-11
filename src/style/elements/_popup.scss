@@ -85,6 +85,25 @@
     font-size: 24px;
   }
 }
+.popup__subtitle {
+  font-family: $font-light;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  color: $text;
+
+  @include max(768) {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  @include max(550) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
 .popup__form {
   display: flex;
   flex-wrap: wrap;
@@ -94,8 +113,48 @@
     flex-direction: column;
   }
 }
+.popup__form-left,
+.popup__form-right {
+  display: flex;
+  flex-direction: column;
+  .popup__input,
+  .popup__textarea {
+    width: 100%;
+  }
+}
+.popup__form-left {
+  width: 40%;
+
+  @include max(1000) {
+    width: 100%;
+  }
+}
+.popup__form-right {
+  width: 55%;
+
+  @include max(1000) {
+    width: 100%;
+  }
+}
+
 .popup__input {
   width: 47%;
+  margin-bottom: 40px;
+  padding: 20px 28px;
+  border: 2px solid #b4b4b4;
+  background-color: transparent;
+
+  @include placeholder-color(#b4b4b4);
+  @include max(1000) {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+  }
+}
+.popup__textarea {
+  width: 47%;
+  height: 100%;
+  min-height: 160px;
   margin-bottom: 40px;
   padding: 20px 28px;
   border: 2px solid #b4b4b4;

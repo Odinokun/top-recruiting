@@ -49,11 +49,21 @@ block content
             input.resume-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
             input.resume-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
             textarea.resume-form__textarea(name="descr" placeholder="Опишите какой персонал Вам необходим")
+
+            //begin clip
             .resume-form__add
               svg
                 use(xlink:href="assets/img/sprite.svg#clip")
               a(href="#") Прикрепить резюме
-            include ../elements/agree-checkbox
+            //end clip
+
+            //begin agree checkbox
+            .agree-checkbox
+              input(type="checkbox" id="agree-resume-page" class="agree" checked)
+              label(for="agree-resume-page")
+                | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                a(href="/agree.html") Пользовательского соглашения
+            //end   agree checkbox
             input.resume-form__submit.btn(type="submit" value="отправить")
 
     //end   second-section

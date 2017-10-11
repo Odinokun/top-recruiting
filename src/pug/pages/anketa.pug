@@ -43,7 +43,13 @@ block content
             input.anketa-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
             input.anketa-form__input(type="text" name="company" placeholder="Название организации")
             textarea.anketa-form__textarea(name="descr" placeholder="Опишите какой персонал Вам необходим")
-            include ../elements/agree-checkbox
+            //begin agree checkbox
+            .agree-checkbox
+              input(type="checkbox" id="agree-anketa-page" class="agree" checked)
+              label(for="agree-anketa-page")
+                | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                a(href="/agree.html") Пользовательского соглашения
+            //end   agree checkbox
             input.anketa-form__submit.btn(type="submit" value="отправить")
 
     //end   second-section

@@ -49,7 +49,7 @@
 //end   popup cabinet
 
 
-//begin popup cabinet
+//begin popup service
 .popup#popup-service
   .popup-close
     svg
@@ -68,4 +68,39 @@
             a(href="/agree.html") Пользовательского соглашения
         //end   agree checkbox
         input.popup__submit.btn(type="submit" value="перезвоните мне")
-//end   popup cabinet
+//end   popup service
+
+
+//begin popup resume
+.popup#popup-resume
+  .popup-close
+    svg
+      use(xlink:href="assets/img/sprite.svg#close")
+  .popup__inn
+    h3.popup__title Отправить резюме
+    h5.popup__subtitle
+      | Если вы являетесь особенным специалистом в области рекрутинга и подбора персонала -
+      br
+      | отправьте нам свое резюме и мы с удовольствием с вами познакомимся.
+    form.popup__form
+      .popup__form-left
+        input.popup__input(type="text" name="name" placeholder="Как к Вам обращаться?*" required)
+        input.popup__input(type="text" name="phone" placeholder="Телефон или e-mail*" required)
+      .popup__form-right
+        textarea.popup__textarea(name="descr" placeholder="Комментарий")
+      .popup__form-footer
+        //begin clip
+        .resume-form__add
+          svg
+            use(xlink:href="assets/img/sprite.svg#clip")
+          a(href="#") Прикрепить резюме
+        //end clip
+        //begin agree checkbox
+        .agree-checkbox
+          input(type="checkbox" id="agree-resume" class="agree" checked)
+          label(for="agree-resume")
+            | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+            a(href="/agree.html") Пользовательского соглашения
+        //end   agree checkbox
+        input.popup__submit.btn(type="submit" value="отправить")
+//end   popup resume

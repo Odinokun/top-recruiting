@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - var title = 'Lets Go'
+  - var title = 'Top recruiting'
   - var pageHeaderTitle = 'Top recruiting'
 
 block content
@@ -9,18 +9,9 @@ block content
   
   //begin content
   section.main
-    .top-block
-      .container-lg(style="background-image:url('assets/img/bg-anketa-top.jpg')")
-        include ../elements/breadcrumbs
-        include ../elements/magnific
-        include ../elements/top-block-mouse
-
-        .container
-          h2.top-block__title
-            | Отправить заявку
-            br
-            | на персонал
+    include ../sections/top-section
+    include ../sections/index-second-section
   //end   content
 
-  //include ../elements/popup
+  include ../elements/popup
   include ../sections/footer

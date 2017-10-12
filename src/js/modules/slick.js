@@ -1,14 +1,29 @@
 module.exports = function() {
 
-  // begin Slick slider
-  $('.slick').slick({
-    dots: true,
+  // begin top slider left
+  $('.top-slider__left .top-slider__list').slick({
+    dots: false,
+    arrows:false,
     infinite: true,
     speed: 500,
     fade: true,
     autoplay: true,
+    autoplaySpeed:3200,
     cssEase: 'linear'
   });
-  // end   Slick slider
+  // end   top slider left
+
+  // begin top slider right
+  $('.top-slider__right .top-slider__list').slick({
+    dots: false,
+    arrows:false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed:3500,
+    cssEase: 'linear'
+  });
+  // end   top slider right
 
 };

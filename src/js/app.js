@@ -16,7 +16,7 @@ $(function() {
   // end   Chrome Scroll2Ancor
   
   // begin Slick slider
-  // require('./modules/slick')();
+  require('./modules/slick')();
   // end   Slick slider
 
   // begin Popup

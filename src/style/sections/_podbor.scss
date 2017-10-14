@@ -1,0 +1,43 @@
+.podbor {
+  z-index: 10;
+  position: relative;
+  margin-bottom: -60px;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.podbor__left,
+.podbor__right {
+  width: 50%;
+
+  @include max(700) {
+    width: 100%;
+  }
+}
+.podbor__left {
+  padding-right: 30px;
+
+  @include max(700) {
+    padding-right: 0;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+
+    @include max(700) {
+      margin: 0 auto 50px;
+    }
+  }
+}
+.podbor__right {
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: $text;
+  }
+}

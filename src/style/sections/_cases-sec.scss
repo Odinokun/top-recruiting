@@ -1,0 +1,251 @@
+.cases-sec {
+  margin-bottom: 50px;
+  .container-lg {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.cases-sec__left,
+.cases-sec__right {
+  width: 50%;
+
+  @include max(1100) {
+    width: 100%;
+  }
+}
+.cases-sec__left {
+  position: relative;
+  padding: 150px 200px 50px 50px;
+  background-color: #f0f0f0;
+
+  @include max(680) {
+    padding: 120px 50px 50px 50px;
+  }
+  @include max(425) {
+    padding: 80px 30px 30px 30px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: $text;
+  }
+}
+.cases-sec__left-inn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+.cases-sec__left-title-g,
+.cases-sec__left-title-w {
+  font-family: $font-bold;
+  font-size: 260px;
+  line-height: 1;
+  position: absolute;
+  top: -180px;
+  left: -85px;
+  display: block;
+  margin: 0;
+
+  @include max(680) {
+    font-size: 200px;
+    top: -100px;
+    left: 0;
+  }
+  @include max(425) {
+    font-size: 140px;
+    top: -70px;
+    left: 20px;
+  }
+}
+.cases-sec__left-title-g {
+  color: #f0f0f0;
+}
+.cases-sec__left-title-w {
+  position: relative;
+  color: #fff;
+}
+
+.cases-sec__left-title {
+  font-family: $font-semibold;
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: $title;
+}
+.cases-sec__list {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.cases-sec__list-item {
+  font-family: $font;
+  font-size: 15px;
+  padding: 2px 2px 2px 15px;
+  list-style-image: url('../../img/ul-highlight.png');
+  color: $title;
+}
+.cases-sec__right {
+  padding: 50px 0 0 0;
+
+  @include max(680) {
+    padding: 50px 0 50px 0;
+  }
+  .title {
+    padding-left: 100px;
+
+    @include max(1360) {
+      padding-left: 50px;
+    }
+  }
+}
+
+//begin slider
+.cases-slider {
+  position: relative;
+  width: calc(100% + 160px);
+  margin-left: -160px;
+
+  @include max(1100) {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+  @include max(680) {
+    max-width: 320px;
+    margin: 0 auto 50px;
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 100;
+    top: calc(100% - 60px);
+    width: 60px;
+    height: 60px;
+    transform: translate(0,0);
+    border: 2px solid $highlight;
+    background-color: #fff;
+
+    @include max(680) {
+      top: calc(100% + 20px);
+    }
+    &:hover {
+      background-color: $highlight;
+    }
+  }
+  .slick-prev {
+    left: 100px;
+    border-right: 1px solid $highlight;
+    background-position: 23px -22px;
+
+    @include max(1100) {
+      left: 10px;
+    }
+    &:hover {
+      background-position: 23px 21px;
+    }
+  }
+  .slick-next {
+    left: 160px;
+    border-left: 1px solid $highlight;
+    background-position: -35px -22px;
+
+    @include max(1100) {
+      left: 70px;
+    }
+    &:hover {
+      background-position: -35px 21px;
+    }
+  }
+}
+.cases-slider__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.cases-slider__item {
+  margin: 0;
+  padding: 0 10px;
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    transition: opacity .5s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    color: $text;
+  }
+}
+.slick-current + .cases-slider__item.slick-active {
+  .cases-slider__name,
+  .cases-slider__position,
+  .cases-slider__link,
+  p {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+.slick-current {
+  .cases-slider__name,
+  .cases-slider__position,
+  .cases-slider__link,
+  p {
+    @include max(680) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
+.cases-slider__pic {
+  height: 300px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.cases-slider__name {
+  font-family: $font-semibold;
+  font-size: 17px;
+  margin-bottom: 5px;
+  transition: opacity .5s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  color: $title;
+}
+.cases-slider__position {
+  font-family: $font-light;
+  font-size: 15px;
+  margin-bottom: 20px;
+  transition: opacity .5s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  color: $title;
+}
+.cases-slider__link {
+  font-family: $font-bold;
+  font-size: 11px;
+  display: block;
+  transition: opacity .5s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  color: $highlight;
+}
+.cases-slider__prev,
+.cases-slider__next {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 33%;
+  height: 300px;
+  cursor: pointer;
+  background-color: transparent;
+
+  @include max(680) {
+    display: none;
+  }
+}
+.cases-slider__prev {
+  left: 10px;
+}
+.cases-slider__next {
+  right: 10px;
+}
+//end slider

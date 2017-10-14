@@ -1,0 +1,42 @@
+mixin cases-slider__item(image)
+  //begin cases-slider__item
+  li.cases-slider__item
+    .cases-slider__pic(style="background-image:url('assets/img/cases-slider/cases-" + image + ".jpg');")
+    .cases-slider__text
+      h4.cases-slider__name Алекперова Екатерина,
+      h5.cases-slider__position директор по продажам
+      p Закрытие вакансии Директора по строительству завода для крупного Фармацевтического холдинга. Директор по персоналу Холдинга обратилась к нам после нескольких месяцев безуспешного поиска.
+      a(href="#").cases-slider__link подробнее
+  //end cases-slider__item
+
+//begin cases-sec
+section.cases-sec
+  .container-lg
+    .cases-sec__left
+      span.cases-sec__left-title-g Топ
+      .cases-sec__left-inn
+        span.cases-sec__left-title-w Топ
+      h3.cases-sec__left-title
+        | Почему рекрутинговая компания Санкт-Петербурга
+        br
+        | «ТОП Рекрутинг» – ведущая фирма по найму сотрудников в СПб?
+      p С нами Вы получаете готовую управленческую команду лучших специалистов, которым под силу повысить эффективность и доходы Вашей компании. В числе других преимуществ:
+      ul.cases-sec__list
+        li.cases-sec__list-item Исключительная база ТОП-кандидатов
+        li.cases-sec__list-item Грамотные и опытные специалисты
+        li.cases-sec__list-item Наличие личных контактов с ведущими лицами бизнеса
+        li.cases-sec__list-item Безграничные возможности подбора необходимых Вам сотрудников, в том числе за пределами Российской Федерации
+        li.cases-sec__list-item Рекомендации и доверие крупнейших компаний
+    .cases-sec__right
+      h2.title Наши актуальные кейсы
+      .cases-slider
+        .cases-slider__prev
+        .cases-slider__next
+        ul.cases-slider__list
+          +cases-slider__item("01")
+          +cases-slider__item("02")
+          +cases-slider__item("03")
+          +cases-slider__item("01")
+          +cases-slider__item("02")
+          +cases-slider__item("03")
+//end cases-sec

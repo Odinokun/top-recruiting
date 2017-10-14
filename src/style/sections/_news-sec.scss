@@ -1,0 +1,118 @@
+.news-sec {
+  .container {
+    position: relative;
+    min-height: 650px;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 50px;
+      bottom: 0;
+      left: -100%;
+      content: '';
+      background-image: url('../../img/bg-news-sec.jpg');
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      background-size: contain;
+
+      @include max(1000) {
+        right: 0;
+        left: 0;
+        background-position: 30% 0;
+        background-size: cover;
+      }
+    }
+  }
+}
+.news-sec__inn {
+  position: relative;
+  max-width: 900px;
+  padding: 100px 30px 100px 0;
+  @include max(550) {
+    padding: 30px 0;
+  }
+}
+//begin link-more
+.news-sec__more {
+  font-family: $font-bold;
+  font-size: 11px;
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  width: 60px;
+  height: 60px;
+  padding-top: 33px;
+  transition: $transition;
+  text-align: center;
+  text-decoration: none;
+  color: $highlight;
+  border: 2px solid $highlight;
+
+  @include max(1000) {
+    right: 30px;
+  }
+  &:hover {
+    color: #fff;
+    background-color: $highlight;
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    left: 0;
+    width: 2px;
+    height: 16px;
+    margin: auto;
+    content: '';
+    transition: $transition;
+    background-color: $highlight;
+  }
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+//end link-more
+
+//begin news-sec__item
+.news-sec__item {
+  display: flex;
+  padding: 40px 0;
+  border-bottom: 1px solid #c8c8c8;
+  @include max(550) {
+    flex-direction: column;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  p {
+    font-family: $font-light;
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+}
+.news-sec__date {
+  width: 120px;
+
+  flex: none;
+  span {
+    font-family: $font-bold;
+    font-size: 35px;
+    color: #c8c8c8;
+  }
+}
+.news-sec__item-title {
+  font-family: $font-semibold;
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: $title;
+}
+.news-sec__item-link {
+  font-family: $font-bold;
+  font-size: 11px;
+}
+//end news-sec__item

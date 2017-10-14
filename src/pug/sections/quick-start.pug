@@ -1,0 +1,46 @@
+//begin quick-start
+.quick-start
+  .container
+    header.quick-start-header
+      h2.quick-start__title Quick start
+      h4.quick-start__subtitle Заполните форму для быстрого начала диалога по Вашей задаче
+
+    form.quick-start-form
+      .quick-start-form__item.quick-start-form__item-inputs
+        input.quick-start__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
+        input.quick-start__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
+        input.quick-start__input(type="text" name="comment" placeholder="Комментарий")
+
+      .quick-start-form__item.quick-start-form__item-checkboxes
+        .quick-start__checkbox
+          input(type="checkbox" id="01").quick-start__checkbox
+          label(for="01") Трудоустройство Топ-Менеджера
+        .quick-start__checkbox
+          input(type="checkbox" id="02" checked).quick-start__checkbox
+          label(for="02") Подбор персонала
+        .quick-start__checkbox
+          input(type="checkbox" id="03").quick-start__checkbox
+          label(for="03") Оценка персонала
+        .quick-start__checkbox
+          input(type="checkbox" id="04").quick-start__checkbox
+          label(for="04") Исследование рынка
+        .quick-start__checkbox
+          input(type="checkbox" id="05").quick-start__checkbox
+          label(for="05") Кадровый консалтинг
+        .quick-start__checkbox
+          input(type="checkbox" id="06").quick-start__checkbox
+          label(for="06") Индивидуальный запрос
+
+      .quick-start-form__item.quick-start-form__item-submit
+        input.quick-start__submit.btn(type="submit" value="отправить")
+
+      .quick-start-form__item.quick-start-form__item-footer
+        //begin agree checkbox
+        .agree-checkbox
+          input(type="checkbox" id="agree-quick" checked).agree
+          label(for="agree-quick")
+            | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+            a(href="/agree.html") Пользовательского соглашения
+        //end   agree checkbox
+
+//end quick-start

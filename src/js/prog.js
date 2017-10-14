@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'anketa',
     'article',
     'cases',
+    'clients',
     'company',
     'resume',
     'team'
@@ -98,7 +99,6 @@ $('.popup__submit').on('click', function() {
 });
 // end   popup success
 
-
 // begin popup close
 $('.popup__layer, .popup-close').on('click', function() {
   $('.popup, .popup__layer, .popup-success').fadeOut();
@@ -109,3 +109,22 @@ $('.popup__layer, .popup-close').on('click', function() {
   return false;
 });
 // end   popup close
+
+
+// begin clients filer
+$('#clients-filter .clients-filter__btn').on('click', function() {
+  $('#clients-filter .clients-filter__btn').removeClass('active');
+  $(this).addClass('active');
+
+  var visible = $(this).data('filter');
+
+  if (visible == 'all') {
+    $('.clients-list__item').fadeIn(100);
+  }
+  else {
+    $('.clients-list__item').fadeOut(100);
+    // $('.clients-list__item--' + visible).fadeIn();
+    $('.clients-list__item[data-filter="'+ visible +'"]').fadeIn(100);
+  }
+});
+// end clients filer

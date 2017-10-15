@@ -1,0 +1,99 @@
+extends ../_template
+
+block variables
+  - var title = 'Директор по продажам'
+  - var pageHeaderTitle = 'Директор по продажам'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.vacancy
+    //begin top-section
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-vacancy-top.jpg')")
+        include ../elements/breadcrumbs
+        include ../elements/magnific
+        include ../elements/top-block-mouse
+
+        .container
+          span.top-block__city Санкт-Петербург
+          h2.top-block__title Директор по продажам
+          h3.top-block__subtitle
+            | Наш Заказчик – инвестиционно-строительная компания
+            br
+            | приглашает опытного Директора по продажам в сфере жилищного девелопмента
+    //end top-section
+
+    //begin second-section
+    section#second-section.vacancy-second
+      .container
+        h2.title Обязанности
+        ul.custom-ul
+          li Организация системной работы подразделения, разработка эффективной стратегии продаж
+          li Обеспечение выполнения плановых показателей продаж, реализация мероприятия по их превышению
+          li Формирование эффективной команды продаж
+          li Разработка систем мотивации для сотрудников отдела; разработка и внедрение системы обучения сотрудников
+          li Участие в рекламной политике, ценообразовании
+
+        h2.title Требования
+        ul.custom-ul
+          li Успешный опыт управления продажами в сфере жилой недвижимости от 3х лет
+          li Опыт формирования эффективных команд
+          li Знание современных технологий управления продажами в девелопменте
+          li Опыт запуска направления продаж в жилищном строительстве «с нуля» будет Вашим преимуществом
+          li Харизматичность, системность, энергичность, целеустремленность
+          li Развитые коммуникат
+
+        h2.title Условия
+        ul.custom-ul
+          li Возможность поучаствовать в запуске нового амбициозного проекта
+          li Возможность реализовать себя как профессионала и сделать рывок в карьере
+          li Позитивная репутация собственника компании на рынке
+          li Достойные условия труда
+          li Комфортный офис в исторической части города
+
+        footer.vacancy-second-footer
+          span.vacancy-second-footer__text Дата публикации вакансии
+          span.vacancy-second-footer__date 17.09.2017
+    //end   second-section
+
+    //begin vacancy-form-section
+    section.vacancy-form-section
+      .container
+        //begin vacancy-form decor
+        .vacancy-form__decor
+          .vacancy-form__decor-inn
+        //end vacancy-form decor
+        h2.title Откликнуться на вакансию
+        form.vacancy-form
+          .vacancy-form__left
+            input.vacancy-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
+            input.vacancy-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
+          .vacancy-form__right
+            textarea.vacancy-form__textarea(name="descr" placeholder="Коментарий")
+
+          //begin clip
+          .resume-form__add
+            svg
+              use(xlink:href="assets/img/sprite.svg#clip")
+            a(href="#") Прикрепить резюме
+          //end clip
+
+          //begin agree checkbox
+          .agree-checkbox
+            input(type="checkbox" id="vacancy-form" class="agree" checked)
+            label(for="vacancy-form")
+              | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+              a(href="/agree.html") Пользовательского соглашения
+          //end   agree checkbox
+          input.vacancy-form__submit.btn(type="submit" value="откликнуться")
+
+    //end   vacancy-form-section
+
+
+
+  //end   content
+
+  include ../elements/popup
+  include ../sections/footer

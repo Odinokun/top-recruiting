@@ -84,10 +84,14 @@ ul {
     padding: 3px 0;
   }
 }
-ul {
+.custom-ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
   li {
-    // путь к кастомной картинке пункта ul
-    // list-style-image: url('../img/ul.png');
+    font-size: 15px;
+    padding-left: 15px;
+    list-style-image: url('../../img/ul-highlight.png');
+    color: $title;
   }
 }
 //кастомные пункты списка с цифрами

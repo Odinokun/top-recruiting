@@ -10,7 +10,8 @@ $(document).ready(function ($) {
     'clients',
     'company',
     'resume',
-    'team'
+    'team',
+    'vacancy'
     ]);
 });
 

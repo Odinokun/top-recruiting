@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     'company',
     'resume',
     'team',
+    'vacancies',
     'vacancy'
     ]);
 });

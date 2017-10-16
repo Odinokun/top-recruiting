@@ -1,0 +1,353 @@
+.review {
+  .top-block {
+    .container-lg {
+      display: flex;
+      background-position: 30% 50%;
+    }
+    .breadcrumbs__list {
+      @include max(700) {
+        padding-left: 170px;
+      }
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+    .top-block__title {
+      margin-bottom: 10px;
+    }
+    .top-block__subtitle {
+      font-family: $font-light;
+      font-size: 25px;
+      margin-bottom: 50px;
+      color: #fff;
+    }
+  }
+}
+.review-top__logo {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+
+  @include max(1100) {
+    width: 150px;
+    height: 80px;
+  }
+  @include max(700) {
+    z-index: 10;
+    top: 0;
+    left: 0;
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 80%;
+    max-height: 90%;
+  }
+}
+.review-second {
+  .container {
+    padding-bottom: 60px;
+  }
+}
+.review-second__tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.review-second__tag {
+  margin-right: 20px;
+  margin-bottom: 5px;
+  span {
+    font-family: $font-bold-os;
+    font-size: 10px;
+    line-height: 22px;
+    display: inline-block;
+    min-width: 170px;
+    padding: 3px 10px;
+    text-align: center;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #2b374d;
+  }
+}
+.review-second__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+.review-second__item-pic {
+  width: 50%;
+
+  @include max(900) {
+    width: 100%;
+  }
+  img {
+    display: block;
+    width: 90%;
+    max-width: 490px;
+    margin: 0;
+  }
+}
+.review-second__item-blockquote {
+  position: relative;
+  width: 50%;
+
+  @include max(900) {
+    width: 100%;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 98px;
+    height: 76px;
+    content: '';
+    background-image: url('../../img/blockquote.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    @include max(900) {
+      left: -10px;
+    }
+  }
+  blockquote {
+    position: relative;
+    margin: 0;
+    padding: 50px 50px 0 0;
+
+    @include max(900) {
+      padding: 50px 0 0 0;
+    }
+  }
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+.revew-second__blockquote-signature {
+  font-family: $font-bold-os;
+  font-size: 17px;
+  font-style: italic;
+  margin-bottom: 0;
+  color: $title;
+}
+.revew-second__blockquote-position {
+  font-family: $font-semibold;
+  font-size: 15px;
+  font-style: italic;
+  color: $title;
+}
+
+
+//begin review-letters
+.review-letters {
+  overflow: hidden;
+  .container {
+    position: relative;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: -100%;
+      content: '';
+      background-color: #f0f0f0;
+    }
+    .title {
+      position: relative;
+    }
+  }
+}
+.review-letters__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d2d2d2;
+
+  @include max(700) {
+    flex-wrap: wrap;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
+.review-letters__pic {
+  position: relative;
+  width: 200px;
+
+  flex: none;
+  @include max(700) {
+    margin-bottom: 20px;
+  }
+  a {
+    display: block;
+    width: 150px;
+    outline: none;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.review-letters__pic-magnific {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  content: '';
+  background-color: $highlight;
+  svg {
+    width: 17px;
+    height: 17px;
+    fill: #fff;
+  }
+}
+.review-letters__right {
+  position: relative;
+
+  @include max(700) {
+    width: 100%;
+  }
+  &::before {
+    position: absolute;
+    top: 70px;
+    left: -30px;
+    width: 98px;
+    height: 76px;
+    content: '';
+    background-image: url('../../img/blockquote-w.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    @include max(550) {
+      display: none;
+    }
+  }
+}
+.review-letters__header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+.review-letters__title {
+  font-family: $font-bold-os;
+  font-size: 19px;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 5px;
+  color: $title;
+}
+.review-letters__position {
+  font-family: $font-bold-os;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: $title;
+}
+.review-letters__header-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.review-letters__text {
+  position: relative;
+  p {
+    font-family: $font-light;
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: $text;
+  }
+}
+.review-letters__text-bottom {
+  display: none;
+}
+.review-letters__footer-fadeout,
+.review-letters__footer-fadein {
+  font-family: $font-bold;
+  font-size: 11px;
+}
+.review-letters__footer-fadein {
+  display: none;
+}
+//end review-letters
+
+////begin decor
+.review-letters__decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  &::before {
+    position: absolute;
+    top: 70px;
+    right: -360px;
+    width: 449px;
+    height: 216px;
+    content: '';
+    background-image: url('../../img/review-mail-g.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    @include max(900) {
+      right: -260px;
+    }
+  }
+}
+.review-letters__decor-inn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    top: 77px;
+    right: -96px;
+    width: 324px;
+    height: 168px;
+    content: '';
+    background-image: url('../../img/review-mail-w.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    @include max(900) {
+      right: -97px;
+    }
+  }
+}
+////end decor

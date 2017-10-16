@@ -1,5 +1,4 @@
 .vacancies {
-  overflow: hidden;
   .top-block {
     .container-lg {
       display: flex;
@@ -15,6 +14,7 @@
   }
 }
 .vacancies-second {
+  overflow: hidden;
   .container {
     padding-bottom: 90px;
   }

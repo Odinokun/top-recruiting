@@ -8,5 +8,5 @@ module.exports = [
   './node_modules/slick-carousel/slick/slick.min.js',
 
   // include fancybox3
-  // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+  './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 ];

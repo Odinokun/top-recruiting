@@ -10,6 +10,7 @@ $(document).ready(function ($) {
     'clients',
     'company',
     'resume',
+    'review',
     'team',
     'vacancies',
     'vacancy'
@@ -114,8 +115,8 @@ $('.popup__layer, .popup-close').on('click', function() {
 
 
 // begin clients filer
-$('#clients-filter .clients-filter__btn').on('click', function() {
-  $('#clients-filter .clients-filter__btn').removeClass('active');
+$('.clients-filter__btn').on('click', function() {
+  $('.clients-filter__btn').removeClass('active');
   $(this).addClass('active');
 
   var visible = $(this).data('filter');
@@ -130,3 +131,25 @@ $('#clients-filter .clients-filter__btn').on('click', function() {
   }
 });
 // end clients filer
+
+
+//begin reviews сворачивание/разворачивание отзыва
+$('.review-letters__footer-fadeout').on('click', function () {
+
+  $(this).prevAll('.review-letters__text-bottom').slideDown();
+  $(this).prevAll('.review-letters__footer-fadein').fadeIn();
+  $(this).fadeOut();
+
+  return false;
+
+});
+$('.review-letters__footer-fadein').on('click', function () {
+
+  $(this).prevAll('.review-letters__text-bottom').slideUp();
+  $(this).next('.review-letters__footer-fadeout').fadeIn();
+  $(this).fadeOut();
+
+  return false;
+
+});
+//end reviews сворачивание/разворачивание отзыва

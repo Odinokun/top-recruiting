@@ -1,6 +1,3 @@
-.company {
-  overflow: hidden;
-}
 .company .top-block {
   .container-lg {
     display: flex;
@@ -96,6 +93,7 @@
 
 //begin company services
 .company-services {
+  overflow: hidden;
   position: relative;
   padding-bottom: 80px;
   p {

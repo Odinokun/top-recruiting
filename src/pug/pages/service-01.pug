@@ -1,0 +1,28 @@
+extends ../_template
+
+block variables
+  - var title = 'Тайный покупатель'
+  - var pageHeaderTitle = 'Тайный покупатель'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.service
+    //begin top-section
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-service-top.jpg')")
+        include ../elements/breadcrumbs
+
+        .container
+          h2.top-block__title Тайный покупатель
+          h3.top-block__subtitle Mystery Shopper
+    //end top-section
+
+    //begin second-section
+    section#second-section.service-second
+      .container
+    //end second-section
+  //end   content
+  include ../elements/popup
+  include ../sections/footer

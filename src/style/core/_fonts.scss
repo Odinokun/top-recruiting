@@ -23,6 +23,12 @@
 }
 
 @font-face {
+  font-family: DroidSerif;
+  src:  url('../../fonts/DroidSerif.woff2') format('woff2'),
+        url('../../fonts/DroidSerif.woff')  format('woff');
+}
+
+@font-face {
   font-family: DroidSerif-Bold;
   src:  url('../../fonts/DroidSerif-Bold.woff2') format('woff2'),
         url('../../fonts/DroidSerif-Bold.woff')  format('woff');

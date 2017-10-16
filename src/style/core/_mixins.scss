@@ -30,7 +30,7 @@
 @mixin counter($var) {
   counter-reset: $var;
   & > li::before {
-    content: counter($var) ') ';
+    content: counter($var) '0 ';
     counter-increment: $var;
   }
 }

@@ -13,16 +13,100 @@ block content
     .top-block
       .container-lg(style="background-image:url('assets/img/bg-service-top.jpg')")
         include ../elements/breadcrumbs
+        //begin decor
+        .service-top__decor
+          .service-top__decor-inn
+        //end decor
 
         .container
           h2.top-block__title Тайный покупатель
           h3.top-block__subtitle Mystery Shopper
     //end top-section
 
+
     //begin second-section
-    section#second-section.service-second
+    section.service-second
       .container
+        h3.service-second__title Услуга «Тайный покупатель» (Mystery Shopper) – современный и эффективный метод проверки качества работы специалистов в области продаж и обслуживания, она включает в себя:
+        ul.custom-ul.service-second__list
+          li.service-second__item Разработку чек листов (анкет) для тайных покупателей с учетом цели и формата исследования, а также корпоративных стандартов компании Заказчика
+          li.service-second__item Индивидуальный подбор пула тайных покупателей и их подробный инструктаж, планирование графика и организация  визитов
+          li.service-second__item Проведение аудита тайными покупателями и направление Заказчику подробных индивидуальных отчетов после каждого визита, звонка, электронного письма
+          li.service-second__item Формирование сводного отчета и предоставление рекомендаций по итогам исследования
     //end second-section
+
+
+    //begin service-advantage
+    section.service-advantage
+      .container
+        .service-advantage__pic
+          img(src="assets/img/service-advantage.png" alt="image")
+        h3.service-advantage__title.title Наши уникальные преимущества
+        ul.custom-ul.service-advantage__list
+          li.service-advantage__item Сформированная база тайных покупателей соответствующих образу клиента премиального сегмента  строительного рынка (возраст, представительская внешность, личный автомобиль, опыт приобретения/продажи жилья в строящихся объектах)
+          li.service-advantage__item Большой опыт выполнения сложных и нестандартных исследований для строительной отрасли (специальные проверки)
+          li.service-advantage__item Глубокие знания строительного и девелоперского рынка Санкт-Петербурга
+          li.service-advantage__item Предоставление заказчику уникальной  и конфиденциальной информацией, необходимой  для принятия управленческих  решений и организационных изменений
+    //end service-advantage
+
+
+    //begin service-method
+    section.service-method
+      .container
+        h3.service-method__title Данный метод открывает для компании следующие возможности:
+        ul.custom-ul.service-method__list
+          li.service-method__item Проверить работу персонала на соответствие принятым в компании стандартам продаж/обслуживания
+          li.service-method__item Разработать эффективные схемы мотивации сотрудников Компании
+          li.service-method__item Выявить «зоны развития» у сотрудников и в дальнейшем составить план программы обучения персонала
+          li.service-method__item Включение дополнительного маркетингового инструмента – нативная и косвенная реклама компании, а также её продуктов
+          li.service-method__item Сформировать сравнительный анализ компаний конкурентов
+    //end service-method
+
+
+    //begin service-evaluation
+    section.service-evaluation
+      .container
+        .service-evaluation__right
+          h2.title.service-evaluation__title О стоимости
+          p Стоимость услуги оценки персонала методом Mystery Shopper зависит от:
+          ol.service-evaluation__list
+            li.service-evaluation__item
+              span Уровня проверяемой позиции
+            li.service-evaluation__item
+              span Количества проверок
+            li.service-evaluation__item
+              span Глубины проверяемых стандартов
+            li.service-evaluation__item
+              span Наличия специальных задач для проверяющего
+          p И обсуждается индивидуально с каждым Заказчиком.
+          p Будем рады предоставить Вам любую дополнительную информацию для принятия положительного решения о сотрудничестве.
+    //end service-evaluation
+
+
+    //begin service-form-section
+    section.service-form-section
+      .container
+        //begin service-form decor
+        .service-form__decor
+          .service-form__decor-inn
+        //end service-form decor
+        h2.title Откликнуться на вакансию
+        form.service-form
+          .service-form__left
+            input.service-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
+            input.service-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
+          .service-form__right
+            textarea.service-form__textarea(name="descr" placeholder="Коментарий")
+
+          //begin agree checkbox
+          .agree-checkbox
+            input(type="checkbox" id="service-form" class="agree" checked)
+            label(for="service-form")
+              | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+              a(href="/agree.html") Пользовательского соглашения
+          //end   agree checkbox
+          input.service-form__submit.btn(type="submit" value="откликнуться")
+    //end   service-form-section
   //end   content
   include ../elements/popup
   include ../sections/footer

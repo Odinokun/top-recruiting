@@ -150,7 +150,7 @@
     width: 100%;
   }
 }
-.custom-ul.service-advantage__list {
+.service-advantage__list {
   max-width: 650px;
 
   @include max(1000) {
@@ -349,3 +349,45 @@
   }
 }
 //end service-form decor
+
+
+//begin service-unique-advantage
+.service-unique-advantage {
+  background-color: #f0f0f0;
+  .container {
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 70px;
+
+    @include max(900) {
+      flex-wrap: wrap;
+    }
+  }
+}
+.service-unique-advantage__left {
+  width: 300px;
+
+  @include max(900) {
+    margin-bottom: 30px;
+  }
+  flex: none;
+  svg {
+    width: 100%;
+    max-width: 237px;
+    height: 100%;
+    max-height: 227px;
+    fill: #2b374d;
+  }
+}
+.service-unique-advantage__list {
+  @include max(1000) {
+    max-width: 100%;
+  }
+  .service-unique-advantage__item {
+    font-size: 14px;
+    list-style-image: url('../../img/ul-star.png');
+    color: $text;
+  }
+}
+//end service-unique-advantage

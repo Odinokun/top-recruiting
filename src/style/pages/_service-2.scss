@@ -128,7 +128,7 @@
 }
 .service-2-second__content-pic {
   display: inline-block;
-  &.float {
+  &.float-right {
     float: right;
     margin-right: -50px;
     padding: 5px 0 40px 50px;
@@ -140,6 +140,17 @@
       display: block;
       float: none;
       margin-bottom: 30px;
+      padding: 0;
+    }
+  }
+  &.float-left {
+    float: left;
+    padding: 10px 50px 20px 0;
+
+    @include max(600) {
+      display: block;
+      float: none;
+      margin-bottom: 20px;
       padding: 0;
     }
   }

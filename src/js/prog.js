@@ -14,6 +14,7 @@ $(document).ready(function ($) {
     'service-01',
     'service-02',
     'service-03',
+    'service-04',
     'team',
     'vacancies',
     'vacancy'

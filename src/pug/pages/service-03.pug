@@ -1,0 +1,61 @@
+extends ../_template
+
+block variables
+  - var title = 'Услуги по поиску и подбору сотрудников на работу'
+  - var pageHeaderTitle = 'Услуги по поиску и подбору сотрудников на работу'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.service-2
+    //begin top-section
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-service-top-2.jpg')")
+        include ../elements/breadcrumbs
+        //begin decor
+        .service-top__decor
+          .service-top__decor-inn
+        //end decor
+
+        .container
+          h2.top-block__title
+            |Услуги по поиску и подбору
+            br
+            |сотрудников на работу
+    //end top-section
+
+
+    //begin second-section
+    section.service-second
+      .container
+    //end second-section
+
+
+    //begin service-form-section
+    section.service-form-section
+      .container
+        //begin service-form decor
+        .service-form__decor
+          .service-form__decor-inn
+        //end service-form decor
+        h2.title Заказать услугу
+        form.service-form
+          .service-form__left
+            input.service-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
+            input.service-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
+          .service-form__right
+            textarea.service-form__textarea(name="descr" placeholder="Коментарий")
+
+          //begin agree checkbox
+          .agree-checkbox
+            input(type="checkbox" id="service-form" class="agree" checked)
+            label(for="service-form")
+              | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+              a(href="/agree.html") Пользовательского соглашения
+          //end   agree checkbox
+          input.service-form__submit.btn(type="submit" value="заказать")
+    //end   service-form-section
+  //end   content
+  include ../elements/popup
+  include ../sections/footer

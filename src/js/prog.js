@@ -13,6 +13,7 @@ $(document).ready(function ($) {
     'review',
     'service-01',
     'service-02',
+    'service-03',
     'team',
     'vacancies',
     'vacancy'

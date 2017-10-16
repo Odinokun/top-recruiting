@@ -1,0 +1,393 @@
+.service-2 {
+  .top-block {
+    overflow: hidden;
+    margin-bottom: -30px;
+
+    @include max(1000) {
+      margin-bottom: 0;
+    }
+    .container-lg {
+      position: relative;
+      display: flex;
+      min-height: 715px;
+      padding-bottom: 170px;
+      background-position: 70% 50%;
+
+      @include max(1000) {
+        padding-bottom: 50px;
+      }
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+
+      @include max(1200) {
+        align-items: flex-end;
+      }
+      @include max(1000) {
+        align-items: center;
+      }
+    }
+    .top-block__title {
+      margin-bottom: 10px;
+    }
+    .top-block__subtitle {
+      font-family: $font-d;
+      font-size: 35px;
+      margin-bottom: 0;
+      color: #fff;
+    }
+  }
+}
+////begin top decor
+//.service-top__decor {
+//  position: absolute;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//  width: 1722px;
+//  height: 280px;
+//  background-image: url('../../img/service-top-decor-2.png');
+//  background-repeat: no-repeat;
+//  background-position: 0 0;
+//  background-size: contain;
+//
+//  @include max(1000) {
+//    background-image: none;
+//  }
+//}
+//.service-top__decor-inn {
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  bottom: 30px;
+//  left: -98px;
+//  pointer-events: none;
+//  opacity: .6;
+//  &::before {
+//    position: absolute;
+//    bottom: 0;
+//    left: 0;
+//    width: 335px;
+//    height: 450px;
+//    content: '';
+//    background-image: url('../../img/service-top-decor.png');
+//    background-repeat: no-repeat;
+//    background-position: 0 0;
+//    background-size: contain;
+//  }
+//}
+////end top decor
+//
+//
+////begin service-second
+//.service-second {
+//  padding-bottom: 90px;
+//
+//  @include max(1000) {
+//    padding-top: 70px;
+//  }
+//}
+//.service-second__title {
+//  font-family: $font-semibold;
+//  font-size: 17px;
+//  line-height: 27px;
+//  margin-bottom: 30px;
+//  color: $title;
+//}
+//.service-second__list {
+//  .service-second__item {
+//    font-size: 14px;
+//    color: $text;
+//  }
+//}
+////end service-second
+//
+//
+////begin service-advantage
+//.service-advantage {
+//  background-color: #f0f0f0;
+//  .container {
+//    position: relative;
+//    min-height: 450px;
+//    padding-top: 90px;
+//    padding-right: 500px;
+//    padding-bottom: 90px;
+//
+//    @include max(1000) {
+//      padding-right: 55px;
+//    }
+//    @include max(768) {
+//      padding-right: 20px;
+//    }
+//    @include max(425) {
+//      padding-right: 10px;
+//    }
+//  }
+//}
+//.service-advantage__pic {
+//  position: absolute;
+//  top: -60px;
+//  right: -30px;
+//  width: 100%;
+//  max-width: 450px;
+//  height: 450px;
+//
+//  @include max(1360) {
+//    right: 20px;
+//  }
+//  @include max(1000) {
+//    position: static;
+//    margin: -140px auto 30px auto;
+//  }
+//  @include max(500) {
+//    margin: 0 auto 30px auto;
+//  }
+//  img {
+//    display: block;
+//    width: 100%;
+//  }
+//}
+//.service-advantage__list {
+//  max-width: 650px;
+//
+//  @include max(1000) {
+//    max-width: 100%;
+//  }
+//  .service-advantage__item {
+//    font-size: 14px;
+//    list-style-image: url('../../img/ul-star.png');
+//    color: $text;
+//  }
+//}
+////end service-advantage
+//
+//
+//
+////begin service-method
+//.service-method {
+//  padding-top: 90px;
+//  padding-bottom: 90px;
+//}
+//.service-method__title {
+//  font-family: $font-semibold;
+//  font-size: 17px;
+//  line-height: 27px;
+//  margin-bottom: 30px;
+//  color: $title;
+//}
+//.service-method__list {
+//  .service-method__item {
+//    font-size: 14px;
+//    color: $text;
+//  }
+//}
+////end service-method
+//
+//
+////begin service-evaluation
+//.service-evaluation {
+//  background-image: url('../../img/bg-service-evaluation.jpg');
+//  background-repeat: no-repeat;
+//  background-position: 50% 50%;
+//  background-size: cover;
+//  .container {
+//    display: flex;
+//    justify-content: flex-end;
+//    padding-top: 90px;
+//    padding-bottom: 90px;
+//    color: #fff;
+//
+//    @include max(900) {
+//      justify-content: center;
+//    }
+//    p {
+//      font-family: $font-light;
+//      font-size: 14px;
+//      line-height: 22px;
+//      margin-bottom: 20px;
+//    }
+//  }
+//}
+//.service-evaluation__right {
+//  width: 50%;
+//
+//  @include max(900) {
+//    width: 70%;
+//  }
+//  @include max(600) {
+//    width: 100%;
+//  }
+//}
+//.service-evaluation__title {
+//  color: #fff;
+//}
+//.service-evaluation__list {
+//  margin: 0 0 20px 0;
+//  padding: 0 0 0 25px;
+//  .service-evaluation__item {
+//    font-family: $font-bold-os;
+//    font-size: 16px;
+//    padding-left: 15px;
+//    list-style-type: decimal-leading-zero;
+//    color: $highlight;
+//    span {
+//      font-family: $font;
+//      font-size: 16px;
+//      line-height: 26px;
+//      color: #fff;
+//    }
+//  }
+//}
+////end service-evaluation
+//
+//
+////begin vacancy form
+//.service-form-section {
+//  overflow: hidden;
+//  .container {
+//    position: relative;
+//    padding-top: 100px;
+//    padding-bottom: 140px;
+//  }
+//  .title {
+//    position: relative;
+//  }
+//}
+//.service-form {
+//  position: relative;
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: space-between;
+//  .agree-checkbox {
+//    width: 100%;
+//    padding-top: 20px;
+//    label {
+//      max-width: 580px;
+//    }
+//  }
+//}
+//.service-form__left,
+//.service-form__right {
+//  width: 48%;
+//
+//  @include max(700) {
+//    width: 100%;
+//  }
+//}
+//.service-form__input,
+//.service-form__textarea {
+//  width: 100%;
+//  margin-bottom: 25px;
+//  padding: 20px 28px;
+//  border: 2px solid #b4b4b4;
+//  background-color: transparent;
+//
+//  @include placeholder-color(#b4b4b4);
+//}
+//.service-form__input {
+//  height: 60px;
+//}
+//.service-form__textarea {
+//  height: 145px;
+//}
+//
+//.service-form__submit {
+//  min-width: 270px;
+//}
+////end vacancy form
+//
+////begin service-form decor
+//.service-form__decor {
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  bottom: 0;
+//  left: -500px;
+//  content: '';
+//  background-image: url('../../img/bg-service-form.jpg');
+//  background-repeat: no-repeat;
+//  background-position: 100% 0;
+//  background-size: cover;
+//
+//  @include max(1024) {
+//    left: 0;
+//  }
+//  &::before {
+//    position: absolute;
+//    top: 400px;
+//    left: calc(100% - 150px);
+//    width: 309px;
+//    height: 239px;
+//    content: '';
+//    background-image: url('../../img/hand-g.svg');
+//    background-repeat: no-repeat;
+//    background-position: 0 0;
+//    background-size: contain;
+//  }
+//}
+//.service-form__decor-inn {
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//  overflow: hidden;
+//  &::before {
+//    position: absolute;
+//    top: 400px;
+//    left: calc(100% - 150px);
+//    width: 309px;
+//    height: 239px;
+//    content: '';
+//    background-image: url('../../img/hand-w.svg');
+//    background-repeat: no-repeat;
+//    background-position: 0 0;
+//    background-size: contain;
+//  }
+//}
+////end service-form decor
+//
+//
+////begin service-unique-advantage
+//.service-unique-advantage {
+//  background-color: #f0f0f0;
+//  .container {
+//    display: flex;
+//    align-items: center;
+//    padding-top: 90px;
+//    padding-bottom: 70px;
+//
+//    @include max(900) {
+//      flex-wrap: wrap;
+//    }
+//  }
+//}
+//.service-unique-advantage__left {
+//  width: 300px;
+//
+//  @include max(900) {
+//    margin-bottom: 30px;
+//  }
+//  flex: none;
+//  svg {
+//    width: 100%;
+//    max-width: 237px;
+//    height: 100%;
+//    max-height: 227px;
+//    fill: #2b374d;
+//  }
+//}
+//.service-unique-advantage__list {
+//  @include max(1000) {
+//    max-width: 100%;
+//  }
+//  .service-unique-advantage__item {
+//    font-size: 14px;
+//    list-style-image: url('../../img/ul-star.png');
+//    color: $text;
+//  }
+//}
+////end service-unique-advantage

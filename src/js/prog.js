@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'cases',
     'clients',
     'company',
+    'news',
     'resume',
     'review',
     'service-01',

@@ -131,11 +131,28 @@ $('.clients-filter__btn').on('click', function() {
   }
   else {
     $('.clients-list__item').fadeOut(100);
-    // $('.clients-list__item--' + visible).fadeIn();
     $('.clients-list__item[data-filter="'+ visible +'"]').fadeIn(100);
   }
 });
 // end clients filer
+
+
+// begin news filer
+$('.news-filter__btn').on('click', function() {
+  $('.news-filter__btn').removeClass('active');
+  $(this).addClass('active');
+
+  var visible = $(this).data('filter');
+
+  if (visible == 'all') {
+    $('.news-list__item').fadeIn(100);
+  }
+  else {
+    $('.news-list__item').fadeOut(100);
+    $('.news-list__item[data-filter="'+ visible +'"]').fadeIn(100);
+  }
+});
+// end news filer
 
 
 //begin reviews сворачивание/разворачивание отзыва

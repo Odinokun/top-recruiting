@@ -2,7 +2,7 @@ extends ../_template
 
 mixin clients-list__item(filter, image, title, subtitle, text)
   //begin clients-list__item
-  .clients-list__item.clients-list__item--filter(data-filter= filter)
+  .clients-list__item(data-filter= filter)
     .clients-list__pic
       img(src="assets/img/clients/clients-" + image + ".png" alt="image")
     h3.clients-list__title= title

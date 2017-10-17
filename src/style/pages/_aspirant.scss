@@ -1,0 +1,513 @@
+.aspirant .top-block {
+  .container-lg {
+    display: flex;
+    background-position: 50% 50%;
+  }
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+  .top-block__title {
+    margin-bottom: 50px;
+  }
+}
+
+//begin aspirant-second
+.aspirant-second {
+  .container {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: #text;
+    span {
+      font-family: $font-semibold;
+      font-size: 15px;
+      line-height: 24px;
+      color: $title;
+    }
+  }
+}
+//end aspirant-second
+
+//begin aspirant-carrier
+.aspirant-carrier {
+  overflow: hidden;
+  .container {
+    position: relative;
+    min-height: 460px;
+  }
+}
+.aspirant-carrier__inn {
+  position: relative;
+  max-width: 900px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .title {
+    margin-bottom: 50px;
+    color: #fff;
+  }
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+}
+.aspirant-carrier__link {
+  font-family: $font-bold;
+  font-size: 11px;
+}
+//end aspirant-carrier
+
+//begin aspirant-carrier__decor
+.aspirant-carrier__decor {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  bottom: 0;
+  left: -100%;
+  pointer-events: none;
+  background-image: url('../../img/bg-aspirant-carrier.jpg');
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: contain;
+
+  @include max(680) {
+    right: 0;
+    left: 0;
+    background-size: cover;
+  }
+  &::before {
+    position: absolute;
+    top: 50px;
+    right: -230px;
+    width: 357px;
+    height: 244px;
+    content: '';
+    background-image: url('../../img/lighting-g.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @include max(680) {
+      display: none;
+    }
+  }
+}
+.aspirant-carrier__decor-inn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+
+  @include max(680) {
+    display: none;
+  }
+  &::before {
+    position: absolute;
+    top: 50px;
+    right: -230px;
+    width: 357px;
+    height: 192px;
+    content: '';
+    background-image: url('../../img/lighting-w.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+//end aspirant-carrier__decor
+
+//begin aspirant-vacancies
+//begin link-more
+.aspirant-vacancies__more {
+  font-family: $font-bold;
+  font-size: 11px;
+  position: absolute;
+  top: 0;
+  right: -100px;
+  width: 60px;
+  height: 60px;
+  padding-top: 33px;
+  transition: $transition;
+  text-align: center;
+  text-decoration: none;
+  color: $highlight;
+  border: 2px solid $highlight;
+
+  @include max(1440) {
+    right: -20px;
+  }
+  @include max(1300) {
+    top: -100px;
+    right: 25px;
+  }
+  @include max(500) {
+    top: -65px;
+  }
+  &:hover {
+    color: #fff;
+    background-color: $highlight;
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    left: 0;
+    width: 2px;
+    height: 16px;
+    margin: auto;
+    content: '';
+    transition: $transition;
+    background-color: $highlight;
+  }
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.aspirant-vacancies {
+  .container {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include max(768) {
+      padding-bottom: 50px;
+    }
+  }
+}
+//end link-more
+
+//begin aspirant-vacancies-list
+.aspirant-vacancies-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 60px);
+  margin-left: -30px;
+
+  @include max(768) {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+  @include max(500) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.aspirant-vacancies-list__item {
+  width: 33.33%;
+  margin-bottom: 50px;
+  padding: 0 30px;
+
+  @include max(900) {
+    width: 50%;
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+  @include max(768) {
+    padding: 0 20px;
+  }
+  @include max(500) {
+    width: 100%;
+    padding: 0;
+  }
+  p {
+    font-family: $font-light;
+    font-size: 13px;
+    line-height: 22px;
+    color: $text;
+  }
+}
+.aspirant-vacancies-list__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include max(1140) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include max(900) {
+    flex-direction: row;
+    align-items: center;
+  }
+  @include max(700) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.aspirant-vacancies-list__city {
+  margin-right: 20px;
+
+  @include max(1140) {
+    margin-bottom: 5px;
+  }
+  span {
+    font-family: $font-bold-os;
+    font-size: 10px;
+    line-height: 22px;
+    display: inline-block;
+    min-width: 170px;
+    padding: 3px 10px;
+    text-align: center;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #2b374d;
+  }
+}
+.aspirant-vacancies-list__date {
+  display: flex;
+  align-items: center;
+  svg {
+    width: 15px;
+    height: 14px;
+    margin-right: 10px;
+    fill: #c8c8c8;
+  }
+  span {
+    font-family: $font-bold;
+    font-size: 18px;
+    color: #c8c8c8;
+  }
+}
+.aspirant-vacancies-list__position {
+  font-family: $font-semibold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $title;
+}
+.aspirant-vacancies-list__link {
+  font-family: $font-bold;
+  font-size: 11px;
+}
+//end aspirant-vacancies-list
+//end aspirant-aspirant-vacancies
+
+
+//begin aspirant-search
+.aspirant-search {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    p {
+      font-family: $font-light;
+      font-size: 14px;
+      line-height: 24px;
+      color: $text;
+    }
+  }
+}
+.aspirant-search__left,
+.aspirant-search__right {
+  width: 50%;
+
+  @include max(900) {
+    width: 100%;
+  }
+}
+.aspirant-search__left {
+  img {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+
+    @include max(900) {
+      margin-bottom: 30px;
+    }
+  }
+}
+//end aspirant-search
+
+
+//begin aspirant-blue
+.aspirant-blue {
+  overflow: hidden;
+}
+.aspirant-blue__left {
+  position: relative;
+  z-index: 10;
+  max-width: 870px;
+  padding-top: 70px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+
+  @include max(900) {
+    padding-right: 0;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100%;
+    content: '';
+    background-color: #2b374d;
+
+    @include max(900) {
+      right: -100%;
+    }
+  }
+  .custom-ul {
+    position: relative;
+    margin-bottom: 40px;
+    li {
+      color: #fff;
+    }
+  }
+  .aspirant-blue__footer {
+    position: relative;
+    .btn {
+      margin-right: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.aspirant-blue__title {
+  font-family: $font-semibold;
+  font-size: 17px;
+  line-height: 27px;
+  position: relative;
+  margin-bottom: 30px;
+  color: #fff;
+}
+//end aspirant-blue
+
+
+//begin aspirant-bottom
+.aspirant-bottom {
+  position: relative;
+  overflow: hidden;
+  margin-top: -350px;
+  &::before {
+    position: absolute;
+    top: 175px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-image: url('../../img/bg-aspirant-bottom.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .container {
+    padding-top: 425px;
+    padding-bottom: 60px;
+    column-count: 2;
+    column-gap: 80px;
+
+    @include max(680) {
+      column-count: auto;
+    }
+    p {
+      font-family: $font-light;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 20px;
+      color: $text;
+    }
+  }
+}
+//end aspirant-bottom
+
+//begin aspirant-bottom__decor
+.aspirant-bottom__decor {
+  position: absolute;
+  top: 175px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  &::before {
+    position: absolute;
+    top: -103px;
+    left: calc(100% - 270px);
+    width: 367px;
+    height: 208px;
+    content: '';
+    background-image: url('../../img/aspirant-g.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+.aspirant-bottom__decor-inn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    top: -80px;
+    left: calc(100% - 270px);
+    width: 264px;
+    height: 185px;
+    content: '';
+    background-image: url('../../img/aspirant-w.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+//end aspirant-bottom__decor
+
+
+//begin aspirant-callback
+.aspirant-callback {
+  .container {
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    @include max(900) {
+      flex-wrap: wrap;
+    }
+    p {
+      font-family: $font-light;
+      font-size: 14px;
+      line-height: 24px;
+      color: $text;
+      span {
+        font-family: $font-semibold;
+        font-size: 17px;
+        line-height: 27px;
+        display: inline-block;
+        margin-bottom: 15px;
+        color: $title;
+      }
+    }
+  }
+}
+.aspirant-callback__left {
+  width: 100%;
+}
+.aspirant-callback__right {
+  width: 300px;
+  padding-top: 10px;
+  text-align: right;
+
+  flex: none;
+  @include max(900) {
+    width: 100%;
+    text-align: center;
+  }
+}
+//end aspirant-callback

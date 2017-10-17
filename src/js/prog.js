@@ -18,7 +18,8 @@ $(document).ready(function ($) {
     'service-04',
     'team',
     'vacancies',
-    'vacancy'
+    'vacancy',
+    'worker'
     ]);
 });
 
@@ -175,3 +176,15 @@ $('.review-letters__footer-fadein').on('click', function () {
 
 });
 //end reviews сворачивание/разворачивание отзыва
+
+
+//begin worker accordeon
+$('.worker-top__accordeon-btn').on('click', function () {
+  // $('.worker-top__accordeon-btn').removeClass('active');
+  // $('.worker-top__accordeon-text').slideUp();
+  // $(this).addClass('active');
+  // $(this).next('.worker-top__accordeon-text').slideDown();
+  $(this).toggleClass('active');
+  $(this).next('.worker-top__accordeon-text').slideToggle();
+});
+//end worker accordeon

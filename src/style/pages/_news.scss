@@ -11,12 +11,14 @@
       .breadcrumbs__list {
         position: relative;
         justify-content: flex-start;
+        margin-top: -45px;
         margin-bottom: 30px;
         padding-left: 20px;
 
         @include max(1000) {
           right: 0;
           justify-content: flex-end;
+          margin-top: 0;
         }
       }
       .breadcrumbs__link,

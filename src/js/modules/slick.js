@@ -120,4 +120,37 @@ module.exports = function() {
   });
   // end   slider in advantage section
 
+
+  // begin slider in advantage section
+  // инициализируем карусель
+  $('.worker-slider__list').slick({
+    speed: 1000,
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1001,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 601,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+  // end   slider in advantage section
+
 };

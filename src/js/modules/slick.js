@@ -8,7 +8,7 @@ module.exports = function() {
     speed: 500,
     fade: true,
     autoplay: true,
-    autoplaySpeed:3200,
+    autoplaySpeed:3500,
     cssEase: 'linear'
   });
   // end   top slider left
@@ -94,7 +94,6 @@ module.exports = function() {
     speed: 1000,
     dots: false,
     infinite: true,
-    speed: 600,
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
@@ -127,7 +126,6 @@ module.exports = function() {
     speed: 1000,
     dots: false,
     infinite: true,
-    speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [

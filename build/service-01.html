@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Тайный покупатель</title>
+    <meta content="odinokun" name="author">
+    <meta content="Top recruiting site" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <script src="assets/js/foundation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA"></script>
+  </head>
+  <body>
+    <!-- begin header-->
+    <header class="header">
+      <div class="container-lg">
+        <a class="header-logo" href="#">
+          <h1 class="header-logo__title">Top Recruiting</h1>
+          <img src="assets/img/logo.png" alt="company logo">
+        </a>
+        <!--begin header-menu-->
+        <nav class="header-menu">
+          <!--begin burger-->
+          <div class="burger" id="burger">
+            <input id="burger__input" name="exit" type="checkbox">
+            <label for="burger__input">
+              <span class="burger__icon"></span>
+            </label>
+          </div>
+          <!--end   burger-->
+          <ul class="header-menu__list" id="header-menu__list">
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">О компании</a>
+            </li>
+            <li class="header-menu__item header-menu__item-parents">
+              <a class="header-menu__link" href="#">Работодателю</a>
+              <span>+</span>
+              <ul class="header-menu__sublist">
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 1</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 2</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 4</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 5</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 6</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-menu__item header-menu__item-parents">
+              <a class="header-menu__link" href="#">Соискателю</a>
+              <span>+</span>
+              <ul class="header-menu__sublist">
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 1</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 2</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Новости</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!--end   header-menu-->
+        <div class="header__right">
+          <button class="header__right-button">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#header-right"></use>
+            </svg>
+          </button>
+          <div class="header__right-inn">
+            <!--begin geolocation-->
+            <section class="geolocation">
+              <a class="geolocation-city" href="#">МСК</a>
+              <a class="geolocation-phone" href="tel:+78123200121">
+                <span>+7 812</span> 320 01 21</a>
+            </section>
+            <!--end   geolocation-->
+            <a class="header-callback popup-open" href="#" data-open="callback">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#header-right"></use>
+              </svg>
+            </a>
+            <a class="header-cabinet popup-open" href="#" data-open="cabinet">Личный кабинет</a>
+            <!--begin lang-switcher-->
+            <section class="lang-switcher">
+              <a class="lang-switcher__link active" href="#">ru</a>
+              <a class="lang-switcher__link" href="#">en</a>
+            </section>
+            <!--end   lang-switcher-->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end   header-->
+    <!--begin content-->
+    <section class="main service">
+      <!--begin top-section-->
+      <div class="top-block">
+        <div class="container-lg" style="background-image:url('assets/img/bg-service-top.jpg');">
+          <!--begin breadcrumbs-->
+          <section class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Работодателю</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Тайный покупатель</a>
+              </li>
+            </ul>
+          </section>
+          <!--end   breadcrumbs-->
+          <!--begin decor-->
+          <div class="service-top__decor">
+            <div class="service-top__decor-inn"></div>
+          </div>
+          <!--end decor-->
+          <div class="container">
+            <h2 class="top-block__title">Тайный покупатель</h2>
+            <h3 class="top-block__subtitle">Mystery Shopper</h3>
+          </div>
+        </div>
+      </div>
+      <!--end top-section-->
+      <!--begin second-section-->
+      <section class="service-second">
+        <div class="container">
+          <h3 class="service-second__title">Услуга «Тайный покупатель» (Mystery Shopper) – современный и эффективный метод проверки качества работы специалистов в области продаж и обслуживания, она включает в себя:</h3>
+          <ul class="custom-ul service-second__list">
+            <li class="service-second__item">Разработку чек листов (анкет) для тайных покупателей с учетом цели и формата исследования, а также корпоративных стандартов компании Заказчика</li>
+            <li class="service-second__item">Индивидуальный подбор пула тайных покупателей и их подробный инструктаж, планирование графика и организация визитов</li>
+            <li class="service-second__item">Проведение аудита тайными покупателями и направление Заказчику подробных индивидуальных отчетов после каждого визита, звонка, электронного письма</li>
+            <li class="service-second__item">Формирование сводного отчета и предоставление рекомендаций по итогам исследования</li>
+          </ul>
+        </div>
+      </section>
+      <!--end second-section-->
+      <!--begin service-advantage-->
+      <section class="service-advantage">
+        <div class="container">
+          <div class="service-advantage__pic">
+            <img src="assets/img/service-advantage.png" alt="image">
+          </div>
+          <h3 class="service-advantage__title title">Наши уникальные преимущества</h3>
+          <ul class="custom-ul service-advantage__list">
+            <li class="service-advantage__item">Сформированная база тайных покупателей соответствующих образу клиента премиального сегмента строительного рынка (возраст, представительская внешность, личный автомобиль, опыт приобретения/продажи жилья в строящихся объектах)</li>
+            <li class="service-advantage__item">Большой опыт выполнения сложных и нестандартных исследований для строительной отрасли (специальные проверки)</li>
+            <li class="service-advantage__item">Глубокие знания строительного и девелоперского рынка Санкт-Петербурга</li>
+            <li class="service-advantage__item">Предоставление заказчику уникальной и конфиденциальной информацией, необходимой для принятия управленческих решений и организационных изменений</li>
+          </ul>
+        </div>
+      </section>
+      <!--end service-advantage-->
+      <!--begin service-method-->
+      <section class="service-method">
+        <div class="container">
+          <h3 class="service-method__title">Данный метод открывает для компании следующие возможности:</h3>
+          <ul class="custom-ul service-method__list">
+            <li class="service-method__item">Проверить работу персонала на соответствие принятым в компании стандартам продаж/обслуживания</li>
+            <li class="service-method__item">Разработать эффективные схемы мотивации сотрудников Компании</li>
+            <li class="service-method__item">Выявить «зоны развития» у сотрудников и в дальнейшем составить план программы обучения персонала</li>
+            <li class="service-method__item">Включение дополнительного маркетингового инструмента – нативная и косвенная реклама компании, а также её продуктов</li>
+            <li class="service-method__item">Сформировать сравнительный анализ компаний конкурентов</li>
+          </ul>
+        </div>
+      </section>
+      <!--end service-method-->
+      <!--begin service-evaluation-->
+      <section class="service-evaluation">
+        <div class="container">
+          <div class="service-evaluation__right">
+            <h2 class="title service-evaluation__title">О стоимости</h2>
+            <p>Стоимость услуги оценки персонала методом Mystery Shopper зависит от:</p>
+            <ol class="service-evaluation__list">
+              <li class="service-evaluation__item">
+                <span>Уровня проверяемой позиции</span>
+              </li>
+              <li class="service-evaluation__item">
+                <span>Количества проверок</span>
+              </li>
+              <li class="service-evaluation__item">
+                <span>Глубины проверяемых стандартов</span>
+              </li>
+              <li class="service-evaluation__item">
+                <span>Наличия специальных задач для проверяющего</span>
+              </li>
+            </ol>
+            <p>И обсуждается индивидуально с каждым Заказчиком.</p>
+            <p>Будем рады предоставить Вам любую дополнительную информацию для принятия положительного решения о сотрудничестве.</p>
+          </div>
+        </div>
+      </section>
+      <!--end service-evaluation-->
+      <!--begin service-form-section-->
+      <section class="service-form-section">
+        <div class="container">
+          <!--begin service-form decor-->
+          <div class="service-form__decor">
+            <div class="service-form__decor-inn"></div>
+          </div>
+          <!--end service-form decor-->
+          <h2 class="title">Заказать услугу</h2>
+          <form class="service-form">
+            <div class="service-form__left">
+              <input class="service-form__input" type="text" name="name" placeholder="Как к Вам обращаться?*" required>
+              <input class="service-form__input" type="text" name="phone" placeholder="Телефон или e-mail*" required>
+            </div>
+            <div class="service-form__right">
+              <textarea class="service-form__textarea" name="descr" placeholder="Коментарий"></textarea>
+            </div>
+            <!--begin agree checkbox-->
+            <div class="agree-checkbox">
+              <input class="agree" type="checkbox" id="service-form" checked>
+              <label for="service-form">Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                <a href="/agree.html">Пользовательского соглашения</a>
+              </label>
+            </div>
+            <!--end   agree checkbox-->
+            <input class="service-form__submit btn" type="submit" value="заказать">
+          </form>
+        </div>
+      </section>
+      <!--end   service-form-section-->
+    </section>
+    <!--end   content-->
+    <div class="popup__layer"></div>
+    <!--begin success popup-->
+    <div class="popup-success" id="popup-success">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h4 class="popup__title">Ваше сообщение отправлено</h4>
+        <h5 class="popup__subtitle">Мы свяжемся с Вами в ближайшее время.</h5>
+      </div>
+    </div>
+    <!--end success popup-->
+    <!--begin popup callback-->
+    <div class="popup" id="popup-callback">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h3 class="popup__title">Заказать обратный звонок</h3>
+        <form class="popup__form">
+          <input class="popup__input" type="text" name="name" placeholder="Как к Вам обращаться?*" required>
+          <input class="popup__input" type="tel" name="phone" placeholder="Телефон*" required>
+          <div class="popup__form-footer">
+            <!--begin agree checkbox-->
+            <div class="agree-checkbox">
+              <input class="agree" type="checkbox" id="agree-callback" checked>
+              <label for="agree-callback">Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                <a href="/agree.html">Пользовательского соглашения</a>
+              </label>
+            </div>
+            <!--end   agree checkbox-->
+            <input class="popup__submit btn" type="submit" value="перезвоните мне">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end   popup callback-->
+    <!--begin popup cabinet-->
+    <div class="popup" id="popup-cabinet">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h3 class="popup__title">Вход в личный кабинет</h3>
+        <form class="popup__form">
+          <input class="popup__input" type="text" name="name" placeholder="Логин*" required>
+          <input class="popup__input" type="password" name="password" placeholder="Пароль*" required>
+          <div class="popup__form-footer">
+            <input class="popup__submit btn" type="submit" value="Войти">
+            <a class="popup__forget" href="#">забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end   popup cabinet-->
+    <!--begin popup service-->
+    <div class="popup" id="popup-service">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h3 class="popup__title">Заказать услугу</h3>
+        <form class="popup__form">
+          <input class="popup__input" type="text" name="name" placeholder="Как к Вам обращаться?*" required>
+          <input class="popup__input" type="tel" name="phone" placeholder="Телефон*" required>
+          <div class="popup__form-footer">
+            <!--begin agree checkbox-->
+            <div class="agree-checkbox">
+              <input class="agree" type="checkbox" id="agree-service" checked>
+              <label for="agree-service">Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                <a href="/agree.html">Пользовательского соглашения</a>
+              </label>
+            </div>
+            <!--end   agree checkbox-->
+            <input class="popup__submit btn" type="submit" value="перезвоните мне">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end   popup service-->
+    <!--begin popup resume-->
+    <div class="popup" id="popup-resume">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h3 class="popup__title">Отправить резюме</h3>
+        <h5 class="popup__subtitle">Если вы являетесь особенным специалистом в области рекрутинга и подбора персонала -
+          <br>отправьте нам свое резюме и мы с удовольствием с вами познакомимся.</h5>
+        <form class="popup__form">
+          <div class="popup__form-left">
+            <input class="popup__input" type="text" name="name" placeholder="Как к Вам обращаться?*" required>
+            <input class="popup__input" type="text" name="phone" placeholder="Телефон или e-mail*" required>
+          </div>
+          <div class="popup__form-right">
+            <textarea class="popup__textarea" name="descr" placeholder="Комментарий"></textarea>
+          </div>
+          <div class="popup__form-footer">
+            <!--begin clip-->
+            <div class="resume-form__add">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#clip"></use>
+              </svg>
+              <a href="#">Прикрепить резюме</a>
+            </div>
+            <!--end clip-->
+            <!--begin agree checkbox-->
+            <div class="agree-checkbox">
+              <input class="agree" type="checkbox" id="agree-resume" checked>
+              <label for="agree-resume">Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                <a href="/agree.html">Пользовательского соглашения</a>
+              </label>
+            </div>
+            <!--end   agree checkbox-->
+            <input class="popup__submit btn" type="submit" value="отправить">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end   popup resume-->
+    <!--begin footer-->
+    <footer class="footer">
+      <!--begin footer top-->
+      <div class="footer-top">
+        <div class="container-lg">
+          <div class="footer-item">
+            <a class="footer-logo" href="#">
+              <img src="assets/img/logo-footer.png" alt="company logo">
+            </a>
+            <a class="footer-accredit" href="#">аккредитованное ЧАЗ</a>
+            <div class="footer-adress">
+              <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <span>Санкт-Петербург</span>
+                <br>Невский проспект, 21
+                <br>БЦ"Дом Мертенса"</a>
+              <a href="tel:+78123200121">+7 812 320 01 21</a>
+            </div>
+            <div class="footer-adress">
+              <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <span>Москва</span>
+                <br>Москва-сити, Башня
+                <br>Федерация Запад, 45-ый этаж</a>
+              <a href="tel:+74959098177">+7 495 909 81 77</a>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item__title">О компании</h3>
+            <ul class="footer-item__list">
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Наша команда</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Наши клиенты</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Реализованные кейсы</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Миссия компании</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Стандарты качества</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Этический кодекс рекрутера</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item__title">Работодателю</h3>
+            <ul class="footer-item__list">
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Подбор персонала</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Оценка персонала</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Исследования рынка</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Кадровый консалтинг</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Заявка на персонал</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item__title">Соискателю</h3>
+            <ul class="footer-item__list">
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Трудоустройство Топ-менеджеров</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Вакансии в Москве</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Вакансии в Санкт-Петербурге</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Вакансии в регионах</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Отправить резюме</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item__title">Требования</h3>
+            <ul class="footer-item__list">
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Оценка условий труда</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Защита персональных данных</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--end footer top-->
+      <!--begin footer bottom-->
+      <div class="footer-bottom">
+        <div class="container-lg">
+          <div class="footer-copyright">
+            <span>&#169; 2009-2017 ТОП Рекрутинг. All Rights Reserved</span>
+          </div>
+          <div class="footer-social">
+            <ul class="footer-social__list">
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#in"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--end footer bottom-->
+    </footer>
+    <!--end   footer-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/prog.js"></script>
+  </body>
+</html>

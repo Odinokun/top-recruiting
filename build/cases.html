@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Кейсы</title>
+    <meta content="odinokun" name="author">
+    <meta content="Top recruiting site" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <script src="assets/js/foundation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA"></script>
+  </head>
+  <body>
+    <!-- begin header-->
+    <header class="header">
+      <div class="container-lg">
+        <a class="header-logo" href="#">
+          <h1 class="header-logo__title">Top Recruiting</h1>
+          <img src="assets/img/logo.png" alt="company logo">
+        </a>
+        <!--begin header-menu-->
+        <nav class="header-menu">
+          <!--begin burger-->
+          <div class="burger" id="burger">
+            <input id="burger__input" name="exit" type="checkbox">
+            <label for="burger__input">
+              <span class="burger__icon"></span>
+            </label>
+          </div>
+          <!--end   burger-->
+          <ul class="header-menu__list" id="header-menu__list">
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">О компании</a>
+            </li>
+            <li class="header-menu__item header-menu__item-parents">
+              <a class="header-menu__link" href="#">Работодателю</a>
+              <span>+</span>
+              <ul class="header-menu__sublist">
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 1</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 2</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 4</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 5</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 6</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-menu__item header-menu__item-parents">
+              <a class="header-menu__link" href="#">Соискателю</a>
+              <span>+</span>
+              <ul class="header-menu__sublist">
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 1</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 2</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Новости</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!--end   header-menu-->
+        <div class="header__right">
+          <button class="header__right-button">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#header-right"></use>
+            </svg>
+          </button>
+          <div class="header__right-inn">
+            <!--begin geolocation-->
+            <section class="geolocation">
+              <a class="geolocation-city" href="#">МСК</a>
+              <a class="geolocation-phone" href="tel:+78123200121">
+                <span>+7 812</span> 320 01 21</a>
+            </section>
+            <!--end   geolocation-->
+            <a class="header-callback popup-open" href="#" data-open="callback">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#header-right"></use>
+              </svg>
+            </a>
+            <a class="header-cabinet popup-open" href="#" data-open="cabinet">Личный кабинет</a>
+            <!--begin lang-switcher-->
+            <section class="lang-switcher">
+              <a class="lang-switcher__link active" href="#">ru</a>
+              <a class="lang-switcher__link" href="#">en</a>
+            </section>
+            <!--end   lang-switcher-->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end   header-->
+    <!--begin content-->
+    <section class="main cases">
+      <!--begin top-section-->
+      <div class="top-block">
+        <div class="container-lg" style="background-image:url('assets/img/bg-cases-top.jpg');">
+          <!--begin breadcrumbs-->
+          <section class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Работодателю</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Реализованные кейсы</a>
+              </li>
+            </ul>
+          </section>
+          <!--end   breadcrumbs-->
+          <!--begin magnific-->
+          <div class="magnific-section">
+            <img class="img-grey" src="assets/img/logo-magnific-g.svg" alt="logo">
+            <div class="magnific-section__inn">
+              <img class="img-white" src="assets/img/logo-magnific-w.svg" alt="logo">
+            </div>
+          </div>
+          <!--end magnific-->
+          <!--begin top-block-mouse-->
+          <svg class="top-block__bottom-svg">
+            <path d="M 0,0   L 280, 0  M280,0 C282,38 338,37 340,0  L 340, 0  1920,0  1920,30  0,30  0,0  "></path>
+          </svg>
+          <a class="mouse-top" href="#second-section">
+            <div class="mouse-wheel"></div>
+          </a>
+          <!--end top-block-mouse-->
+          <div class="container">
+            <h2 class="top-block__title">Кейсы
+              <br>наших клиентов</h2>
+          </div>
+        </div>
+      </div>
+      <!--end top-section-->
+      <!--begin second-section-->
+      <section class="cases-second" id="second-section">
+        <div class="container">
+          <!--begin cases row-->
+          <div class="cases__row">
+            <div class="cases__item cases-img">
+              <h3 class="cases-img__title cases-img__title-grey">Кейс 1</h3>
+              <div class="cases-img__inn">
+                <h3 class="cases-img__title cases-img__title-white">Кейс 1</h3>
+                <img src="assets/img/cases-01.jpg" alt="cases" />
+              </div>
+            </div>
+            <div class="cases__item cases-text">
+              <h3 class="cases-text__title">Директор по строительству фармацевтического холдинга</h3>
+              <h4 class="cases-text__name">
+                <span>Алекперова Екатерина,</span> директор по продажам
+              </h4>
+              <p>Закрытие вакансии Директора по строительству завода для крупного Фармацевтического холдинга. Директор по персоналу Холдинга обратилась к нам после нескольких месяцев безуспешного поиска.</p>
+              <a class="cases-text__link" href="#">подробнее</a>
+            </div>
+          </div>
+          <!--end cases row-->
+          <!--begin cases row-->
+          <div class="cases__row">
+            <div class="cases__item cases-img">
+              <h3 class="cases-img__title cases-img__title-grey">Кейс 2</h3>
+              <div class="cases-img__inn">
+                <h3 class="cases-img__title cases-img__title-white">Кейс 2</h3>
+                <img src="assets/img/cases-02.jpg" alt="cases" />
+              </div>
+            </div>
+            <div class="cases__item cases-text">
+              <h3 class="cases-text__title">Hазвание сложного проекта</h3>
+              <h4 class="cases-text__name">
+                <span>Смельцова Александра,</span> руководитель проектов Executive Search
+              </h4>
+              <p>Самые сложные проекты в портфеле рекрутера часто оказываются самыми яркими и запоминающимися. Таковым стал для меня проект по подбору Бренд-Кондитера из Франции для крупнейшей и одной из самых известных в Петербурге ресторанной сети.</p>
+              <a
+                class="cases-text__link" href="#">подробнее</a>
+            </div>
+          </div>
+          <!--end cases row-->
+          <!--begin cases row-->
+          <div class="cases__row">
+            <div class="cases__item cases-img">
+              <h3 class="cases-img__title cases-img__title-grey">Кейс 3</h3>
+              <div class="cases-img__inn">
+                <h3 class="cases-img__title cases-img__title-white">Кейс 3</h3>
+                <img src="assets/img/cases-03.jpg" alt="cases" />
+              </div>
+            </div>
+            <div class="cases__item cases-text">
+              <h3 class="cases-text__title">Название кейса</h3>
+              <h4 class="cases-text__name">
+                <span>Бикбаева Ольга,</span> руководитель специальных проектов
+              </h4>
+              <p>Для многих руководителей и собственников бизнеса, основная задача это сформировать надежную команду, которая разделяет ценности Компании, успешно достигает поставленных результатов и которой можно доверять. Но как быть, когда руководитель
+                понимает, что определенные бизнес-процессы идут в разрез тех ценностей, которые были изначально заложены в основе работы Компании.</p>
+              <a class="cases-text__link" href="#">подробнее</a>
+            </div>
+          </div>
+          <!--end cases row-->
+          <!--begin cases row-->
+          <div class="cases__row">
+            <div class="cases__item cases-img">
+              <h3 class="cases-img__title cases-img__title-grey">Кейс 4</h3>
+              <div class="cases-img__inn">
+                <h3 class="cases-img__title cases-img__title-white">Кейс 4</h3>
+                <img src="assets/img/cases-04.jpg" alt="cases" />
+              </div>
+            </div>
+            <div class="cases__item cases-text">
+              <h3 class="cases-text__title">Название кейса</h3>
+              <h4 class="cases-text__name">
+                <span>Разгонова Анна,</span> консультант по подбору персонала
+              </h4>
+              <p>К нам в агентство обратилась владелица йога центра премиум класса, открывающегося в престижном районе города. Необходимо было найти Управляющего, способного открыть клуб, выстроить все бизнес процессы, и в дальнейшем заниматься развитием
+                данного места.</p>
+              <a class="cases-text__link" href="#">подробнее</a>
+            </div>
+          </div>
+          <!--end cases row-->
+          <!--begin cases row-->
+          <div class="cases__row">
+            <div class="cases__item cases-img">
+              <h3 class="cases-img__title cases-img__title-grey">Кейс 5</h3>
+              <div class="cases-img__inn">
+                <h3 class="cases-img__title cases-img__title-white">Кейс 5</h3>
+                <img src="assets/img/cases-05.jpg" alt="cases" />
+              </div>
+            </div>
+            <div class="cases__item cases-text">
+              <h3 class="cases-text__title">Название кейса</h3>
+              <h4 class="cases-text__name">
+                <span>Колмаков Сергей,</span> консультант по подбору персонала
+              </h4>
+              <p>Любой рекрутер подтвердит, что самые творческие проекты появляются во время работы на узком рынке. Чем меньше рынок, чем лучше все компании и их сотрудники знают друг друга, тем интереснее и сложнее работать по данному проекту. Недавно нашей
+                команде удалось поучаствовать именно в таком проекте.</p>
+              <a class="cases-text__link" href="#">подробнее</a>
+            </div>
+          </div>
+          <!--end cases row-->
+        </div>
+      </section>
+      <!--end   second-section-->
+    </section>
+    <!--end   content-->
+    <!--include ../elements/popup-->
+    <!--begin footer-->
+    <footer class="footer">
+      <!--begin footer top-->
+      <div class="footer-top">
+        <div class="container-lg">
+          <div class="footer-item">
+            <a class="footer-logo" href="#">
+              <img src="assets/img/logo-footer.png" alt="company logo">
+            </a>
+            <a class="footer-accredit" href="#">аккредитованное ЧАЗ</a>
+            <div class="footer-adress">
+              <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <span>Санкт-Петербург</span>
+                <br>Невский проспект, 21
+                <br>БЦ"Дом Мертенса"</a>
+              <a href="tel:+78123200121">+7 812 320 01 21</a>
+            </div>
+            <div class="footer-adress">
+              <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <span>Москва</span>
+                <br>Москва-сити, Башня
+                <br>Федерация Запад, 45-ый этаж</a>
+              <a href="tel:+74959098177">+7 495 909 81 77</a>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item__title">О компании</h3>
+            <ul class="footer-item__list">
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Наша команда</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Наши клиенты</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Реализованные кейсы</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Миссия компании</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Стандарты качества</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Этический кодекс рекрутера</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item__title">Работодателю</h3>
+            <ul class="footer-item__list">
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Подбор персонала</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Оценка персонала</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Исследования рынка</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Кадровый консалтинг</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Заявка на персонал</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item__title">Соискателю</h3>
+            <ul class="footer-item__list">
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Трудоустройство Топ-менеджеров</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Вакансии в Москве</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Вакансии в Санкт-Петербурге</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Вакансии в регионах</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Отправить резюме</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-item__title">Требования</h3>
+            <ul class="footer-item__list">
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Оценка условий труда</a>
+              </li>
+              <li class="footer-item__item">
+                <a class="footer-item__link" href="#">Защита персональных данных</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--end footer top-->
+      <!--begin footer bottom-->
+      <div class="footer-bottom">
+        <div class="container-lg">
+          <div class="footer-copyright">
+            <span>&#169; 2009-2017 ТОП Рекрутинг. All Rights Reserved</span>
+          </div>
+          <div class="footer-social">
+            <ul class="footer-social__list">
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#in"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="#">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--end footer bottom-->
+    </footer>
+    <!--end   footer-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/prog.js"></script>
+  </body>
+</html>

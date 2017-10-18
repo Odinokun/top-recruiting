@@ -1,0 +1,287 @@
+extends ../_template
+
+mixin aspirant-vacancies-list__item(city, date, position, text)
+  //begin aspirant-vacancies__item
+  .aspirant-vacancies-list__item
+    header.aspirant-vacancies-list__header
+      .aspirant-vacancies-list__city
+        span= city
+      .aspirant-vacancies-list__date
+        svg
+          use(xlink:href="assets/img/sprite.svg#calendar")
+        span= date
+    h3.aspirant-vacancies-list__position= position
+    p= text
+    a(href="#").aspirant-vacancies-list__link подробнее
+  //end   aspirant-vacancies__item
+
+block variables
+  - var title = 'Кадровые услуги'
+  - var pageHeaderTitle = 'Кадровые услуги'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.services
+    //begin top-section
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-services-top.jpg')")
+        include ../elements/breadcrumbs
+        include ../elements/magnific
+        include ../elements/top-block-mouse
+
+        .container
+          h2.top-block__title
+            | Услуги
+            br
+            | кадрового агенства
+        //.container-lg
+        .services-ancors__list
+          a(href="#01").btn подбор персонала
+          a(href="#02").btn кадровый консалтинг
+          a(href="#03").btn центр оценки персонала
+          a(href="#04").btn исследования рынка труда
+          a(href="#05").btn индивидуальная услуга
+
+    //end top-section
+
+    //begin second-section
+    section#second-section.services-second
+      .container-lg#01
+        .services-second__left
+          //begin services-second__decor
+          .services-second__decor
+            .services-second__decor-inn
+            span.services-section__number 01
+          //end services-second__decor
+
+          .services-second__left--text
+            h2.title.services-second__left-title Подбор персонала
+            p Быстрое и эффективное решение HR-задач способствует развитию Вашего бизнеса, делает его успешным, конкурентоспособным. Однако поиск персонала целенаправленная работа, в которой нельзя полагаться лишь на собственные силы без знаний и опыта.
+            a(href="#").services-second__left-link подробнее
+
+        .services-second__right
+          h3.services-second__right-title
+            | Используем разные виды подбора персонала
+            br
+            | для достижения лучших результатов
+          .services-second__accordeon
+            .services-second__accordeon-item
+              span.services-second__accordeon-btn Executive search
+              .services-second__accordeon-text
+                p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
+
+            .services-second__accordeon-item
+              span.services-second__accordeon-btn Head hunting
+              .services-second__accordeon-text
+                p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
+
+            .services-second__accordeon-item
+              span.services-second__accordeon-btn Скриннинг резюме
+              .services-second__accordeon-text
+                p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
+
+            .services-second__accordeon-item
+              span.services-second__accordeon-btn Talant selection
+              .services-second__accordeon-text
+                p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
+
+            .services-second__accordeon-item
+              span.services-second__accordeon-btn Дни карьеры
+              .services-second__accordeon-text
+                p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
+
+            .services-second__accordeon-item
+              span.services-second__accordeon-btn Собственная база соискателей
+              .services-second__accordeon-text
+                p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
+
+        //begin services-second__podbor
+        section.services-second__podbor
+          .container
+            h3.services-second__podbor-title Подбираем персонал в котором Вы нуждаетесь:
+            ol.services-second__podbor-list
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Топ менеджеры
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Юристы
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Бухгалтеры
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link IT персонал
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Менеджеры по продажам
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Персонал в логистике
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Специалисты
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Банковский персонал
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Персонал СРО
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Персонал в гостиничный бизнес
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Персонал в ритейл
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Торговый персонал
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Персонал для нефтегазовой отрасли
+              li.services-second__podbor-item
+                a(href="#").services-second__podbor-link Персонал для строительной отрасли
+        //end services-second__podbor
+    //end   second-section
+
+
+    //begin services-consulting
+    section.services-consulting#02
+      .container
+        .services-consulting__left
+          h2.title Кадровый консалтинг
+          p Формирование эффективной системы управления, создание кадровой архитектуры организации, оптимизация штатных ресурсов, разработка и усиление системы мотивации, – все это ключевые задачи услуги кадрового консалтинга. Для их решения ведущее рекрутинговое агентство «ТОП Рекрутинг» применяет различные инструменты, которые подбираются индивидуально с учетом особенностей Вашей компании.
+          a(href="#").services-consulting__link подробнее
+          
+          span.services-section__number 02
+
+        .services-consulting__right
+          a(href="#")
+            img(src="assets/img/services-consulting.jpg" alt="img")
+    //end   services-consulting
+
+
+    //begin services-ocenka
+    section.services-ocenka#03
+      .container
+        .services-ocenka__left
+          h2.title Центр оценки персонала
+          p Оценка персонала – залог эффективной работы компании и необходимая мера для совершенствования кадровой политики организации. Рекрутинговое агентство «ТОП Рекрутинг» оказывает профессиональные услуги оценки персонала.
+          a(href="#").services-consulting__link подробнее
+          span.services-section__number 03
+        .services-ocenka__right
+          h3.services-ocenka__title Произведем многогранную оценку вашего персонала:
+          ul.services-ocenka__right-list
+            li.services-ocenka__right-item
+              a(href="#").services-ocenka__right-link Тайный покупатель
+            li.services-ocenka__right-item
+              a(href="#").services-ocenka__right-link Оценка 360 градусов
+            li.services-ocenka__right-item
+              a(href="#").services-ocenka__right-link Профессиональные качества работника
+            li.services-ocenka__right-item
+              a(href="#").services-ocenka__right-link Независимая оценка квалификации
+            li.services-ocenka__right-item
+              a(href="#").services-ocenka__right-link Оценка профессиональных компетенций
+            li.services-ocenka__right-item
+              a(href="#").services-ocenka__right-link Ассессмент центр
+            li.services-ocenka__right-item
+              a(href="#").services-ocenka__right-link Профессиональная аттестация
+            li.services-ocenka__right-item
+              a(href="#").services-ocenka__right-link Оценка руководителей
+    //end   services-ocenka
+
+
+    //begin services-research
+    section.services-research#04
+      .container
+        h2.title Исследования рынка труда
+        span.services-section__number 04
+        ul.services-research__list
+          li.services-research__item
+            .services-research__item-header
+              svg
+                use(xlink:href="assets/img/sprite.svg#research-01")
+              h3.services-research__item-title
+                |Исследование
+                br
+                |рынка труда
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            a(href="#").services-research__item-link подробнее
+
+          li.services-research__item
+            .services-research__item-header
+              svg
+                use(xlink:href="assets/img/sprite.svg#research-02")
+              h3.services-research__item-title
+                |Обзор и исследование
+                br
+                |заработных плат
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            a(href="#").services-research__item-link подробнее
+
+          li.services-research__item
+            .services-research__item-header
+              svg
+                use(xlink:href="assets/img/sprite.svg#research-03")
+              h3.services-research__item-title
+                |Изучение
+                br
+                |конкурентной среды
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            a(href="#").services-research__item-link подробнее
+
+          li.services-research__item
+            .services-research__item-header
+              svg
+                use(xlink:href="assets/img/sprite.svg#research-04")
+              h3.services-research__item-title
+                |Исследование
+                br
+                |систем мотивации
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            a(href="#").services-research__item-link подробнее
+
+          li.services-research__item
+            .services-research__item-header
+              svg
+                use(xlink:href="assets/img/sprite.svg#research-05")
+              h3.services-research__item-title
+                |Обзор структур
+                br
+                |отделов продаж
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            a(href="#").services-research__item-link подробнее
+
+          li.services-research__item
+            .services-research__item-header
+              svg
+                use(xlink:href="assets/img/sprite.svg#research-06")
+              h3.services-research__item-title
+                |Исследования под
+                br
+                |индивидуальный запрос
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            a(href="#").services-research__item-link подробнее
+    //end   services-research
+
+
+    //begin services-form-section
+    section.services-form-section#05
+      .container
+        span.services-section__number 05
+        //begin services-form decor
+        .services-form__decor
+          .services-form__decor-inn
+        //end services-form decor
+        h2.title Запрос индивидуальной услуги
+        h3.subtitle Если Вы не нашли в списке наших услуг решения вашей задачи, напишите нам и мы предложим индивидуальное решение.
+        form.services-form
+          .services-form__left
+            input.services-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
+            input.services-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
+          .services-form__right
+            textarea.services-form__textarea(name="descr" placeholder="Коментарий")
+
+          //begin agree checkbox
+          .agree-checkbox
+            input(type="checkbox" id="services-form" class="agree" checked)
+            label(for="services-form")
+              | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+              a(href="/agree.html") Пользовательского соглашения
+          //end   agree checkbox
+          input.services-form__submit.btn(type="submit" value="заказать")
+    //end   services-form-section
+
+  //end   content
+
+  include ../elements/popup
+  include ../sections/footer

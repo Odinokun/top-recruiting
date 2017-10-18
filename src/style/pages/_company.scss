@@ -137,7 +137,7 @@
     width: 377px;
     height: 322px;
     content: '';
-    background-image: url('../../img/gear-g.png');
+    background-image: url('../img/gear-g.png');
     background-size: contain;
   }
 }
@@ -156,7 +156,7 @@
     width: 250px;
     height: 248px;
     content: '';
-    background-image: url('../../img/gear-w.png');
+    background-image: url('../img/gear-w.png');
     background-size: contain;
   }
 }
@@ -207,7 +207,7 @@
     content: '';
     transition: background-color .5s ease-in-out;
     background-color: $highlight;
-    background-image: url('../../img/arrow-right.png');
+    background-image: url('../img/arrow-right.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }

@@ -18,7 +18,7 @@
 
   @include max(680) {
     background-color: #909090;
-    background-image: url('../../img/bg-anketa.jpg');
+    background-image: url('../img/bg-anketa.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -117,7 +117,7 @@
 .anketa-second__bg-right {
   position: relative;
   background-color: #909090;
-  background-image: url('../../img/bg-anketa.jpg');
+  background-image: url('../img/bg-anketa.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -128,7 +128,7 @@
     width: 100%;
     height: 240px;
     content: '';
-    background-image: url('../../img/mails-g.svg');
+    background-image: url('../img/mails-g.svg');
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: contain;
@@ -148,7 +148,7 @@
     width: 100%;
     height: 240px;
     content: '';
-    background-image: url('../../img/mails-w.svg');
+    background-image: url('../img/mails-w.svg');
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: contain;

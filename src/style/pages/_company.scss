@@ -93,8 +93,8 @@
 
 //begin company services
 .company-services {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   padding-bottom: 80px;
   p {
     font-family: $font-light;
@@ -266,6 +266,7 @@
   p {
     font-family: $font-light;
     font-size: 14px;
+    line-height: 24px;
     color: $text;
     span {
       font-family: $font-semibold;

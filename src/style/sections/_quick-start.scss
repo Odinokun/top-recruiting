@@ -10,6 +10,7 @@
     min-height: 640px;
     padding-top: 100px;
     padding-bottom: 100px;
+
     @include max(1100) {
       min-height: 0;
     }
@@ -25,6 +26,7 @@
       background-repeat: repeat-x;
       background-position: 100% 0;
       background-size: contain;
+
       @include max(1100) {
         display: none;
       }
@@ -33,15 +35,17 @@
 }
 .quick-start-header {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .quick-start__title {
   margin-bottom: 10px;
   color: #fff;
+  font-size: 35px;
 }
 .quick-start__subtitle {
   font-family: $font-light;
   font-size: 15px;
+  opacity: .7;
   color: #fff;
 }
 .quick-start-form {
@@ -49,6 +53,7 @@
   display: flex;
   flex-wrap: wrap;
   padding-right: 310px;
+
   @include max(1100) {
     padding-right: 0;
   }
@@ -59,6 +64,7 @@
   flex-direction: column;
   width: 50%;
   padding-right: 35px;
+
   @include max(700) {
     width: 100%;
     padding-right: 0;
@@ -70,10 +76,10 @@
   margin-bottom: 25px;
   padding: 20px 28px;
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid #868685;
   background-color: transparent;
 
-  @include placeholder-color(#fff);
+  @include placeholder-color(#868685);
 }
 //end inputs
 
@@ -83,6 +89,7 @@
   flex-direction: column;
   width: 50%;
   padding-right: 35px;
+
   @include max(1100) {
     padding-right: 0;
   }
@@ -118,7 +125,7 @@
       width: 18px;
       height: 18px;
       content: '';
-      border: 2px solid #fff;
+      border: 2px solid #868685;
       background-color: transparent;
     }
     &::after {
@@ -144,13 +151,15 @@
   height: 298px;
   cursor: default;
   border-radius: 50%;
-@include max(1100) {
-  border-radius: 0;
-  position: static;
-  order:10;
-  width: auto;
-  height: auto;
-}
+
+  @include max(1100) {
+    position: static;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+
+    order: 10;
+  }
   &:hover {
     &::after {
       opacity: 0;
@@ -169,6 +178,7 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+
     @include max(1100) {
       display: none;
     }
@@ -181,15 +191,16 @@
   }
 
   input {
-    min-width: 200px;
     width: 298px;
+    min-width: 200px;
     height: 298px;
     cursor: pointer;
     opacity: 0;
+
     @include max(1100) {
-      opacity: 1;
       width: auto;
       height: auto;
+      opacity: 1;
     }
   }
 }
@@ -198,6 +209,8 @@
 .quick-start-form__item-footer {
   width: 100%;
   max-width: 600px;
+  margin-top: 27px;
+
   @include max(1100) {
     max-width: 100%;
   }
@@ -205,12 +218,12 @@
     background-image: url('../img/check-w.png');
   }
   label {
-    color: #fff;
+    color: #868685;
     &::before {
-      border: 2px solid #fff;
+      border: 2px solid #868685;
     }
   }
   a {
-    color: #fff !important;
+    color: #868685 !important;
   }
 }

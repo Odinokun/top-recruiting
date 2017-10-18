@@ -195,6 +195,7 @@
 .review-letters__pic {
   position: relative;
   width: 200px;
+  cursor: pointer;
 
   flex: none;
   @include max(700) {
@@ -220,6 +221,7 @@
   width: 40px;
   height: 40px;
   content: '';
+  pointer-events: none;
   background-color: $highlight;
   svg {
     width: 17px;

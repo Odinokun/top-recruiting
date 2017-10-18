@@ -40,6 +40,7 @@
     font-family: $font-light;
     font-size: 14px;
     line-height: 24px;
+    margin-bottom: 20px;
     color: $text;
   }
 }
@@ -118,6 +119,7 @@
 
 .team-all {
   overflow: hidden;
+
   @include max(1360) {
     margin-right: 4%;
     margin-left: 4%;
@@ -142,6 +144,8 @@
   }
 }
 .team-all__item {
+  display: flex;
+  flex-direction: column;
   width: 23%;
   max-width: 390px;
   margin-bottom: 40px;
@@ -179,6 +183,7 @@
 .team-all__link {
   font-family: $font-bold;
   font-size: 11px;
+  margin-top: auto;
 }
 .team-all__item-last {
   position: relative;

@@ -9,7 +9,7 @@ module.exports = function() {
     fade: true,
     pauseOnHover:false,
     autoplay: true,
-    autoplaySpeed:3500,
+    autoplaySpeed:3000,
     cssEase: 'linear'
   });
   // end   top slider left
@@ -23,7 +23,7 @@ module.exports = function() {
     fade: true,
     pauseOnHover:false,
     autoplay: true,
-    autoplaySpeed:3500,
+    autoplaySpeed:3000,
     cssEase: 'linear'
   });
   // end   top slider right

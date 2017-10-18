@@ -2,26 +2,46 @@
   display: flex;
   justify-content: space-between;
   margin: -20px -20px -20px -20px !important;
+
+  @include max(900) {
+    flex-direction: column;
+  }
 }
 .top-slider {
+  position: relative;
   width: calc(50% - 3px);
+
+  @include max(900) {
+    width: 100%;
+    border-bottom: 3px solid #fff;
+  }
 }
 .top-slider__list {
   margin: 0;
   padding: 0;
 }
 .top-slider__item {
-  height: 600px;
+  min-height: 600px;
   margin: 0;
   padding: 0;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+
+  @include max(900) {
+    min-height: 400px;
+  }
 }
 .top-slider__banner {
   position: absolute;
   z-index: 10;
   bottom: 80px;
+
+  @include max(900) {
+    display: flex;
+      justify-content: flex-end;
+    flex-direction: column;
+  }
   p {
     font-family: $font-light;
     font-size: 18px;
@@ -32,9 +52,8 @@
     @include max(1220) {
       font-size: 16px;
     }
-    @include max(550) {
-      font-size: 15px;
-      margin-bottom: 20px;
+    @include max(900) {
+      display: none;
     }
   }
   .btn {
@@ -43,23 +62,24 @@
 }
 .top-slider__left {
   .top-slider__banner {
-    left: 50px;
-
-    @include max(550) {
-      left: 20px;
+    right: 50px;
+    @include max(900) {
+      align-items: flex-end;
     }
+    @include max(425) {
+      right: 10px;
+    }
+
   }
 }
 .top-slider__right {
   .top-slider__banner {
-    right: 50px;
-    text-align: right;
-
+    left: 50px;
     @include max(900) {
-      top: 30px;
+      align-items: flex-start;
     }
-    @include max(550) {
-      right: 20px;
+    @include max(425) {
+      left: 10px;
     }
   }
 }

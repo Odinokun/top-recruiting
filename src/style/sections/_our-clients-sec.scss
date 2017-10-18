@@ -67,12 +67,26 @@
     font-size: 13px;
     line-height: 22px;
     margin-bottom: 20px;
+    transition: $transition;
+    pointer-events: none;
+    opacity: 0;
     color: $text;
     span {
       font-family: $font;
       margin-bottom: 20px;
       color: $title;
     }
+  }
+}
+
+//.slick-current + .our-clients__slider-item.slick-active,
+.our-clients__slider-item[aria-hidden='false'] {
+  .our-clients__slider-title,
+  a,
+  p {
+    transition: $transition;
+    pointer-events: auto;
+    opacity: 1;
   }
 }
 
@@ -106,9 +120,15 @@
   font-family: $font-semibold;
   font-size: 16px;
   margin-bottom: 20px;
+  transition: $transition;
+  pointer-events: none;
+  opacity: 0;
   color: $title;
 }
 .our-clients__slider-link {
   font-family: $font-bold;
   font-size: 11px;
+  transition: $transition;
+  pointer-events: none;
+  opacity: 0;
 }

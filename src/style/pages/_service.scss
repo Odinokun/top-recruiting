@@ -95,7 +95,7 @@
   font-size: 17px;
   line-height: 27px;
   margin-bottom: 30px;
-  color: $title;
+  color: #141414;
 }
 .service-second__list {
   .service-second__item {
@@ -129,7 +129,7 @@
 }
 .service-advantage__pic {
   position: absolute;
-  top: -60px;
+  top: -50px;
   right: -30px;
   width: 100%;
   max-width: 450px;
@@ -176,7 +176,7 @@
   font-size: 17px;
   line-height: 27px;
   margin-bottom: 30px;
-  color: $title;
+  color: #141414;
 }
 .service-method__list {
   .service-method__item {
@@ -234,7 +234,7 @@
     list-style-type: decimal-leading-zero;
     color: $highlight;
     span {
-      font-family: $font;
+      font-family: $font-light;
       font-size: 16px;
       line-height: 26px;
       color: #fff;
@@ -263,7 +263,6 @@
   justify-content: space-between;
   .agree-checkbox {
     width: 100%;
-    padding-top: 20px;
     label {
       max-width: 580px;
     }

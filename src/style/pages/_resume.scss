@@ -19,7 +19,7 @@
 
   @include max(680) {
     background-color: #909090;
-    background-image: url('../../img/bg-anketa.jpg');
+    background-image: url('../img/bg-anketa.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -73,7 +73,7 @@
 .resume-list__item {
   font-size: 15px;
   padding-left: 15px;
-  list-style-image: url('../../img/ul-highlight.png');
+  list-style-image: url('../img/ul-highlight.png');
   color: $title;
 }
 
@@ -151,7 +151,7 @@
 .resume-second__bg-right {
   position: relative;
   background-color: #909090;
-  background-image: url('../../img/bg-resume.jpg');
+  background-image: url('../img/bg-resume.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;

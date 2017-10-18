@@ -7,6 +7,7 @@ module.exports = function() {
     infinite: true,
     speed: 500,
     fade: true,
+    pauseOnHover:false,
     autoplay: true,
     autoplaySpeed:3500,
     cssEase: 'linear'
@@ -20,6 +21,7 @@ module.exports = function() {
     infinite: true,
     speed: 500,
     fade: true,
+    pauseOnHover:false,
     autoplay: true,
     autoplaySpeed:3500,
     cssEase: 'linear'

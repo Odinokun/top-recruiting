@@ -45,7 +45,7 @@
     margin-right: 20px;
   }
   input:checked + label:after {
-    background-image: url('../../img/check.png');
+    background-image: url('../img/check.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
@@ -205,7 +205,7 @@
     width: 374px;
     height: 341px;
     content: '';
-    background-image: url('../../img/vacancies-g.png');
+    background-image: url('../img/vacancies-g.png');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -229,7 +229,7 @@
     width: 211px;
     height: 235px;
     content: '';
-    background-image: url('../../img/vacancies-w.png');
+    background-image: url('../img/vacancies-w.png');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;

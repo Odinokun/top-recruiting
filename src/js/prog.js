@@ -17,6 +17,7 @@ $(document).ready(function ($) {
     'service-02',
     'service-03',
     'service-04',
+    'services',
     'team',
     'vacancies',
     'vacancy',
@@ -189,3 +190,11 @@ $('.worker-top__accordeon-btn').on('click', function () {
   $(this).next('.worker-top__accordeon-text').slideToggle();
 });
 //end worker accordeon
+
+
+//begin services second section accordeon
+$('.services-second__accordeon-btn').on('click', function () {
+  $(this).toggleClass('active');
+  $(this).next('.services-second__accordeon-text').slideToggle();
+});
+//end services second section accordeon

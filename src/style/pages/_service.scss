@@ -49,7 +49,7 @@
   left: 0;
   width: 1722px;
   height: 280px;
-  background-image: url('../../img/service-top-decor-2.png');
+  background-image: url('../img/service-top-decor-2.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -73,7 +73,7 @@
     width: 335px;
     height: 450px;
     content: '';
-    background-image: url('../../img/service-top-decor.png');
+    background-image: url('../img/service-top-decor.png');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -158,7 +158,7 @@
   }
   .service-advantage__item {
     font-size: 14px;
-    list-style-image: url('../../img/ul-star.png');
+    list-style-image: url('../img/ul-star.png');
     color: $text;
   }
 }
@@ -189,7 +189,7 @@
 
 //begin service-evaluation
 .service-evaluation {
-  background-image: url('../../img/bg-service-evaluation.jpg');
+  background-image: url('../img/bg-service-evaluation.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -307,7 +307,7 @@
   bottom: 0;
   left: -500px;
   content: '';
-  background-image: url('../../img/bg-service-form.jpg');
+  background-image: url('../img/bg-service-form.jpg');
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: cover;
@@ -322,7 +322,7 @@
     width: 309px;
     height: 239px;
     content: '';
-    background-image: url('../../img/hand-g.svg');
+    background-image: url('../img/hand-g.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -342,7 +342,7 @@
     width: 309px;
     height: 239px;
     content: '';
-    background-image: url('../../img/hand-w.svg');
+    background-image: url('../img/hand-w.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -386,7 +386,7 @@
   }
   .service-unique-advantage__item {
     font-size: 14px;
-    list-style-image: url('../../img/ul-star.png');
+    list-style-image: url('../img/ul-star.png');
     color: $text;
   }
 }

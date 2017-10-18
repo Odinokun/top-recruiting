@@ -9,7 +9,7 @@
     margin-right: 20px;
   }
   input:checked + label:after {
-    background-image: url('../../img/check.png');
+    background-image: url('../img/check.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
@@ -43,5 +43,13 @@
       color: $text;
     }
   }
+}
+.agree-checkbox + .btn {
+  pointer-events: none;
+  opacity: .5;
+}
+.agree-checkbox.checked + .btn {
+  pointer-events: auto;
+  opacity: 1;
 }
 //end checkbox

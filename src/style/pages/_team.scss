@@ -78,7 +78,7 @@
     content: '';
     transition: background-color .5s ease-in-out;
     background-color: $highlight;
-    background-image: url('../../img/arrow-right.png');
+    background-image: url('../img/arrow-right.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
@@ -189,7 +189,7 @@
     width: 139px;
     height: 141px;
     content: '';
-    background-image: url('../../img/team-magnific-g.svg');
+    background-image: url('../img/team-magnific-g.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -209,7 +209,7 @@
       width: 139px;
       height: 141px;
       content: '';
-      background-image: url('../../img/team-magnific-w.svg');
+      background-image: url('../img/team-magnific-w.svg');
       background-repeat: no-repeat;
       background-position: 0 0;
       background-size: contain;

@@ -1,0 +1,23 @@
+extends ../_template
+
+block variables
+  - var title = 'Top recruiting'
+  - var pageHeaderTitle = 'Top recruiting'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main
+    include ../sections/top-section
+    include ../sections/index-second-section
+    include ../sections/quick-start
+    include ../sections/podbor
+    include ../sections/cases-sec
+    include ../sections/service-sec
+    include ../sections/our-clients-sec
+    include ../sections/news-sec
+  //end   content
+
+  include ../elements/popup
+  include ../sections/footer

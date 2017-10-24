@@ -29,6 +29,7 @@ $.gulp.task('default', $.gulp.series(
     'sprite:svg',
     'pug',
     'sass',
+    'sass-2',
     'css:foundation',
     'js:foundation',
     'js:app-browserify',

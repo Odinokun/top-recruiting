@@ -12,8 +12,9 @@
     align-items: flex-end;
   }
   .top-block__title {
-    margin-bottom: 50px;
     font-size: 150px;
+    margin-bottom: 50px;
+
     @include max(600) {
       font-size: 100px;
     }
@@ -28,8 +29,8 @@
     font-family: $font-light;
     font-size: 14px;
     line-height: 22px;
-    margin-bottom: 0px;
-    color: #text;
+    margin-bottom: 0;
+    color: $text;
   }
   .btn {
     margin-top: 50px;

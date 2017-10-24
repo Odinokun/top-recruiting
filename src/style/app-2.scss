@@ -1,3 +1,41 @@
-//begin 404 page
+@import 'core/variables';
+@import 'core/mixins';
 
+//begin 404 page
+.error .top-block {
+  .container-lg {
+    display: flex;
+    background-position: 50% 50%;
+  }
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+  .top-block__title {
+    margin-bottom: 50px;
+    font-size: 150px;
+    @include max(600) {
+      font-size: 100px;
+    }
+  }
+}
+.error-second {
+  .container {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0px;
+    color: #text;
+  }
+  .btn {
+    margin-top: 50px;
+  }
+}
+.error-second__title {
+  margin-bottom: 50px;
+}
 //end 404 page

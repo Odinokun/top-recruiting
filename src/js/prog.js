@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     'clients',
     'company',
     'contacts',
+    'error',
     'news',
     'resume',
     'review',

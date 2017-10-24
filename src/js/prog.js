@@ -207,3 +207,41 @@ $('.services-second__accordeon-btn').on('click', function () {
   $(this).next('.services-second__accordeon-text').slideToggle();
 });
 //end services second section accordeon
+
+
+
+
+// begin открываем окно выбора региона
+$('.geolocation-region__city').on('click', function() {
+  $('.geolocation-region__popup-city').fadeIn();
+  $('.popup__layer-2').fadeIn();
+  $('body').addClass('no-scroll');
+  return false;
+})
+// end открываем окно выбора региона
+
+// begin Выбор города в попапе в шапке
+$('.geolocation-region__popup-city li').on('click', function() {
+  $('.geolocation-region__popup-city').fadeOut();
+  $('.popup__layer-2').fadeOut();
+  $('body').removeClass('no-scroll');
+
+  var city = $(this).data('city');
+
+  // меняем значение селекта на карте
+  $(".control select [value=" + city + "]").attr("selected", "selected");
+  // меняем баннер на карте
+  $('.map-banner').fadeOut(0);
+  $('.map-banner-' + city).delay(500).fadeIn();
+  // меняем город
+  $('.geolocation-region__city').fadeOut(0);
+  $('.geolocation-region__city-' + city).fadeIn();
+  // меняем телефон
+  $('.geolocation-phone__link').fadeOut(0);
+  $('.geolocation-phone__link-' + city).fadeIn();
+
+  goToCity(city);
+
+})
+// end Выбор города в попапе в шапке
+

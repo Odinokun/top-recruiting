@@ -95,9 +95,30 @@
           <div class="header__right-inn">
             <!--begin geolocation-->
             <section class="geolocation">
-              <a class="geolocation-city" href="#">МСК</a>
-              <a class="geolocation-phone" href="tel:+78123200121">
-                <span>+7 812</span> 320 01 21</a>
+              <div class="popup__layer-2"></div>
+              <div class="geolocation-region">
+                <a class="geolocation-region__city geolocation-region__city-msk" href="#">МСК</a>
+                <a class="geolocation-region__city geolocation-region__city-spb active" href="#">СПБ</a>
+              </div>
+              <div class="geolocation-phone">
+                <a class="geolocation-phone__link geolocation-phone__link-msk" href="tel:88000000000">
+                  <span>+8 800</span> 000 00 00</a>
+                <a class="geolocation-phone__link geolocation-phone__link-spb active" href="tel:78123200121">
+                  <span>+7 812</span> 320 01 21</a>
+                <div class="geolocation-region__popup">
+                  <h3 class="geolocation-region__popup-title">Ваш регион Санкт-Петербург?</h3>
+                  <div class="geolocation-region__btn-wrap">
+                    <button class="btn btn-rr">Да</button>
+                    <button class="btn btn-no">Нет, изменить регион</button>
+                  </div>
+                </div>
+                <div class="geolocation-region__popup-city">
+                  <ul>
+                    <li data-city="msk">Москва</li>
+                    <li data-city="spb">Санкт-Петербург</li>
+                  </ul>
+                </div>
+              </div>
             </section>
             <!--end   geolocation-->
             <a class="header-callback popup-open" href="#" data-open="callback">

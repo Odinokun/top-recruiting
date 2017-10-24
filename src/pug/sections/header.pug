@@ -51,11 +51,29 @@ header.header
         
         //begin geolocation
         section.geolocation
-          a(href="#").geolocation-city МСК
-          a(href="tel:+78123200121").geolocation-phone
-            span +7 812
-            =" "
-            |320 01 21
+          .popup__layer-2
+
+          .geolocation-region
+            a(href="#").geolocation-region__city.geolocation-region__city-msk МСК
+            a(href="#").geolocation-region__city.geolocation-region__city-spb.active СПБ
+          .geolocation-phone
+            a(href="tel:88000000000").geolocation-phone__link.geolocation-phone__link-msk
+              span +8 800
+              =" "
+              | 000 00 00
+            a(href="tel:78123200121").geolocation-phone__link.geolocation-phone__link-spb.active
+              span +7 812
+              =" "
+              | 320 01 21
+            .geolocation-region__popup
+              h3.geolocation-region__popup-title Ваш регион Санкт-Петербург?
+              .geolocation-region__btn-wrap
+                button.btn.btn-rr Да
+                button.btn.btn-no Нет, изменить регион
+            .geolocation-region__popup-city
+              ul
+                li(data-city="msk") Москва
+                li(data-city="spb") Санкт-Петербург
         //end   geolocation
 
         a(href="#" data-open="callback").header-callback.popup-open

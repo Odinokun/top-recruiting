@@ -83,39 +83,6 @@
 }
 //end header__right
 
-//begin geolocation
-.geolocation {
-  display: flex;
-  align-items: center;
-
-  @include max(700) {
-    margin-bottom: 30px;
-  }
-}
-.geolocation-city {
-  font-family: $font-light;
-  font-size: 12px;
-  margin-right: 18px;
-  text-transform: uppercase;
-  color: #969696;
-}
-.geolocation-phone {
-  font-family: $font-bold;
-  font-size: 25px;
-  margin-right: 20px;
-  white-space: nowrap;
-  text-decoration: none;
-  color: $title;
-
-  @include max(1360) {
-    font-size: 20px;
-  }
-  span {
-    color: #969696;
-  }
-}
-//end geolocation
-
 //begin callback
 .header-callback {
   display: flex;

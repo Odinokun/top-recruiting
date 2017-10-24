@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'anketa',
     'aspirant',
     'article',
+    'case',
     'cases',
     'clients',
     'company',

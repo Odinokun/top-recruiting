@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'anketa',
     'aspirant',
     'article',
+    'case',
     'cases',
     'clients',
     'company',
@@ -111,6 +112,12 @@ $('.popup__submit').on('click', function() {
   $('#popup-success, .popup__layer').fadeIn();
 });
 // end   popup success
+
+// begin popup success-2
+$('.popup__submit-2').on('click', function() {
+  $('#popup-success, .popup__layer').fadeIn();
+});
+// end   popup success-2
 
 // begin popup close
 $('.popup__layer, .popup-close').on('click', function() {

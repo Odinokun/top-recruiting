@@ -1,0 +1,35 @@
+extends ../_template
+
+block variables
+  - var title = '404'
+  - var pageHeaderTitle = '404'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.error
+    //begin top-section
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-error-top.jpg')")
+        include ../elements/breadcrumbs
+        include ../elements/magnific
+        include ../elements/top-block-mouse
+
+        .container
+          h2.top-block__title 404
+    //end top-section
+
+    //begin second-section
+    section#second-section.error-second
+      .container
+        h2.error-second__title.title Этой страницы больше не существует
+        p Здесь будет текст который обычно пишут на таких страницах.
+        p Удачно подобранный персонал высшего и среднего звена – это лучшие инвестиции в будущее процветание Вашей организации.
+
+        a(href="#").btn вернуться на главную
+
+    //end   second-section
+
+  include ../elements/popup
+  include ../sections/footer

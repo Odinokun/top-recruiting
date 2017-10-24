@@ -1,0 +1,150 @@
+extends ../_template
+
+mixin vacancies-list__item(city, date, position, text)
+  //begin vacancies-list__item
+  .vacancies-list__item
+    header.vacancies-list__item-header
+      .vacancies-list__item-city
+        span= city
+      .vacancies-list__item-date
+        svg
+          use(xlink:href="assets/img/sprite.svg#calendar")
+        span= date
+    h3.vacancies-list__item-position= position
+    p= text
+    a(href="#").vacancies-list__item-link подробнее
+  //end   vacancies-list__item
+
+block variables
+  - var title = 'Вакансии'
+  - var pageHeaderTitle = 'Вакансии'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.vacancies
+    //begin top-section
+    .top-block
+      .container-lg(style="background-image:url('assets/img/bg-vacancies-top.jpg')")
+        include ../elements/breadcrumbs
+        include ../elements/magnific
+        include ../elements/top-block-mouse
+
+        .container
+          h2.top-block__title Наши вакансии
+    //end top-section
+
+    //begin second-section
+    section#second-section.vacancies-second
+      .vacancies-checkbox-section
+        .container
+          h2.title Выберите интересующие вас вакансии
+          form.vacancies-form
+            .vacancies-form__left
+              .vacancies-form__checkbox
+                input(type="checkbox" id="01" checked)
+                label(for="01") Москва
+              .vacancies-form__checkbox
+                input(type="checkbox" id="02" checked)
+                label(for="02") Санкт-Петербург
+              .vacancies-form__checkbox
+                input(type="checkbox" id="03" checked)
+                label(for="03") Регионы
+            .vacancies-form__right
+              .vacancies-form__checkbox
+                input(type="checkbox" id="04" checked)
+                label(for="04") Топ-менеджеры
+              .vacancies-form__checkbox
+                input(type="checkbox" id="05" checked)
+                label(for="05") Мидл-менеджеры
+              .vacancies-form__checkbox
+                input(type="checkbox" id="06" checked)
+                label(for="06") Специалисты
+
+      //begin vacancies-list
+      section.vacancies-list-section
+        .container
+          //begin decor
+          .vacancies-list__decor
+            .vacancies-list__decor-inn
+          //end decor
+          .vacancies__list
+            +vacancies-list__item(
+            'Санкт-Петербург',
+            '17.09.2017',
+            'Директор по продажам',
+            'Наш Заказчик – инвестиционно-строительная компания приглашает опытного Директора по продажам в сфере жилищного девелопмента.'
+            )
+            +vacancies-list__item(
+            'Москва',
+            '17.09.2017',
+            'Заместитель главного бухгалтера на участок заработная плата',
+            'Крупный холдинг, специализирующийся на предоставлении услуг аутсорсинга и аутстаффинга, в связи с расширением, приглашает к себе в команду заместителя главного бухгалтера на участок заработная плата.'
+            )
+            +vacancies-list__item(
+            'Новый Уренгой',
+            '17.09.2017',
+            'Главный эксперт в области охраны труда, пожарной промышленной и экологической безопасности',
+            'Наш заказчик и надежный партнер - крупнейший федеральный строительный холдинг (основные заказчики - ведущие игроки нефтегазовой отрасли)'
+            )
+            +vacancies-list__item(
+            'Санкт-Петербург',
+            '17.09.2017',
+            'Директор по продажам',
+            'Наш Заказчик – инвестиционно-строительная компания приглашает опытного Директора по продажам в сфере жилищного девелопмента.'
+            )
+            +vacancies-list__item(
+            'Москва',
+            '17.09.2017',
+            'Заместитель главного бухгалтера на участок заработная плата',
+            'Крупный холдинг, специализирующийся на предоставлении услуг аутсорсинга и аутстаффинга, в связи с расширением, приглашает к себе в команду заместителя главного бухгалтера на участок заработная плата.'
+            )
+            +vacancies-list__item(
+            'Новый Уренгой',
+            '17.09.2017',
+            'Главный эксперт в области охраны труда, пожарной промышленной и экологической безопасности',
+            'Наш заказчик и надежный партнер - крупнейший федеральный строительный холдинг (основные заказчики - ведущие игроки нефтегазовой отрасли)'
+            )
+            +vacancies-list__item(
+            'Санкт-Петербург',
+            '17.09.2017',
+            'Директор по продажам',
+            'Наш Заказчик – инвестиционно-строительная компания приглашает опытного Директора по продажам в сфере жилищного девелопмента.'
+            )
+            +vacancies-list__item(
+            'Москва',
+            '17.09.2017',
+            'Заместитель главного бухгалтера на участок заработная плата',
+            'Крупный холдинг, специализирующийся на предоставлении услуг аутсорсинга и аутстаффинга, в связи с расширением, приглашает к себе в команду заместителя главного бухгалтера на участок заработная плата.'
+            )
+            +vacancies-list__item(
+            'Новый Уренгой',
+            '17.09.2017',
+            'Главный эксперт в области охраны труда, пожарной промышленной и экологической безопасности',
+            'Наш заказчик и надежный партнер - крупнейший федеральный строительный холдинг (основные заказчики - ведущие игроки нефтегазовой отрасли)'
+            )
+            +vacancies-list__item(
+            'Санкт-Петербург',
+            '17.09.2017',
+            'Директор по продажам',
+            'Наш Заказчик – инвестиционно-строительная компания приглашает опытного Директора по продажам в сфере жилищного девелопмента.'
+            )
+            +vacancies-list__item(
+            'Москва',
+            '17.09.2017',
+            'Заместитель главного бухгалтера на участок заработная плата',
+            'Крупный холдинг, специализирующийся на предоставлении услуг аутсорсинга и аутстаффинга, в связи с расширением, приглашает к себе в команду заместителя главного бухгалтера на участок заработная плата.'
+            )
+            +vacancies-list__item(
+            'Новый Уренгой',
+            '17.09.2017',
+            'Главный эксперт в области охраны труда, пожарной промышленной и экологической безопасности',
+            'Наш заказчик и надежный партнер - крупнейший федеральный строительный холдинг (основные заказчики - ведущие игроки нефтегазовой отрасли)'
+            )
+      //end   vacancies-list
+    //end   second-section
+  //end   content
+
+  include ../elements/popup
+  include ../sections/footer

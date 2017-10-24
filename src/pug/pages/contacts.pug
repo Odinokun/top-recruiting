@@ -1,0 +1,192 @@
+extends ../_template
+
+block variables
+  - var title = 'Контакты'
+  - var pageHeaderTitle = 'Контакты'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.contacts
+    //begin top-section
+    .top-block
+      .container-lg
+        include ../elements/magnific
+        .contacts-top__left#map
+        .contacts-top__right
+          include ../elements/breadcrumbs
+
+          h2.contacts-top__title.title Контакты
+          h3.contacts-top__subtitle Ваш город
+          .contacts-top__select.map-select__wrap.control
+            select.map-select
+              option(value="spb" selected) Санкт-Петербург
+              option(value="msk") Москва
+              option(value="all") Все города
+          //begin moscow adress
+          .contacts-top__city.contacts-top__city-msk
+            .contacts-top__city-adress
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer")
+                |191186, г. Москва, Арбат, 00
+                br
+                |БЦ «Дом Мертенса»
+              a(href="tel:+78123200121") +7 (812) 320-01-21
+              p по рабочим дням 10:00-18:30 (MSK)
+              a(href="mailto:info@toprecruiting.ru") info@toprecruiting.ru
+              .contacts-top__city-pic
+                img(src="assets/img/city-01.png" alt="image")
+              a(href="#").contacts-top__link-path как проехать?
+          //end moscow adress
+
+          //begin SPB adress
+          .contacts-top__city.contacts-top__city-spb
+            .contacts-top__city-adress
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer")
+                |191186, г. Санкт-Петербург, Невский пр, 21
+                br
+                |БЦ «Дом Мертенса»
+              a(href="tel:+78123200121") +7 (812) 320-01-21
+              p по рабочим дням 10:00-18:30 (MSK)
+              a(href="mailto:info@toprecruiting.ru") info@toprecruiting.ru
+              .contacts-top__city-pic
+                img(src="assets/img/city-01.png" alt="image")
+              a(href="#").contacts-top__link-path как проехать?
+          //end SPB adress
+
+    //end top-section
+
+    //begin second-section
+    section.contacts-question
+      .container
+        h2.title Напишите нам
+        form.contacts-form
+          .contacts-form__left
+            input.contacts-form__input(type="text" name="name"    placeholder="Как к Вам обращаться?*" required)
+            input.contacts-form__input(type="text" name="phone"   placeholder="Телефон или e-mail*" required)
+          .contacts-form__right
+            textarea.contacts-form__textarea(name="descr" placeholder="Ваш вопрос")
+
+          //begin agree checkbox
+          .agree-checkbox
+            input(type="checkbox" id="service-form" class="agree" checked)
+            label(for="service-form")
+              | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+              a(href="/agree.html") Пользовательского соглашения
+          //end   agree checkbox
+          input.contacts-form__submit.btn.popup__submit-2(type="submit" value="отправить")
+    //end second-section
+  //end   content
+
+  include ../elements/popup
+  include ../sections/footer
+
+  script(type='text/javascript').
+    google.maps.event.addDomListener(window, "load", initialize);
+
+    // begin google map in index.html
+    var coords = [
+      // !!!!!!!!!!!!  порядок координат не менять, а добавлять снизу
+      // all
+      [58.011121, 33.899882],
+      // spb
+      [59.935786, 30.322077, "Санкт-Петербург"],
+      // moscow
+      [55.79093, 37.60345, "Москва"]
+    ];
+    var markers = [
+      // moscow
+      [55.79093, 37.60345, "Москва", "msk"],
+      // spb
+      [59.935786, 30.322077, "Санкт-Петербург", "spb"]
+    ];
+    var map = {};
+    function initialize() {
+      var mapDiv = document.getElementById("map");
+      map = new google.maps.Map(mapDiv, {
+        zoom: 12,
+        disableDefaultUI: false,
+        scrollwheel: false,
+        center: {lat: 59.935786, lng: 30.322077},
+        styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+      });
+      var image = "http://top-recruting.odinokun.com/assets/img/marker.png";
+
+      $.each(markers, function (index, val) {
+        var myLatLng = new google.maps.LatLng(val[0], val[1]);
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: image,
+          title: val[2]
+        });
+
+        marker.addListener("click", function () {
+          map.panTo(this.getPosition());
+          map.setZoom(12);
+          var markerClick = val[3];
+          $('.map-banner').fadeOut(0);
+          $('.map-banner-' + markerClick).delay(500).fadeIn();
+          $(".control select [value=" + markerClick + "]").attr("selected", "selected");
+        });
+      });
+    }
+    // google.maps.event.addDomListener(window, "load", initialize);
+    $(document).ready(function ($) {
+      // begin Изменения при выборе селекта
+      $('.control').on('change', 'select', function (event) {
+        event.preventDefault();
+        var city = $(this).val();
+        $('.map-banner').fadeOut(0);
+        $('.map-banner-' + city).delay(500).fadeIn();
+
+        // меняем адрес в контактах
+        $('.contacts-top__city').fadeOut(0);
+        $('.contacts-top__city-' + city).fadeIn();
+        goToCity(city);
+      });
+      // end Изменения при выборе селекта
+      // begin Выбор города в попапе в шапке
+      $('.geolocation-region__popup-city li').on('click', function () {
+        $('.geolocation-region__popup-city').fadeOut();
+        $('.popup__layer').fadeOut();
+        $('body').removeClass('no-scroll');
+        var city = $(this).data('city');
+        // меняем значение селекта на карте
+        $(".control select [value=" + city + "]").attr("selected", "selected");
+        // меняем город
+        $('.geolocation-region__city').fadeOut(0);
+        $('.geolocation-region__city-' + city).fadeIn();
+        // меняем телефон
+        $('.geolocation-phone__link').fadeOut(0);
+        $('.geolocation-phone__link-' + city).fadeIn();
+        goToCity(city);
+      })
+      // end Выбор города в попапе в шапке
+      // меняем координаты центра карты по выбранному селекту
+      function goToCity(city) {
+        switch (city) {
+          case 'all':
+            map.setZoom(6);
+            map.setCenter(new google.maps.LatLng(coords[0][0], coords[0][1]));
+            break;
+          case 'spb':
+            map.setZoom(10);
+            map.setCenter(new google.maps.LatLng(coords[1][0], coords[1][1]));
+            break;
+          case 'msk':
+            map.setZoom(10);
+            map.setCenter(new google.maps.LatLng(coords[2][0], coords[2][1]));
+            break;
+        }
+      }
+    });
+    // end   google map in index.html
+    // begin открываем окно выбора региона
+    $('.geolocation-region__city').on('click', function () {
+      $('.geolocation-region__popup-city').fadeIn();
+      $('.popup__layer').fadeIn();
+      $('body').addClass('no-scroll');
+      return false;
+    })
+    // end открываем окно выбора региона

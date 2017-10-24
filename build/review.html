@@ -25,42 +25,66 @@
           <img src="assets/img/logo.png" alt="company logo">
         </a>
         <!--begin header-menu-->
-        <!--nav.header-menu
-        include ../elements/burger
-        ul.header-menu__list#header-menu__list
-          li.header-menu__item
-            a(href="#").header-menu__link О компании
-          li.header-menu__item.header-menu__item-parents
-            a(href="#").header-menu__link Работодателю
-            span +
-            ul.header-menu__sublist
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Подпункт 1
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Подпункт 2
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Длинный подпункт 3
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Подпункт 4
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Подпункт 5
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Длинный подпункт 6
-          li.header-menu__item.header-menu__item-parents
-            a(href="#").header-menu__link Соискателю
-            span +
-            ul.header-menu__sublist
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Подпункт 1
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Подпункт 2
-              li.header-menu__subitem
-                a(href="#").header-menu__sublink Длинный подпункт 3
-          li.header-menu__item
-            a(href="#").header-menu__link Новости
-          li.header-menu__item
-            a(href="#").header-menu__link Контакты
-        -->
+        <nav class="header-menu">
+          <!--begin burger-->
+          <div class="burger" id="burger">
+            <input id="burger__input" name="exit" type="checkbox">
+            <label for="burger__input">
+              <span class="burger__icon"></span>
+            </label>
+          </div>
+          <!--end   burger-->
+          <ul class="header-menu__list" id="header-menu__list">
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">О компании</a>
+            </li>
+            <li class="header-menu__item header-menu__item-parents">
+              <a class="header-menu__link" href="#">Работодателю</a>
+              <span>+</span>
+              <ul class="header-menu__sublist">
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 1</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 2</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 4</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 5</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 6</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-menu__item header-menu__item-parents">
+              <a class="header-menu__link" href="#">Соискателю</a>
+              <span>+</span>
+              <ul class="header-menu__sublist">
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 1</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Подпункт 2</a>
+                </li>
+                <li class="header-menu__subitem">
+                  <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Новости</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
         <!--end   header-menu-->
         <div class="header__right">
           <button class="header__right-button">
@@ -71,21 +95,16 @@
           <div class="header__right-inn">
             <!--begin geolocation-->
             <section class="geolocation">
-              <a class="geolocation-city" href="#">МСК</a>
-              <a class="geolocation-phone" href="tel:+78123200121">
-                <span>+7 812</span> 320 01 21</a>
+              <div class="popup__layer-2"></div>
+              <div class="geolocation-region">
+                <a class="geolocation-region__city geolocation-region__city-msk" href="#">МСК</a>
+                <a class="geolocation-region__city geolocation-region__city-spb active" href="#">СПБ</a>
+              </div>
               <div class="geolocation-phone">
                 <a class="geolocation-phone__link geolocation-phone__link-msk" href="tel:88000000000">
-                  <span>+8 800 000 00 00</span>
-                </a>
+                  <span>+8 800</span> 000 00 00</a>
                 <a class="geolocation-phone__link geolocation-phone__link-spb active" href="tel:78123200121">
-                  <span>+7 812 320 01 21</span>
-                </a>
-              </div>
-              <div class="geolocation-region">
-                <span>Ваш регион:</span>
-                <a class="geolocation-region__city geolocation-region__city-msk" href="#">Москва</a>
-                <a class="geolocation-region__city geolocation-region__city-spb active" href="#">Санкт-Петербург</a>
+                  <span>+7 812</span> 320 01 21</a>
                 <div class="geolocation-region__popup">
                   <h3 class="geolocation-region__popup-title">Ваш регион Санкт-Петербург?</h3>
                   <div class="geolocation-region__btn-wrap">

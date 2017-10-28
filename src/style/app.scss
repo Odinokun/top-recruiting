@@ -1,14 +1,14 @@
-// core
+//core
 @import 'core/fonts';
 @import 'core/variables';
 @import 'core/mixins';
 @import 'core/base';
 
 //elements
-// @import 'elements/pagination';
  @import 'elements/agree-checkbox';
  @import 'elements/breadcrumbs';
  @import 'elements/burger';
+ @import 'elements/geolocation';
  @import 'elements/menu';
  @import 'elements/magnific';
  @import 'elements/popup';
@@ -31,10 +31,12 @@
 @import 'pages/anketa';
 @import 'pages/aspirant';
 @import 'pages/article';
+@import 'pages/case';
 @import 'pages/cases';
 @import 'pages/clients';
 @import 'pages/company';
 @import 'pages/contacts';
+@import 'pages/error';
 @import 'pages/index';
 @import 'pages/inner';
 @import 'pages/news';

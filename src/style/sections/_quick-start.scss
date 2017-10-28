@@ -151,6 +151,10 @@
   height: 298px;
   cursor: default;
   border-radius: 50%;
+  pointer-events: none;
+  &.active {
+    pointer-events: auto;
+  }
 
   @include max(1100) {
     position: static;

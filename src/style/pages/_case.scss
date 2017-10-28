@@ -1,0 +1,33 @@
+.case .top-block {
+  .container-lg {
+    display: flex;
+    background-position: 70% 50%;
+  }
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+  .top-block__title {
+    margin-bottom: 50px;
+
+    @include max(375) {
+      font-size: 24px;
+    }
+  }
+}
+.case-second {
+  .container {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: $text;
+  }
+  .btn {
+    margin-top: 50px;
+  }
+}

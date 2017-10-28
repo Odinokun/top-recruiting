@@ -94,6 +94,25 @@ $("input:checkbox").on('click', function() {
 // END активная/неактивная кнопка в форме
 
 
+// BEGIN активная/неактивная кнопка в форме QUICK START
+$(window).on('load', function() {
+  if ($('.quick-start-form .agree-checkbox').hasClass('checked')) {
+    $('.quick-start-form .quick-start-form__item-submit').addClass('active')
+  } else {
+    $('.quick-start-form .quick-start-form__item-submit').removeClass('active')
+  }
+});
+//
+$(".quick-start-form input:checkbox").on('click', function() {
+  if ($(this).is(':checked')) {
+    $('.quick-start-form .quick-start-form__item-submit').addClass('active')
+  } else {
+    $('.quick-start-form .quick-start-form__item-submit').removeClass('active')
+  }
+});
+// END активная/неактивная кнопка в форме QUICK START
+
+
 // begin popup open
 $('.popup-open').on('click', function() {
   var popupName = $(this).data('open');
@@ -191,20 +210,32 @@ $('.review-letters__footer-fadein').on('click', function () {
 
 //begin worker accordeon
 $('.worker-top__accordeon-btn').on('click', function () {
-  // $('.worker-top__accordeon-btn').removeClass('active');
-  // $('.worker-top__accordeon-text').slideUp();
-  // $(this).addClass('active');
-  // $(this).next('.worker-top__accordeon-text').slideDown();
-  $(this).toggleClass('active');
-  $(this).next('.worker-top__accordeon-text').slideToggle();
+  if ($(this).hasClass('active')) {
+    $(this).removeClass('active');
+    $(this).next('.worker-top__accordeon-text').slideUp();
+  }
+  else {
+    $('.worker-top__accordeon-btn').removeClass('active');
+    $('.worker-top__accordeon-text').slideUp();
+    $(this).addClass('active');
+    $(this).next('.worker-top__accordeon-text').slideDown();
+  }
 });
 //end worker accordeon
 
 
 //begin services second section accordeon
 $('.services-second__accordeon-btn').on('click', function () {
-  $(this).toggleClass('active');
-  $(this).next('.services-second__accordeon-text').slideToggle();
+  if ($(this).hasClass('active')) {
+    $(this).removeClass('active');
+    $(this).next('.services-second__accordeon-text').slideUp();
+  }
+  else {
+    $('.services-second__accordeon-btn').removeClass('active');
+    $('.services-second__accordeon-text').slideUp();
+    $(this).addClass('active');
+    $(this).next('.services-second__accordeon-text').slideDown();
+  }
 });
 //end services second section accordeon
 

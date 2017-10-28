@@ -207,7 +207,137 @@
       <!--end   second-section-->
     </section>
     <!--end   content-->
-    <!--include ../elements/popup-->
+    <div class="popup__layer"></div>
+    <!--begin success popup-->
+    <div class="popup-success" id="popup-success">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h4 class="popup__title title">Спасибо за заявку!</h4>
+        <p class="popup__subtitle">Если вы являетесь особенным специалистом в области рекрутинга и подбора персонала -
+          <br>отправьте нам свое резюме и мы с удовольствием с вами познакомимся.</p>
+      </div>
+    </div>
+    <!--end success popup-->
+    <!--begin popup callback-->
+    <div class="popup" id="popup-callback">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h3 class="popup__title">Заказать обратный звонок</h3>
+        <form class="popup__form">
+          <input class="popup__input" type="text" name="name" placeholder="Как к Вам обращаться?*" required>
+          <input class="popup__input" type="tel" name="phone" placeholder="Телефон*" required>
+          <div class="popup__form-footer">
+            <!--begin agree checkbox-->
+            <div class="agree-checkbox">
+              <input class="agree" type="checkbox" id="agree-callback" checked>
+              <label for="agree-callback">Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                <a href="/agree.html">Пользовательского соглашения</a>
+              </label>
+            </div>
+            <!--end   agree checkbox-->
+            <input class="popup__submit btn" type="submit" value="перезвоните мне">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end   popup callback-->
+    <!--begin popup cabinet-->
+    <div class="popup" id="popup-cabinet">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h3 class="popup__title">Вход в личный кабинет</h3>
+        <form class="popup__form">
+          <input class="popup__input" type="text" name="name" placeholder="Логин*" required>
+          <input class="popup__input" type="password" name="password" placeholder="Пароль*" required>
+          <div class="popup__form-footer">
+            <input class="popup__submit btn" type="submit" value="Войти">
+            <a class="popup__forget" href="#">забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end   popup cabinet-->
+    <!--begin popup service-->
+    <div class="popup" id="popup-service">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h3 class="popup__title">Заказать услугу</h3>
+        <form class="popup__form">
+          <input class="popup__input" type="text" name="name" placeholder="Как к Вам обращаться?*" required>
+          <input class="popup__input" type="tel" name="phone" placeholder="Телефон*" required>
+          <div class="popup__form-footer">
+            <!--begin agree checkbox-->
+            <div class="agree-checkbox">
+              <input class="agree" type="checkbox" id="agree-service" checked>
+              <label for="agree-service">Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                <a href="/agree.html">Пользовательского соглашения</a>
+              </label>
+            </div>
+            <!--end   agree checkbox-->
+            <input class="popup__submit btn" type="submit" value="перезвоните мне">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end   popup service-->
+    <!--begin popup resume-->
+    <div class="popup" id="popup-resume">
+      <div class="popup-close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__inn">
+        <h3 class="popup__title">Отправить резюме</h3>
+        <h5 class="popup__subtitle">Если вы являетесь особенным специалистом в области рекрутинга и подбора персонала -
+          <br>отправьте нам свое резюме и мы с удовольствием с вами познакомимся.</h5>
+        <form class="popup__form">
+          <div class="popup__form-left">
+            <input class="popup__input" type="text" name="name" placeholder="Как к Вам обращаться?*" required>
+            <input class="popup__input" type="text" name="phone" placeholder="Телефон или e-mail*" required>
+          </div>
+          <div class="popup__form-right">
+            <textarea class="popup__textarea" name="descr" placeholder="Комментарий"></textarea>
+          </div>
+          <div class="popup__form-footer">
+            <!--begin clip-->
+            <div class="resume-form__add">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#clip"></use>
+              </svg>
+              <a href="#">Прикрепить резюме</a>
+            </div>
+            <!--end clip-->
+            <!--begin agree checkbox-->
+            <div class="agree-checkbox">
+              <input class="agree" type="checkbox" id="agree-resume" checked>
+              <label for="agree-resume">Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
+                <a href="/agree.html">Пользовательского соглашения</a>
+              </label>
+            </div>
+            <!--end   agree checkbox-->
+            <input class="popup__submit btn" type="submit" value="отправить">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end   popup resume-->
     <!--begin footer-->
     <footer class="footer">
       <!--begin footer top-->

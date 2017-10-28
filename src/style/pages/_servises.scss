@@ -424,10 +424,14 @@
   transform: translateY(50px);
   background-color: #2b374d;
 
+  flex: none;
   @include max(1024) {
     margin: 0 auto;
   }
-  flex: none;
+  @include max(425) {
+    width: 100%;
+    padding: 60px 30px;
+  }
   &::before {
     position: absolute;
     top: 0;

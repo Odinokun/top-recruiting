@@ -89,11 +89,15 @@
 }
 .worker-top__title {
   font-size: 50px;
+  margin-top: -20px;
   margin-bottom: 20px;
   color: $title;
 
   @include max(1000) {
     color: #fff;
+  }
+  @include max(425) {
+    margin-top: 10px;
   }
 }
 .worker-top__subtitle {

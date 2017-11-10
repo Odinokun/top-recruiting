@@ -120,10 +120,19 @@ input {
 textarea {
   resize: none;
 }
+form div[role="alert"] {
+  border: none !important;
+  color: #ed1b24;
+}
 input.error,
 textarea.error {
   border-color: #ed1b24 !important;
   background: #fbd1d3 !important;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 svg {
   display: block;
@@ -137,7 +146,6 @@ svg {
 }
 .main {
   position: relative;
-
   flex: 1 0 auto;
 }
 .container {

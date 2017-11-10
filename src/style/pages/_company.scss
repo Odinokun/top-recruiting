@@ -63,7 +63,9 @@
   background-color: #fff;
 
   @include max(550) {
+    position: static;
     width: 100%;
+    text-align: center;
   }
 }
 .company-director__name {

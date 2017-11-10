@@ -12,20 +12,32 @@ module.exports = function() {
     autoplaySpeed:3000,
     cssEase: 'linear'
   });
+  //изменение скорости листания слайдера
+  setTimeout(function () {
+    $('.top-slider__left .top-slider__list').slick('slickSetOption', 'autoplaySpeed', 6000, true);
+  }, 3000); // время задержки в мс
   // end   top slider left
 
   // begin top slider right
-  $('.top-slider__right .top-slider__list').slick({
-    dots: false,
-    arrows:false,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    pauseOnHover:false,
-    autoplay: true,
-    autoplaySpeed:3000,
-    cssEase: 'linear'
-  });
+    $('.top-slider__right .top-slider__list').slick({
+      dots: false,
+      arrows:false,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      pauseOnHover:false,
+      autoplay: false,
+      autoplaySpeed:3000,
+      cssEase: 'linear'
+    });
+    //старт автоплея с задержкой
+    setTimeout(function () {
+      $('.top-slider__right .top-slider__list').slick('slickSetOption', 'autoplay', true, true);
+    }, 3000); // время задержки в мс
+    //изменение скорости листания слайдера
+    setTimeout(function () {
+      $('.top-slider__right .top-slider__list').slick('slickSetOption', 'autoplaySpeed', 6000, true);
+    }, 6010); // время задержки в мс
   // end   top slider right
 
   // begin cases slider

@@ -58,7 +58,7 @@
   left: 0;
   background-image: url('../img/bg-news-top.jpg');
   background-repeat: no-repeat;
-  background-position: 80% 50%;
+  background-position: 43% 50% !important;
   background-size: cover;
 
   @include max(1000) {

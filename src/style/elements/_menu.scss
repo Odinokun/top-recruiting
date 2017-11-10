@@ -41,7 +41,9 @@
     text-align: left;
   }
 }
-.header-menu__link {
+.header .header-menu__list>li>a,
+.header .header-menu__list>li>span,
+.header .header-menu__link {
   font-size: 14px;
   display: inline-block;
   padding: 40px 15px;

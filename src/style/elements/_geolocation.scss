@@ -21,6 +21,10 @@
   @include max(750) {
     display: none;
   }
+  @include max(700) {
+    display: flex;
+    margin: 0 auto 20px;
+  }
 }
 .geolocation-phone__link {
   font-family: $font-bold;

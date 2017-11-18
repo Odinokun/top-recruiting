@@ -27,6 +27,9 @@
         align-items: flex-end;
         text-align: right;
       }
+      @include max(1200) {
+        padding-left: 300px;
+      }
     }
     .top-block__title {
       margin-bottom: 0;

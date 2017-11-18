@@ -14,7 +14,13 @@
 }
 .worker-top__left,
 .worker-top__right {
+  overflow: hidden;
   width: 50%;
+  height: 630px;
+
+  @include max(1000) {
+    height: auto;
+  }
 }
 .worker-top__left {
   min-height: 630px;
@@ -28,13 +34,6 @@
     margin: -20px 0 -20px -20px;
 
     flex: none;
-    //position: absolute;
-    //top: 0;
-    //right: 0;
-    //bottom: 0;
-    //left: 0;
-    //width: 100%;
-    //margin: 0;
   }
   &::before {
     position: absolute;
@@ -54,6 +53,7 @@
   }
 }
 .worker-top__right {
+  overflow-y: auto;
   margin: -20px -20px -20px 0;
   padding-bottom: 50px;
   padding-left: 50px;
@@ -61,7 +61,7 @@
   @include max(1000) {
     width: 100%;
     margin: 50px 0 0 -20px;
-    padding: 0;
+    padding: 10px 0 0 0;
     //position: relative;
     //z-index: 10;
     //width: 100%;
@@ -166,6 +166,7 @@
 }
 .worker-top__accordeon-text {
   display: none;
+
   p {
     font-family: $font-light;
     font-size: 14px;

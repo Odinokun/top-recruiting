@@ -1,8 +1,27 @@
 .review {
   .top-block {
     .container-lg {
+      position: relative;
       display: flex;
+      padding-right: 280px;
       background-position: 30% 50%;
+
+      @include max(1100) {
+        padding-right: 150px;
+      }
+      @include max(700) {
+        padding-right: 0;
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        pointer-events: none;
+        background-color: rgba(0,0,0,.4);
+      }
     }
     .breadcrumbs__list {
       @include max(700) {
@@ -31,15 +50,18 @@
   right: 0;
   bottom: 30px;
   display: flex;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   width: 250px;
   height: 150px;
+  padding: 25px;
   background-color: #fff;
 
   @include max(1100) {
     width: 150px;
     height: 80px;
+    padding: 15px;
   }
   @include max(700) {
     z-index: 10;
@@ -49,8 +71,8 @@
   img {
     display: block;
     width: 100%;
-    max-width: 80%;
-    max-height: 90%;
+    //max-width: 80%;
+    //max-height: 90%;
   }
 }
 .review-second {

@@ -12,28 +12,33 @@
       min-height: 715px;
       padding-bottom: 170px;
       background-position: 40% 50%;
-
+      padding-left: 300px;
       @include max(1000) {
         padding-bottom: 50px;
+        padding-left: 0;
       }
     }
     .container {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      align-items: center;
-      text-align: center;
+      //align-items: center;
+      //text-align: center;
       @include max(1440) {
-        align-items: flex-end;
-        text-align: right;
+        //align-items: flex-end;
+        //text-align: right;
       }
       @include max(1200) {
-        padding-left: 300px;
+        //padding-left: 300px;
+      }
+      @include max(1000) {
+        text-align: center;
+        align-items: center;
       }
     }
     .top-block__title {
       margin-bottom: 0;
-      max-width: 1000px;
+      //max-width: 1000px;
     }
   }
 }

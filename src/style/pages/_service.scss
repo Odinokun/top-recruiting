@@ -12,32 +12,38 @@
       min-height: 715px;
       padding-bottom: 170px;
       background-position: 70% 50%;
-
+      padding-left: 300px;
       @include max(1000) {
         padding-bottom: 50px;
+        padding-left: 0;
       }
     }
     .container {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      align-items: center;
+      //align-items: center;
+      //padding-left: 100px;
+      align-items: flex-start;
 
       @include max(1200) {
-        align-items: flex-end;
+        //align-items: flex-end;
       }
       @include max(1000) {
+        text-align: center;
         align-items: center;
       }
     }
     .top-block__title {
       margin-bottom: 10px;
+      //max-width: 1000px;
     }
     .top-block__subtitle {
       font-family: $font-d;
       font-size: 35px;
       margin-bottom: 0;
       color: #fff;
+      //max-width: 1000px;
     }
   }
 }

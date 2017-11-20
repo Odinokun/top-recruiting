@@ -21,7 +21,7 @@
     <header class="header">
       <div class="container-lg">
         <a class="header-logo" href="#">
-          <h1 class="header-logo__title">Top Recruiting</h1>
+          <span class="header-logo__title">Top Recruiting</span>
           <img src="assets/img/logo.png" alt="company logo">
         </a>
         <!--begin header-menu-->
@@ -175,16 +175,17 @@
           </a>
           <!--end top-block-mouse-->
           <div class="container">
-            <h2 class="top-block__title">Услуги
-              <br>кадрового агенства</h2>
+            <h1 class="top-block__title">Услуги
+              <br>кадрового агенства</h1>
           </div>
           <!--.container-lg-->
           <div class="services-ancors__list">
-            <a class="btn" href="#01">подбор персонала</a>
-            <a class="btn" href="#02">кадровый консалтинг</a>
-            <a class="btn" href="#03">центр оценки персонала</a>
-            <a class="btn" href="#04">исследования рынка труда</a>
-            <a class="btn" href="#05">индивидуальная услуга</a>
+            <a class="btn-light" href="#01">Подбор персонала</a>
+            <a class="btn-light" href="#02">Кадровый консалтинг</a>
+            <a class="btn-light" href="#03">Тайный клиент</a>
+            <a class="btn-light" href="#04">Центр оценки персонала</a>
+            <a class="btn-light" href="#05">Исследования рынка труда</a>
+            <a class="btn-light" href="#06">Индивидуальная услуга</a>
           </div>
         </div>
       </div>
@@ -234,7 +235,7 @@
                 </div>
               </div>
               <div class="services-second__accordeon-item">
-                <span class="services-second__accordeon-btn">Talant selection</span>
+                <span class="services-second__accordeon-btn">Talent selection</span>
                 <div class="services-second__accordeon-text">
                   <p>Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры
                     практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.</p>
@@ -247,13 +248,12 @@
                     практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.</p>
                 </div>
               </div>
-              <div class="services-second__accordeon-item">
-                <span class="services-second__accordeon-btn">Собственная база соискателей</span>
-                <div class="services-second__accordeon-text">
-                  <p>Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры
-                    практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.</p>
-                </div>
-              </div>
+              <!--.services-second__accordeon-item
+              span.services-second__accordeon-btn Собственная база соискателей
+              .services-second__accordeon-text
+                p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
+              
+              -->
             </div>
           </div>
           <!--begin services-second__podbor-->
@@ -321,29 +321,46 @@
             <span class="services-section__number">02</span>
           </div>
           <div class="services-consulting__right">
-            <a href="#">
-              <img src="assets/img/services-consulting.jpg" alt="img">
-            </a>
+            <!--a(href="#")-->
+            <img src="assets/img/services-consulting.jpg" alt="img">
           </div>
         </div>
       </section>
       <!--end   services-consulting-->
+      <!--begin services-secret-->
+      <section class="services-secret" id="03">
+        <div class="container">
+          <div class="services-secret__left">
+            <img src="assets/img/services-secret.png" alt="services-secret">
+            <span class="services-section__number">03</span>
+          </div>
+          <div class="services-secret__right">
+            <h2 class="title">
+              <a href="#">«Тайный клиент»
+                <br>премиального сегмента</a>
+            </h2>
+            <p>Услуги кадрового агентства включают в себя оценку эффективности и качества работы персонала по продажам дорогостоящих товаров и услуг. Уникальная база покупателей позволяет подобрать тайного клиента с учетом целевой аудитории и специфики Вашего
+              бизнеса.</p>
+            <a class="services-consulting__link" href="#">подробнее</a>
+          </div>
+        </div>
+      </section>
+      <!--end   services-secret-->
       <!--begin services-ocenka-->
-      <section class="services-ocenka" id="03">
+      <section class="services-ocenka" id="04">
         <div class="container">
           <div class="services-ocenka__left">
             <h2 class="title">Центр оценки персонала</h2>
             <p>Оценка персонала – залог эффективной работы компании и необходимая мера для совершенствования кадровой политики организации. Рекрутинговое агентство «ТОП Рекрутинг» оказывает профессиональные услуги оценки персонала.</p>
             <a class="services-consulting__link"
               href="#">подробнее</a>
-            <span class="services-section__number">03</span>
+            <span class="services-section__number">04</span>
           </div>
           <div class="services-ocenka__right">
             <h3 class="services-ocenka__title">Произведем многогранную оценку вашего персонала:</h3>
             <ul class="services-ocenka__right-list">
-              <li class="services-ocenka__right-item">
-                <a class="services-ocenka__right-link" href="#">Тайный покупатель</a>
-              </li>
+              <!--li.services-ocenka__right-itema(href="#").services-ocenka__right-link Тайный покупатель
+              -->
               <li class="services-ocenka__right-item">
                 <a class="services-ocenka__right-link" href="#">Оценка 360 градусов</a>
               </li>
@@ -371,10 +388,10 @@
       </section>
       <!--end   services-ocenka-->
       <!--begin services-research-->
-      <section class="services-research" id="04">
+      <section class="services-research" id="05">
         <div class="container">
           <h2 class="title">Исследования рынка труда</h2>
-          <span class="services-section__number">04</span>
+          <span class="services-section__number">05</span>
           <ul class="services-research__list">
             <li class="services-research__item">
               <div class="services-research__item-header">
@@ -385,7 +402,7 @@
                   <br>рынка труда</h3>
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-              <a class="services-research__item-link" href="#">подробнее</a>
+              <!--a(href="#").services-research__item-link подробнее-->
             </li>
             <li class="services-research__item">
               <div class="services-research__item-header">
@@ -396,7 +413,7 @@
                   <br>заработных плат</h3>
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-              <a class="services-research__item-link" href="#">подробнее</a>
+              <!--a(href="#").services-research__item-link подробнее-->
             </li>
             <li class="services-research__item">
               <div class="services-research__item-header">
@@ -407,7 +424,7 @@
                   <br>конкурентной среды</h3>
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-              <a class="services-research__item-link" href="#">подробнее</a>
+              <!--a(href="#").services-research__item-link подробнее-->
             </li>
             <li class="services-research__item">
               <div class="services-research__item-header">
@@ -418,7 +435,7 @@
                   <br>систем мотивации</h3>
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-              <a class="services-research__item-link" href="#">подробнее</a>
+              <!--a(href="#").services-research__item-link подробнее-->
             </li>
             <li class="services-research__item">
               <div class="services-research__item-header">
@@ -429,7 +446,7 @@
                   <br>отделов продаж</h3>
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-              <a class="services-research__item-link" href="#">подробнее</a>
+              <!--a(href="#").services-research__item-link подробнее-->
             </li>
             <li class="services-research__item">
               <div class="services-research__item-header">
@@ -440,16 +457,16 @@
                   <br>индивидуальный запрос</h3>
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-              <a class="services-research__item-link" href="#">подробнее</a>
+              <!--a(href="#").services-research__item-link подробнее-->
             </li>
           </ul>
         </div>
       </section>
       <!--end   services-research-->
       <!--begin services-form-section-->
-      <section class="services-form-section" id="05">
+      <section class="services-form-section" id="06">
         <div class="container">
-          <span class="services-section__number">05</span>
+          <span class="services-section__number">06</span>
           <!--begin services-form decor-->
           <div class="services-form__decor">
             <div class="services-form__decor-inn"></div>
@@ -467,7 +484,7 @@
             </div>
             <!--begin agree checkbox-->
             <div class="agree-checkbox">
-              <input class="agree" type="checkbox" id="services-form" checked>
+              <input class="agree" type="checkbox" id="services-form">
               <label for="services-form">Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
                 <a href="/agree.html">Пользовательского соглашения</a>
               </label>

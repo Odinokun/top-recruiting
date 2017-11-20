@@ -119,6 +119,7 @@ input {
 }
 textarea {
   resize: none;
+  overflow-x: hidden !important;
 }
 form div[role="alert"] {
   border: none !important;

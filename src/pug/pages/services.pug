@@ -32,17 +32,18 @@ block content
         include ../elements/top-block-mouse
 
         .container
-          h2.top-block__title
+          h1.top-block__title
             | Услуги
             br
             | кадрового агенства
         //.container-lg
         .services-ancors__list
-          a(href="#01").btn подбор персонала
-          a(href="#02").btn кадровый консалтинг
-          a(href="#03").btn центр оценки персонала
-          a(href="#04").btn исследования рынка труда
-          a(href="#05").btn индивидуальная услуга
+          a(href="#01").btn-light Подбор персонала
+          a(href="#02").btn-light Кадровый консалтинг
+          a(href="#03").btn-light Тайный клиент
+          a(href="#04").btn-light Центр оценки персонала
+          a(href="#05").btn-light Исследования рынка труда
+          a(href="#06").btn-light Индивидуальная услуга
 
     //end top-section
 
@@ -84,7 +85,7 @@ block content
                 p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
 
             .services-second__accordeon-item
-              span.services-second__accordeon-btn Talant selection
+              span.services-second__accordeon-btn Talent selection
               .services-second__accordeon-text
                 p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
 
@@ -93,7 +94,7 @@ block content
               .services-second__accordeon-text
                 p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
 
-            .services-second__accordeon-item
+            //.services-second__accordeon-item
               span.services-second__accordeon-btn Собственная база соискателей
               .services-second__accordeon-text
                 p Executive search (целенаправленный поиск) - это прямой направленный поиск из числа успешно работающих в настоящее время руководителей среднего и высшего звена, а также среди узкопрофильных и редких специалистов. Так как лучшие кадры практически всегда профессионально заняты, данная технология позволяет искать среди наиболее успешных и ценных кадров.
@@ -146,23 +147,40 @@ block content
           span.services-section__number 02
 
         .services-consulting__right
-          a(href="#")
-            img(src="assets/img/services-consulting.jpg" alt="img")
+          //a(href="#")
+          img(src="assets/img/services-consulting.jpg" alt="img")
     //end   services-consulting
 
 
+    //begin services-secret
+    section.services-secret#03
+      .container
+        .services-secret__left
+          img(src="assets/img/services-secret.png" alt="services-secret")
+          span.services-section__number 03
+        .services-secret__right
+          h2.title
+            a(href="#")
+              |«Тайный клиент»
+              br
+              |премиального сегмента
+          p Услуги кадрового агентства включают в себя оценку эффективности и качества работы персонала по продажам дорогостоящих товаров и услуг. Уникальная база покупателей позволяет подобрать тайного клиента с учетом целевой аудитории и специфики Вашего бизнеса.
+          a(href="#").services-consulting__link подробнее
+    //end   services-secret
+
+
     //begin services-ocenka
-    section.services-ocenka#03
+    section.services-ocenka#04
       .container
         .services-ocenka__left
           h2.title Центр оценки персонала
           p Оценка персонала – залог эффективной работы компании и необходимая мера для совершенствования кадровой политики организации. Рекрутинговое агентство «ТОП Рекрутинг» оказывает профессиональные услуги оценки персонала.
           a(href="#").services-consulting__link подробнее
-          span.services-section__number 03
+          span.services-section__number 04
         .services-ocenka__right
           h3.services-ocenka__title Произведем многогранную оценку вашего персонала:
           ul.services-ocenka__right-list
-            li.services-ocenka__right-item
+            //li.services-ocenka__right-item
               a(href="#").services-ocenka__right-link Тайный покупатель
             li.services-ocenka__right-item
               a(href="#").services-ocenka__right-link Оценка 360 градусов
@@ -182,10 +200,10 @@ block content
 
 
     //begin services-research
-    section.services-research#04
+    section.services-research#05
       .container
         h2.title Исследования рынка труда
-        span.services-section__number 04
+        span.services-section__number 05
         ul.services-research__list
           li.services-research__item
             .services-research__item-header
@@ -196,7 +214,7 @@ block content
                 br
                 |рынка труда
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-            a(href="#").services-research__item-link подробнее
+            //a(href="#").services-research__item-link подробнее
 
           li.services-research__item
             .services-research__item-header
@@ -207,7 +225,7 @@ block content
                 br
                 |заработных плат
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-            a(href="#").services-research__item-link подробнее
+            //a(href="#").services-research__item-link подробнее
 
           li.services-research__item
             .services-research__item-header
@@ -218,7 +236,7 @@ block content
                 br
                 |конкурентной среды
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-            a(href="#").services-research__item-link подробнее
+            //a(href="#").services-research__item-link подробнее
 
           li.services-research__item
             .services-research__item-header
@@ -229,7 +247,7 @@ block content
                 br
                 |систем мотивации
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-            a(href="#").services-research__item-link подробнее
+            //a(href="#").services-research__item-link подробнее
 
           li.services-research__item
             .services-research__item-header
@@ -240,7 +258,7 @@ block content
                 br
                 |отделов продаж
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-            a(href="#").services-research__item-link подробнее
+            //a(href="#").services-research__item-link подробнее
 
           li.services-research__item
             .services-research__item-header
@@ -251,14 +269,14 @@ block content
                 br
                 |индивидуальный запрос
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-            a(href="#").services-research__item-link подробнее
+            //a(href="#").services-research__item-link подробнее
     //end   services-research
 
 
     //begin services-form-section
-    section.services-form-section#05
+    section.services-form-section#06
       .container
-        span.services-section__number 05
+        span.services-section__number 06
         //begin services-form decor
         .services-form__decor
           .services-form__decor-inn
@@ -274,7 +292,7 @@ block content
 
           //begin agree checkbox
           .agree-checkbox
-            input(type="checkbox" id="services-form" class="agree" checked)
+            input(type="checkbox" id="services-form" class="agree")
             label(for="services-form")
               | Ставя отметку, я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия
               a(href="/agree.html") Пользовательского соглашения

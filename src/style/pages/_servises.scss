@@ -25,13 +25,99 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  //justify-content: space-around;
+  width: 100%;
+  //max-width: 1610px;
+  margin-right: auto;
   margin-bottom: 20px;
+  margin-left: auto;
 
+  @include max(1870) {
+    max-width: 1300px;
+  }
+  @include max(1160) {
+    max-width: 950px;
+  }
   @include max(1000) {
     display: none;
   }
   .btn {
-    margin: 0 7px 30px 7px;
+    //margin: 0 7px 30px 7px;
+  }
+  .btn-light {
+    font-family: $font-bold;
+    font-size: 18px;
+    position: relative;
+    padding: 10px 30px 40px 30px;
+    text-decoration: none;
+    color: $highlight;
+    // begin срытие/показ декоративных элементов кнопок
+
+    @include max(1870) {
+      &:nth-child(4) {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    @include max(1160) {
+      &:nth-child(4) {
+        &::after {
+          display: block;
+        }
+      }
+      &:nth-child(3) {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    @include max(1060) {
+      &:nth-child(5) {
+        &::after {
+          display: none;
+        }
+      }
+      &:nth-child(3) {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    // end срытие/показ декоративных элементов кнопок
+    &:hover {
+      &::before {
+        width: calc(100% - 60px);
+      }
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      margin: auto;
+      content: '';
+      transition: width .3s;
+      background-color: $highlight;
+    }
+    &::after {
+      position: absolute;
+      top: 12px;
+      right: 0;
+      bottom: 0;
+      width: 1px;
+      height: 20px;
+      content: '';
+      opacity: .3;
+      background-color: #fff;
+    }
   }
 }
 
@@ -346,6 +432,76 @@
   }
 }
 //end services-consulting
+
+
+//begin services-secret
+.services-secret {
+  margin-bottom: -50px;
+  background-image: url('../img/bg-services-secret.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  .container {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 150px;
+
+    @include max(1000) {
+      flex-wrap: wrap;
+    }
+  }
+}
+.services-secret__left {
+  position: relative;
+  width: 580px;
+  padding-top: 10px;
+
+  flex: none;
+  @include max(1100) {
+    width: 500px;
+  }
+  @include max(1000) {
+    width: 100%;
+    max-width: 580px;
+    margin-bottom: 30px;
+
+    flex: auto;
+  }
+  .services-section__number {
+    position: absolute;
+    top: -8px;
+    right: 100px;
+    color: #fff;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.services-secret__right {
+  padding-left: 50px;
+
+  @include max(1000) {
+    width: 100%;
+    padding-left: 0;
+  }
+  .title {
+    a {
+      text-decoration: none;
+      color: $title;
+    }
+  }
+  p {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 24px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 30px;
+    color: $text;
+  }
+}
+//end services-secret
 
 
 //begin services-ocenka

@@ -50,6 +50,10 @@
   .title {
     margin-bottom: 50px;
     color: #fff;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
   }
   p {
     font-family: $font-light;

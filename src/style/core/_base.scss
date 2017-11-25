@@ -22,6 +22,9 @@ body {
 }
 body.no-scroll {
   overflow: hidden;
+  @include max(700) {
+    overflow: visible;
+  }
 }
 body.fix {
   position: fixed;

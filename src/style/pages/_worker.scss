@@ -69,6 +69,7 @@
     //text-align: right;
   }
   @include max(700) {
+    margin: 50px 0 0 0;
     padding: 0 20px;
   }
 
@@ -110,10 +111,16 @@
   color: $title;
 
   @include max(1000) {
-    //color: #fff;
+    font-size: 45px;
+  }
+  @include max(700) {
+    margin-top: 0;
+  }
+  @include max(500) {
+    font-size: 32px;
   }
   @include max(425) {
-    //margin-top: 10px;
+    font-size: 30px;
   }
 }
 .worker-top__subtitle {

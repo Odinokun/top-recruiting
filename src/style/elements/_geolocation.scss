@@ -7,6 +7,11 @@
   left: 0;
   display: none;
   background-color: rgba(0, 0, 0, .85);
+
+  @include max(700) {
+    top: -100px;
+    min-height: 1000vh;
+  }
 }
 .geolocation {
   position: relative;
@@ -76,11 +81,25 @@
   display: none;
   padding: 40px;
   background-color: #fff;
+
+  @include max(700) {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 95%;
+    margin: auto;
+    transform: translateY(-50%);
+  }
   .btn {
     line-height: 58px;
     height: 60px;
     cursor: pointer;
     white-space: nowrap;
+
+    @include max(700) {
+      margin-top: 20px;
+    }
   }
   .btn-rr {
     padding: 0 85px;
@@ -116,6 +135,11 @@
 .geolocation-region__btn-wrap {
   display: flex;
   justify-content: space-between;
+
+  @include max(700) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 //  end geolocation-region__popup
 
@@ -131,6 +155,16 @@
   padding: 15px;
   transition: transform .5s;
   background-color: #f0f0f0;
+
+  @include max(700) {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 280px;
+    margin: auto;
+    transform: translateY(-50%);
+  }
   ul {
     margin: 0;
     padding: 0;

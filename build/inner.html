@@ -10,13 +10,84 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/app-2.css">
+    <link rel="stylesheet" href="assets/css/app2.css">
     <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
     <script src="assets/js/foundation.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA"></script>
+    <style>
+      #preloader {
+        background-color: #eee;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #2b374d;
+        animation: spin 2s linear infinite;
+      }
+
+      #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #222b3c;
+        animation: spin 3s linear infinite;
+      }
+
+      #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #c19f63;
+        animation: spin 1.5s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
     <!--include ../sections/header-->
     <!--begin content-->
     <section class="main">

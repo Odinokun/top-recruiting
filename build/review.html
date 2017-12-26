@@ -10,13 +10,84 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/app-2.css">
+    <link rel="stylesheet" href="assets/css/app2.css">
     <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
     <script src="assets/js/foundation.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA"></script>
+    <style>
+      #preloader {
+        background-color: #eee;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #2b374d;
+        animation: spin 2s linear infinite;
+      }
+
+      #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #222b3c;
+        animation: spin 3s linear infinite;
+      }
+
+      #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #c19f63;
+        animation: spin 1.5s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
     <!-- begin header-->
     <header class="header">
       <div class="container-lg">
@@ -34,56 +105,65 @@
             </label>
           </div>
           <!--end   burger-->
-          <ul class="header-menu__list" id="header-menu__list">
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">О компании</a>
-            </li>
-            <li class="header-menu__item header-menu__item-parents">
-              <a class="header-menu__link" href="#">Работодателю</a>
-              <span>+</span>
-              <ul class="header-menu__sublist">
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Подпункт 1</a>
-                </li>
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Подпункт 2</a>
-                </li>
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
-                </li>
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Подпункт 4</a>
-                </li>
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Подпункт 5</a>
-                </li>
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Длинный подпункт 6</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header-menu__item header-menu__item-parents">
-              <a class="header-menu__link" href="#">Соискателю</a>
-              <span>+</span>
-              <ul class="header-menu__sublist">
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Подпункт 1</a>
-                </li>
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Подпункт 2</a>
-                </li>
-                <li class="header-menu__subitem">
-                  <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">Новости</a>
-            </li>
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">Контакты</a>
-            </li>
-          </ul>
+          <div class="header-menu__list-wrap" id="header-menu__list-wrap">
+            <ul class="header-menu__list" id="header-menu__list">
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">О компании</a>
+              </li>
+              <li class="header-menu__item header-menu__item-parents">
+                <a class="header-menu__link" href="#">Работодателю</a>
+                <span>+</span>
+                <ul class="header-menu__sublist">
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Подпункт 1</a>
+                  </li>
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Подпункт 2</a>
+                  </li>
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
+                  </li>
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Подпункт 4</a>
+                  </li>
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Подпункт 5</a>
+                  </li>
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Длинный подпункт 6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-menu__item header-menu__item-parents">
+                <a class="header-menu__link" href="#">Соискателю</a>
+                <span>+</span>
+                <ul class="header-menu__sublist">
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Подпункт 1</a>
+                  </li>
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Подпункт 2</a>
+                  </li>
+                  <li class="header-menu__subitem">
+                    <a class="header-menu__sublink" href="#">Длинный подпункт 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">Новости</a>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <a class="header-cabinet popup-open" href="#" data-open="cabinet">Личный кабинет</a>
+            <!--begin lang-switcher-->
+            <section class="lang-switcher">
+              <a class="lang-switcher__link active" href="#">ru</a>
+              <a class="lang-switcher__link" href="#">en</a>
+            </section>
+            <!--end   lang-switcher-->
+          </div>
         </nav>
         <!--end   header-menu-->
         <div class="header__right">

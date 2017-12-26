@@ -59,7 +59,7 @@ $('.header-menu .header-menu__item-parents span').on('click', function () {
 
 //begin open/close top menu
 $('#burger label').on('click', function () {
-  $('#header-menu__list').toggleClass('active');
+  $('#header-menu__list-wrap').toggleClass('active');
   //del header__right active classes
   $('.header__right-inn').removeClass('active');
 });

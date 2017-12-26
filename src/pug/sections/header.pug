@@ -8,39 +8,48 @@ header.header
     //begin header-menu
     nav.header-menu
       include ../elements/burger
-      ul.header-menu__list#header-menu__list
-        li.header-menu__item
-          a(href="#").header-menu__link О компании
-        li.header-menu__item.header-menu__item-parents
-          a(href="#").header-menu__link Работодателю
-          span +
-          ul.header-menu__sublist
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Подпункт 1
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Подпункт 2
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Длинный подпункт 3
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Подпункт 4
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Подпункт 5
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Длинный подпункт 6
-        li.header-menu__item.header-menu__item-parents
-          a(href="#").header-menu__link Соискателю
-          span +
-          ul.header-menu__sublist
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Подпункт 1
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Подпункт 2
-            li.header-menu__subitem
-              a(href="#").header-menu__sublink Длинный подпункт 3
-        li.header-menu__item
-          a(href="#").header-menu__link Новости
-        li.header-menu__item
-          a(href="#").header-menu__link Контакты
+      .header-menu__list-wrap#header-menu__list-wrap
+        ul.header-menu__list#header-menu__list
+          li.header-menu__item
+            a(href="#").header-menu__link О компании
+          li.header-menu__item.header-menu__item-parents
+            a(href="#").header-menu__link Работодателю
+            span +
+            ul.header-menu__sublist
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Подпункт 1
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Подпункт 2
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Длинный подпункт 3
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Подпункт 4
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Подпункт 5
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Длинный подпункт 6
+          li.header-menu__item.header-menu__item-parents
+            a(href="#").header-menu__link Соискателю
+            span +
+            ul.header-menu__sublist
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Подпункт 1
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Подпункт 2
+              li.header-menu__subitem
+                a(href="#").header-menu__sublink Длинный подпункт 3
+          li.header-menu__item
+            a(href="#").header-menu__link Новости
+          li.header-menu__item
+            a(href="#").header-menu__link Контакты
+
+        a(href="#" data-open="cabinet").header-cabinet.popup-open Личный кабинет
+
+        //begin lang-switcher
+        section.lang-switcher
+          a(href="#").lang-switcher__link.active ru
+          a(href="#").lang-switcher__link en
+        //end   lang-switcher
     //end   header-menu
 
     .header__right
@@ -48,7 +57,7 @@ header.header
         svg
           use(xlink:href="assets/img/sprite.svg#header-right")
       .header__right-inn
-        
+
         //begin geolocation
         section.geolocation
           .popup__layer-2

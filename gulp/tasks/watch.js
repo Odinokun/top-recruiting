@@ -6,7 +6,6 @@ module.exports = function() {
     $.gulp.watch('./src/pug/**/*.pug', $.gulp.series('pug'));
 
     $.gulp.watch('./src/style/**/*.scss', $.gulp.series('sass'));
-    $.gulp.watch('./src/style/style/app-2.scss', $.gulp.series('sass-2'));
 
     $.gulp.watch('./src/js/**/*.js', $.gulp.series('js:app-browserify', 'copy:js'));
 

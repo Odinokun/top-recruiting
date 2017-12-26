@@ -19,9 +19,9 @@ $(function() {
   require('./modules/slick')();
   // end   Slick slider
 
-  // begin Popup
-  // require('./modules/popup')();
-  // end   Popup
+  // begin Preloader
+  require('./modules/preloader')();
+  // end   Preloader
 
   // begin Sticky header
   // require('./modules/stickyHeader')();
